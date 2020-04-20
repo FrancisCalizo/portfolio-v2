@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const SidebarContainer = styled.div`
-  background: gray;
+  background: #d0d0d0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,11 +33,19 @@ const Sidebar = ({ title }) => {
       <SidebarLinks>
         <Link to="/">Home</Link>
         <Link to="/skills">Skills</Link>
-        <Link>Portfolio</Link>
-        <Link>Accomplishments</Link>
-        <Link>Blog</Link>
-        <Link>Contact</Link>
-        <Link>Resume</Link>
+        <Link to="/portfolio">Portfolio</Link>
+        <Link to="/accomplishments">Accomplishments</Link>
+        <a
+          href="https://ohyoufrancybruh.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Blog
+        </a>
+        <Link to="/contact">Contact</Link>
+        <a href="resume.pdf" target="_blank">
+          Resume
+        </a>
       </SidebarLinks>
       <div>
         Questions? Comments? Concerns? Please don't hesitate to drop me a line

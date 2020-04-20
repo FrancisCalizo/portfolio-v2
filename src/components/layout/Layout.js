@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 
 import Sidebar from "./Sidebar"
 
@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0
   }
+`
+const MainContent = styled.div`
+  position: absolute;
+  left: 300px;
 `
 
 const Layout = ({ children }) => {
@@ -27,7 +31,7 @@ const Layout = ({ children }) => {
     <div>
       <GlobalStyle />
       <Sidebar title={data.site.siteMetadata.title} />
-      {children}
+      <MainContent>{children}</MainContent>
     </div>
   )
 }
