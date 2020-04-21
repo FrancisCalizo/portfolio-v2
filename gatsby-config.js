@@ -30,5 +30,17 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `rubik\:300,400,500`,
+          `roboto slab\:300,500,700`,
+          `playfair display\:400,500,700`,
+          `pt serif\:400,700`,
+        ],
+        display: "swap",
+      },
+    },
   ],
 }
