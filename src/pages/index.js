@@ -14,28 +14,37 @@ const HomeContainer = styled.div`
   padding: 0 5rem;
 
   & div {
-    max-width: 570px;
+    max-width: 600px;
 
     & p:nth-child(1) {
       color: #fff;
       font-size: 1.9rem;
-      font-weight: bold;
-      // letter-spacing: 1.1px;
+      font-weight: 300;
+      letter-spacing: 1.1px;
 
       & span {
         border-bottom: 4px solid var(--salmon);
+        font-size: 2.2rem;
+        font-weight: bold;
       }
     }
 
     & h1 {
       color: var(--text-dark);
       font-size: 2.7rem;
+      margin: 2rem 0;
+      line-height: 1.4;
     }
 
     & p {
       color: var(--text-gray);
       font-size: 1.5rem;
+      margin: 0;
     }
+  }
+
+  & div:nth-child(2) {
+    margin: 2rem 0;
   }
 `
 
