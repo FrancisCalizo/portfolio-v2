@@ -4,6 +4,7 @@ module.exports = {
   siteTitle: "Francis Calizo",
   siteTitleShort: "Francis Calizo",
   author: "Francis Calizo",
+  email: "FrancisACalizo@gmail.com",
   repo: "https://github.com/franciscalizo/portfolio-v2",
   description:
     "I'm a web | software developer passionate about creating modern and captivating web applications.",

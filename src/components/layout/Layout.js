@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <GlobalStyle />
-      <Sidebar title={config.siteTitle} />
+      <Sidebar title={config.siteTitle} email={config.email} />
       <MainContent>{children}</MainContent>
     </div>
   )

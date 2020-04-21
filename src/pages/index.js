@@ -25,7 +25,7 @@ const HomeContainer = styled.div`
       & span {
         border-bottom: 4px solid var(--salmon);
         font-size: 2.2rem;
-        font-weight: bold;
+        font-weight: 500;
       }
     }
 
