@@ -16,16 +16,18 @@ const HomeContainer = styled.div`
   & div {
     max-width: 570px;
 
-    & h1:nth-child(1) {
+    & p:nth-child(1) {
       color: #fff;
-      font-size: 1.7rem;
+      font-size: 1.9rem;
+      font-weight: bold;
+      // letter-spacing: 1.1px;
 
       & span {
         border-bottom: 4px solid var(--salmon);
       }
     }
 
-    & h1:nth-child(2) {
+    & h1 {
       color: var(--text-dark);
       font-size: 2.7rem;
     }
@@ -51,9 +53,9 @@ const IndexPage = () => (
     <SEO title="Home" />
     <HomeContainer>
       <div>
-        <h1>
+        <p>
           Hi, I'm <span>Francis</span> 👋
-        </h1>
+        </p>
         <h1>{config.description}</h1>
         <p>{config.bio} 💪</p>
       </div>
