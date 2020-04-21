@@ -60,14 +60,22 @@ const SidebarContainer = styled.div`
 const SidebarLinks = styled.div`
   display: flex;
   flex-direction: column;
+  list-style-type: none;
 
-  a {
+  li {
     font-size: 1.2rem;
     text-transform: uppercase;
-    padding: 0.2rem 0;
-    margin: 0.5rem 0;
+    margin: 0.7rem 0;
     font-weight: 500;
     letter-spacing: 1.4px;
+
+    & a {
+      padding: 0.3rem 0;
+    }
+
+    & a:hover {
+      border-bottom: 2px solid var(--text-gray);
+    }
   }
 `
 
@@ -101,21 +109,35 @@ const Sidebar = ({ title, email }) => {
         </p>
       </div>
       <SidebarLinks>
-        <Link to="/">Home</Link>
-        <Link to="/skills">Skills</Link>
-        <Link to="/portfolio">Portfolio</Link>
-        <Link to="/accomplishments">Accomplishments</Link>
-        <a
-          href="https://ohyoufrancybruh.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Blog
-        </a>
-        <Link to="/contact">Contact</Link>
-        <a href="resume.pdf" target="_blank">
-          Resume
-        </a>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/skills">Skills</Link>
+        </li>
+        <li>
+          <Link to="/portfolio">Portfolio</Link>
+        </li>
+        <li>
+          <Link to="/accomplishments">Accomplishments</Link>
+        </li>
+        <li>
+          <a
+            href="https://ohyoufrancybruh.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </a>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <a href="resume.pdf" target="_blank">
+            Resume
+          </a>
+        </li>
       </SidebarLinks>
       <div>
         Questions? Comments? Concerns? Please don't hesitate to drop me a line

@@ -5,6 +5,7 @@ import { lighten, darken } from "polished"
 
 import config from "../../data/config"
 import Layout from "../components/layout/Layout"
+import { device } from "../utils/breakpoints"
 import SEO from "../components/Seo"
 
 const HomeContainer = styled.div`
@@ -46,6 +47,14 @@ const HomeContainer = styled.div`
 
   & div:nth-child(2) {
     margin: 3rem 0;
+  }
+
+  @media ${device.minMd} and ${device.maxLg}{
+    & div {
+      & h1 {
+        font-size: 3.5vw;
+      }
+    }
   }
 `
 
