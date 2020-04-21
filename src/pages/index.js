@@ -11,7 +11,7 @@ const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 4rem;
+  padding: 0 5rem;
 
   & div {
     max-width: 570px;
