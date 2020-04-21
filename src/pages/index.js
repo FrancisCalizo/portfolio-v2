@@ -31,7 +31,7 @@ const HomeContainer = styled.div`
 
     & h1 {
       color: var(--text-dark);
-      font-size: 2.7rem;
+      font-size: 2.6rem;
       margin: 2rem 0;
       line-height: 1.4;
     }
