@@ -21,7 +21,7 @@ const HomeContainer = styled.div`
       font-size: 1.7rem;
 
       & span {
-        color: var(--salmon);
+        border-bottom: 4px solid var(--salmon);
       }
     }
 
