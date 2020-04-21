@@ -79,6 +79,10 @@ const SocialLinks = styled.div`
 
 const SocialLink = styled(FontAwesomeIcon)`
   color: var(--text-dark);
+
+  &:hover {
+    color: var(--salmon);
+  }
 `
 
 const Sidebar = ({ title, email }) => {

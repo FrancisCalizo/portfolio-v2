@@ -101,3 +101,5 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 ## Helpful Articles Along the Way!
 
 Set global body styles using styled components - https://stackoverflow.com/questions/46760861/styled-components-how-to-set-styles-on-html-or-body-tag
+
+Emojis in React (Best practices) - https://medium.com/@seanmcp/%EF%B8%8F-how-to-use-emojis-in-react-d23bbf608bf7

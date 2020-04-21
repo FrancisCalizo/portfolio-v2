@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { lighten, darken } from "polished"
 
 import config from "../../data/config"
 import Layout from "../components/layout/Layout"
@@ -22,7 +23,7 @@ const HomeContainer = styled.div`
       font-weight: 300;
       letter-spacing: 1.1px;
 
-      & span {
+      & span:nth-child(1) {
         border-bottom: 4px solid var(--salmon);
         font-size: 2.2rem;
         font-weight: 500;
@@ -31,7 +32,7 @@ const HomeContainer = styled.div`
 
     & h1 {
       color: var(--text-dark);
-      font-size: 2.6rem;
+      font-size: 2.75rem;
       margin: 2rem 0;
       line-height: 1.4;
     }
@@ -61,11 +62,20 @@ const HomeLink = styled(Link)`
     margin-right: 1.5rem;
     background: var(--salmon);
     color: white;
+    border: 1px solid ${darken(0.1, config.colors.salmon)};
+  }
+
+  &:nth-child(1):hover {
+    background: ${lighten(0.1, config.colors.salmon)};
   }
 
   &:nth-child(2) {
     border: 2px solid var(--salmon);
   }
+
+  &:nth-child(2):hover {
+    background: ${lighten(0.1, config.colors.salmon)};
+    color: white;
 `
 
 const IndexPage = () => (
@@ -74,10 +84,18 @@ const IndexPage = () => (
     <HomeContainer>
       <div>
         <p>
-          Hi, I'm <span>Francis</span> 👋
+          Hi, I'm <span>Francis</span>{" "}
+          <span role="img" aria-label="wave">
+            👋
+          </span>
         </p>
         <h1>{config.description}</h1>
-        <p>{config.bio} 💪</p>
+        <p>
+          {config.bio}
+          <span role="img" aria-label="flex">
+            💪
+          </span>
+        </p>
       </div>
       <div>
         <HomeLink to="/portfolio">View my work</HomeLink>
