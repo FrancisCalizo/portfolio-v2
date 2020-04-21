@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 const SidebarContainer = styled.div`
-  background: #d0d0d0;
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,7 +13,7 @@ const SidebarContainer = styled.div`
   left: 0px;
   bottom: 0px;
   z-index: 100;
-  width: 300px;
+  width: 280px;
 `
 
 const SidebarLinks = styled.div`
