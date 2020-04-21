@@ -38,7 +38,7 @@ const SidebarContainer = styled.div`
 
     & p {
       color: var(--text-gray);
-      margin: 2rem 0;
+      margin: 2rem 0 0;
       line-height: 1.8;
     }
   }

@@ -44,16 +44,27 @@ const HomeContainer = styled.div`
   }
 
   & div:nth-child(2) {
-    margin: 2rem 0;
+    margin: 3rem 0;
   }
 `
 
 const HomeLink = styled(Link)`
   color: var(--text-dark);
   text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
 
   &:nth-child(1) {
     margin-right: 1.5rem;
+    background: var(--salmon);
+    color: white;
+  }
+
+  &:nth-child(2) {
+    border: 2px solid var(--salmon);
   }
 `
 
@@ -69,7 +80,7 @@ const IndexPage = () => (
         <p>{config.bio} 💪</p>
       </div>
       <div>
-        <HomeLink to="/portfolio">See my work</HomeLink>
+        <HomeLink to="/portfolio">View my work</HomeLink>
         <HomeLink to="/contact">Get in touch</HomeLink>
       </div>
     </HomeContainer>
