@@ -11,11 +11,16 @@ const TopbarContainer = styled.div`
   z-index: 100;
   text-transform: uppercase;
   font-size: 1.2rem;
+  color: var(--text-dark);
 
   > div {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
+
+    > div:nth-child(2) {
+      font-weight: 600;
+    }
   }
 
   @media ${device.minMd} {
