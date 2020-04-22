@@ -2,15 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
-import {
-  faEnvelopeSquare,
-  faFile,
-  faBlog,
-} from "@fortawesome/free-solid-svg-icons"
 
 import { device } from "../../utils/breakpoints"
+import SocialBar from "../social/SocialBar"
 
 const SidebarContainer = styled.div`
   background: #fff;
@@ -85,20 +79,6 @@ const SidebarLinks = styled.div`
   }
 `
 
-const SocialLinks = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 180px;
-`
-
-const SocialLink = styled(FontAwesomeIcon)`
-  color: var(--text-dark);
-
-  &:hover {
-    color: var(--salmon);
-  }
-`
-
 const Sidebar = ({ title, email }) => {
   return (
     <SidebarContainer>
@@ -148,39 +128,7 @@ const Sidebar = ({ title, email }) => {
       <div>
         Questions? Comments? Concerns? Please don't hesitate to drop me a line
         at <a href="mailto:francisacalizo@gmail.com">{email}</a>
-        <SocialLinks>
-          <a
-            href="https://linkedin.com/in/fcalizo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialLink icon={faLinkedin} size="2x" />
-          </a>
-          <a
-            href="https://github.com/franciscalizo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialLink icon={faGithub} size="2x" />
-          </a>
-          <a
-            href="mailto:francisacalizo@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialLink icon={faEnvelopeSquare} size="2x" />
-          </a>
-          <a href="#!" target="_blank" rel="noopener noreferrer">
-            <SocialLink icon={faFile} size="2x" />
-          </a>
-          <a
-            href="https://ohyoufrancybruh.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialLink icon={faBlog} size="2x" />
-          </a>
-        </SocialLinks>
+        <SocialBar />
       </div>
     </SidebarContainer>
   )
