@@ -70,6 +70,7 @@ const HomeContainer = styled.div`
   }
 
   @media ${device.maxMd}{
+    height: 100%;
     padding: 0 2rem;
     & div {
       max-width: none;
@@ -94,6 +95,7 @@ const HomeContainer = styled.div`
 
   @media ${device.maxMd}{
     text-align: center;
+    margin: 5rem auto;
   }
 `
 

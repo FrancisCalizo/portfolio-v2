@@ -6,6 +6,8 @@ import { device } from "../../utils/breakpoints"
 import config from "../../../data/config"
 import Sidebar from "./Sidebar"
 import Topbar from "./Topbar"
+import UnderNav from "./UnderNav"
+import Footer from "./Footer"
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -43,7 +45,10 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <Topbar title={config.siteTitle} email={config.email} />
       <Sidebar title={config.siteTitle} email={config.email} />
-      <MainContent>{children}</MainContent>
+      <UnderNav>
+        <MainContent>{children}</MainContent>
+        <Footer email={config.email} />
+      </UnderNav>
     </div>
   )
 }

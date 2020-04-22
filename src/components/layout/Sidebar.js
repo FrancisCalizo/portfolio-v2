@@ -127,7 +127,7 @@ const Sidebar = ({ title, email }) => {
       </SidebarLinks>
       <div>
         Questions? Comments? Concerns? Please don't hesitate to drop me a line
-        at <a href="mailto:francisacalizo@gmail.com">{email}</a>
+        at <a href={`mailto:${email}`}>{email}</a>
         <SocialBar />
       </div>
     </SidebarContainer>

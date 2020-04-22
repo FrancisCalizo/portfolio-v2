@@ -8,8 +8,6 @@ import {
   faBlog,
 } from "@fortawesome/free-solid-svg-icons"
 
-import { device } from "../../utils/breakpoints"
-
 const SocialLinks = styled.div`
   display: flex;
   justify-content: space-between;
@@ -24,7 +22,7 @@ const SocialLink = styled(FontAwesomeIcon)`
   }
 `
 
-const SocialBar = () => {
+const SocialBar = ({ email }) => {
   return (
     <SocialLinks>
       <a
@@ -41,11 +39,7 @@ const SocialBar = () => {
       >
         <SocialLink icon={faGithub} size="2x" />
       </a>
-      <a
-        href="mailto:francisacalizo@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
         <SocialLink icon={faEnvelopeSquare} size="2x" />
       </a>
       <a href="#!" target="_blank" rel="noopener noreferrer">
