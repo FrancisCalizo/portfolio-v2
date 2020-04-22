@@ -21,6 +21,14 @@ const TopbarContainer = styled.div`
   @media ${device.minMd} {
     display: none;
   }
+
+  @media ${device.maxSm} {
+    > div {
+      > div:nth-child(2) {
+        display: none;
+      }
+    }
+  }
 `
 
 const Topbar = ({ title, email }) => {
