@@ -51,8 +51,20 @@ const HomeContainer = styled.div`
 
   @media ${device.minMd} and ${device.maxLg}{
     & div {
+      & p:nth-child(1){
+        font-size: 2.8vw;
+
+        & span:nth-child(1){
+          font-size: 3.2vw;
+        }
+      }
+
       & h1 {
         font-size: 3.5vw;
+      }
+
+      & p {
+        font-size: 2vw;
       }
     }
   }
@@ -85,6 +97,13 @@ const HomeLink = styled(Link)`
   &:nth-child(2):hover {
     background: ${lighten(0.1, config.colors.salmon)};
     color: white;
+  }
+
+    @media ${device.minMd} and ${device.maxLg}{
+      font-size: 1.4vw;
+      padding: 1.5vw 2vw;
+    }
+  }
 `
 
 const IndexPage = () => (
