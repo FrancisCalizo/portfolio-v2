@@ -68,6 +68,30 @@ const HomeContainer = styled.div`
       }
     }
   }
+
+  @media ${device.maxMd}{
+    & div {
+      & p:nth-child(1){
+        font-size: calc(16px + (30 - 16) * ((100vw - 330px) / (768 - 330)));
+
+        & span:nth-child(1){
+          font-size: 3.7vw;
+        }
+      }
+
+      & h1 {
+        font-size: 4vw;
+      }
+
+      & p {
+        font-size: 2.5vw;
+      }
+    }
+  }
+
+  @media ${device.maxMd}{
+    text-align: center;
+  }
 `
 
 const HomeLink = styled(Link)`

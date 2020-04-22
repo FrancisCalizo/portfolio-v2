@@ -2,8 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled, { createGlobalStyle } from "styled-components"
 
+import { device } from "../../utils/breakpoints"
 import config from "../../../data/config"
 import Sidebar from "./Sidebar"
+import Topbar from "./Topbar"
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -29,14 +31,17 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 const MainContent = styled.div`
-  position: absolute;
-  left: 280px;
+  @media ${device.minMd} {
+    position: absolute;
+    left: 280px;
+  }
 `
 
 const Layout = ({ children }) => {
   return (
     <div>
       <GlobalStyle />
+      <Topbar title={config.siteTitle} email={config.email} />
       <Sidebar title={config.siteTitle} email={config.email} />
       <MainContent>{children}</MainContent>
     </div>

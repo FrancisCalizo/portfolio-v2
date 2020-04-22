@@ -10,6 +10,8 @@ import {
   faBlog,
 } from "@fortawesome/free-solid-svg-icons"
 
+import { device } from "../../utils/breakpoints"
+
 const SidebarContainer = styled.div`
   background: #fff;
   display: flex;
@@ -55,6 +57,10 @@ const SidebarContainer = styled.div`
     & > div {
       margin-top: 1.4rem;
     }
+  }
+
+  @media ${device.maxMd} {
+    display: none;
   }
 `
 const SidebarLinks = styled.div`

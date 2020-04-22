@@ -1,17 +1,21 @@
 export const size = {
-  sm: "425px",
-  md: "768px",
-  lg: "1024px",
-  xl: "1440px",
+  minSm: "426px",
+  maxSm: "425px",
+  minMd: "769px",
+  maxMd: "768px",
+  minLg: "1025px",
+  maxLg: "1024px",
+  minXl: "1441px",
+  maxXl: "1440px",
 }
 
 export const device = {
-  minSm: `(min-width: ${size.sm})`,
-  minMd: `(min-width: ${size.md})`,
-  minLg: `(min-width: ${size.lg})`,
-  minXl: `(min-width: ${size.xl})`,
-  maxSm: `(max-width: ${size.sm})`,
-  maxMd: `(max-width: ${size.md})`,
-  maxLg: `(max-width: ${size.lg})`,
-  maxXl: `(max-width: ${size.xl})`,
+  minSm: `(min-width: ${size.minSm})`,
+  minMd: `(min-width: ${size.minMd})`,
+  minLg: `(min-width: ${size.minLg})`,
+  minXl: `(min-width: ${size.minXl})`,
+  maxSm: `(max-width: ${size.maxSm})`,
+  maxMd: `(max-width: ${size.maxMd})`,
+  maxLg: `(max-width: ${size.maxLg})`,
+  maxXl: `(max-width: ${size.maxXl})`,
 }
