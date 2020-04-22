@@ -70,21 +70,24 @@ const HomeContainer = styled.div`
   }
 
   @media ${device.maxMd}{
+    padding: 0 2rem;
     & div {
+      max-width: none;
+
       & p:nth-child(1){
-        font-size: calc(16px + (30 - 16) * ((100vw - 330px) / (768 - 330)));
+        font-size: min(max(16px, 4vw), 22px);
 
         & span:nth-child(1){
-          font-size: 3.7vw;
+          font-size: min(max(20px, 4vw), 26px);
         }
       }
 
       & h1 {
-        font-size: 4vw;
+        font-size: min(max(26px, 4vw), 34px);
       }
 
       & p {
-        font-size: 2.5vw;
+        font-size: min(max(14px, 3vw), 17px);
       }
     }
   }
@@ -123,10 +126,14 @@ const HomeLink = styled(Link)`
     color: white;
   }
 
-    @media ${device.minMd} and ${device.maxLg}{
-      font-size: 1.4vw;
-      padding: 1.5vw 2vw;
-    }
+  @media ${device.minMd} and ${device.maxLg}{
+    font-size: 1.4vw;
+    padding: 1.5vw 2vw;
+  }
+
+  @media ${device.maxMd}{
+    font-size: min(max(10px, 2vw), 12px);
+    padding: 2.25vw 3.25vw;
   }
 `
 
