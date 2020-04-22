@@ -5,7 +5,7 @@ import { device } from "../../utils/breakpoints"
 import SocialBar from "../social/SocialBar"
 
 const FooterContainer = styled.div`
-  position: absolute;
+  // position: absolute;
   bottom: 0;
   width: 100%;
   background: #fff;
@@ -20,6 +20,17 @@ const FooterContainer = styled.div`
 
   p {
     color: var(--text-gray);
+
+    & a {
+      color: var(--text-dark);
+      text-decoration: none;
+      padding: 5px;
+      border-bottom: 2px solid var(--text-dark);
+    }
+  }
+
+  p:nth-child(3) {
+    margin: 1rem 0 2.5rem;
   }
 
   @media ${device.minMd} {
