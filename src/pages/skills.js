@@ -4,6 +4,7 @@ import styled from "styled-components"
 import config from "../../data/config"
 import SEO from "../components/Seo"
 import Layout from "../components/layout/Layout"
+import SkillsIcons from "../components/skills/SkillsIcons"
 
 const SkillsContainer = styled.div`
   height: 100vh;
@@ -39,6 +40,7 @@ const Skills = () => {
             {config.skills.header}
           </h1>
           <p>{config.skills.description}</p>
+          <SkillsIcons />
         </div>
       </SkillsContainer>
     </Layout>
