@@ -6,22 +6,32 @@ import { icons } from "./icons"
 const SkillsIconsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-top: 2rem;
 `
 const Skill = styled.div`
-  & div:nth-child(1) {
+  & div:nth-child(2) {
     display: flex;
     justify-content: center;
 
     & > span {
+      color: #fff;
       text-align: center;
+      background: var(--text-dark);
+      padding: 1px 5px;
+      border: 1px solid var(--text-dark);
+      border-radius: 5px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+      transform: translateY(-20px);
     }
   }
 
-  & > div:nth-child(2) {
+  & > div:nth-child(1) {
     background: #fff;
     margin: 0.5rem;
-    padding: 1rem 1.2rem;
+    padding: 1.15rem 1.2rem 0.75rem;
     border-radius: 100px;
+    border: 1px solid var(--text-gray);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
   }
 `
 const SkillsIcons = () => {
@@ -30,10 +40,10 @@ const SkillsIcons = () => {
       {icons.map(e => (
         <Skill>
           <div>
-            <span>{e.name}</span>
+            <img src={e.icon} alt={e.name} />
           </div>
           <div>
-            <img src={e.icon} alt={e.name} />
+            <span>{e.name}</span>
           </div>
         </Skill>
       ))}

@@ -46,7 +46,7 @@ export const icons = [
     icon: css,
   },
   {
-    name: "Express",
+    name: "Express.js",
     icon: express,
   },
   {
@@ -58,7 +58,7 @@ export const icons = [
     icon: sql,
   },
   {
-    name: "Git/Github",
+    name: "Git | Github",
     icon: github,
   },
 ]

@@ -11,9 +11,9 @@ module.exports = {
   bio:
     "You can find me primarily using the latest JavaScript technologies to build front-end web projects, but I also aspire to develop myself into a full-stack engineer (as well as learn new languages and tools). I welcome challenging opportunities for growth and development ",
   skills: {
-    header: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+    header: "Specialized in writing modern, performant, and maintainable code.",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fuga, autem perspiciatis atque laudantium molestiae cumque adipisci soluta magnam consequuntur voluptatibus, consectetur deserunt minima iusto nisi porro quae, voluptates ducimus.",
+      "Equipped with the skills to create intuitive, dynamic user experiences. I have a serious passion for frontend architecture. My skill set includes:",
   },
   colors: {
     salmon: "#e37263",
