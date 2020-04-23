@@ -145,7 +145,7 @@ const IndexPage = () => (
     <HomeContainer>
       <div>
         <p>
-          Hi, I'm <span>Francis</span>{" "}
+          // Hi, I'm <span>Francis</span>{" "}
           <span role="img" aria-label="wave">
             👋
           </span>
