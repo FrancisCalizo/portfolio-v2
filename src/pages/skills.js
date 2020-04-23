@@ -24,7 +24,6 @@ const SkillsContainer = styled.div`
         display: inline-block;
         color: #fff;
         font-family: "Rubik", sans-serif;
-        font-size: 1.9rem;
         font-weight: 400;
         letter-spacing: 1.1px;
 
@@ -35,7 +34,6 @@ const SkillsContainer = styled.div`
 
       & span:nth-child(2) {
         display: block;
-        font-size: 36px;
         color: var(--text-dark);
         line-height: 1.4;
         margin: 1.5rem 0;
@@ -45,7 +43,40 @@ const SkillsContainer = styled.div`
     & p {
       color: var(--text-gray);
       margin: 0;
-      font-size: 20px;
+    }
+  }
+
+  @media ${device.minLg} {
+    & div {
+      & h1 {
+        & span:nth-child(1) {
+          font-size: 26px;
+        }
+        & span:nth-child(2) {
+          font-size: 36px;
+        }
+      }
+
+      & p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media ${device.minMd} and ${device.maxLg} {
+    & div {
+      & h1 {
+        & span:nth-child(1) {
+          font-size: 12px;
+        }
+        & span:nth-child(2) {
+          font-size: 12px;
+        }
+      }
+
+      & p {
+        font-size: 12px;
+      }
     }
   }
 `
