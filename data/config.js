@@ -15,6 +15,21 @@ module.exports = {
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio vitae nesciunt, magnam sint autem mollitia nostrum voluptate dolor rem deleniti.",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fuga, autem perspiciatis atque laudantium molestiae cumque adipisci soluta magnam consequuntur voluptatibus, consectetur deserunt minima iusto nisi porro quae, voluptates ducimus.",
+    icons: [
+      "js",
+      "ts",
+      "react",
+      "graphql",
+      "redux",
+      "node",
+      "html",
+      "css",
+      "sass",
+      "express",
+      "mongo",
+      "sql",
+      "github",
+    ],
   },
   colors: {
     salmon: "#e37263",
