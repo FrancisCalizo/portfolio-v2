@@ -7,7 +7,7 @@ import Layout from "../components/layout/Layout"
 import SkillsIcons from "../components/skills/SkillsIcons"
 
 const SkillsContainer = styled.div`
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,6 +17,10 @@ const SkillsContainer = styled.div`
     max-width: 600px;
 
     & > h1 {
+      font-size: 38px;
+      color: var(--text-dark);
+      line-height: 1.4;
+
       & > span {
         color: #fff;
         font-family: "Rubik", sans-serif;
@@ -25,6 +29,10 @@ const SkillsContainer = styled.div`
         font-weight: 400;
         letter-spacing: 1.1px;
       }
+    }
+
+    & p {
+      color: var(--text-gray);
     }
   }
 `
