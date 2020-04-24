@@ -166,6 +166,7 @@ const Topbar = ({ title, email }) => {
               Accolades
             </BurgerLink>
             <BurgerLinkA
+              as="a"
               id="blog"
               className="menu-item"
               href="https://ohyoufrancybruh.com"
@@ -176,6 +177,7 @@ const Topbar = ({ title, email }) => {
               Blog
             </BurgerLinkA>
             <BurgerLinkA
+              as="a"
               id="resume"
               className="menu-item"
               href="/resume"
