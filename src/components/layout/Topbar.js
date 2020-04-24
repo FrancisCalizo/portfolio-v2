@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import PropTypes from "prop-types"
+import { slide as Menu } from "react-burger-menu"
 
 import { device } from "../../utils/breakpoints"
 
@@ -45,10 +46,43 @@ const TopbarContainer = styled.div`
 `
 
 const Topbar = ({ title, email }) => {
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false)
+
+  const isMenuOpen = status => {
+    setIsBurgerOpen(status.isOpen)
+  }
+
+  const menuStyles = {
+    bmBurgerButton: {
+      position: "fixed",
+      height: "35px",
+      width: "50px",
+      top: "10px",
+      left: "25px",
+    },
+    bmOverlay: {
+      top: "0",
+      left: "0",
+    },
+    bmMenuWrap: {
+      display: isBurgerOpen ? "block" : "none",
+    },
+  }
+
   return (
     <TopbarContainer>
       <div>
-        <div>Menu</div>
+        <div>
+          Menu
+          <Menu styles={menuStyles} onStateChange={isMenuOpen}>
+            <a id="home" className="menu-item" href="/">
+              Home
+            </a>
+            <a id="skills" className="menu-item" href="/skills">
+              Skills
+            </a>
+          </Menu>
+        </div>
         <div>
           <Link to="/">{title}</Link>
         </div>
