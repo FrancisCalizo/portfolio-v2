@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import { bubble as Menu } from "react-burger-menu"
+import { slide as Menu } from "react-burger-menu"
 
 import { device } from "../../utils/breakpoints"
 import config from "../../../data/config"
@@ -15,11 +15,12 @@ const TopbarContainer = styled.div`
   text-transform: uppercase;
   font-size: 1.2rem;
   color: var(--text-dark);
+  background: ${props => (props.isNavColored ? "#fff" : "transparent")};
 
   > div {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: ${props => (props.isNavColored ? "0.5rem 2rem" : "1rem 2rem")};
 
     > div:nth-child(2) {
       font-weight: 600;
@@ -56,6 +57,13 @@ const BurgerLink = styled(Link)`
 
 const Topbar = ({ title, email }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false)
+  const [isNavColored, setisNavColored] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const getBurgerOpen = status => {
     setIsBurgerOpen(status.isOpen)
@@ -63,6 +71,14 @@ const Topbar = ({ title, email }) => {
 
   const handleClick = () => {
     setIsBurgerOpen(false)
+  }
+
+  const handleScroll = e => {
+    if (window.scrollY > 70) {
+      setisNavColored(true)
+    } else {
+      setisNavColored(false)
+    }
   }
 
   const menuStyles = {
@@ -92,6 +108,7 @@ const Topbar = ({ title, email }) => {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
+      background: "#fff",
     },
     bmItem: {
       display: "inline-block",
@@ -100,14 +117,10 @@ const Topbar = ({ title, email }) => {
     bmCross: {
       background: config.colors.textDark,
     },
-    // bmCrossButton: {
-    //   top: "20px",
-    //   right: "30px",
-    // },
   }
 
   return (
-    <TopbarContainer>
+    <TopbarContainer isNavColored={isNavColored}>
       <div>
         <div>
           Menu
