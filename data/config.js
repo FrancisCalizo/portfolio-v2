@@ -17,5 +17,6 @@ module.exports = {
   },
   colors: {
     salmon: "#e37263",
+    textDark: "#343434",
   },
 }

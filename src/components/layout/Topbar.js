@@ -2,9 +2,10 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import { slide as Menu } from "react-burger-menu"
+import { bubble as Menu } from "react-burger-menu"
 
 import { device } from "../../utils/breakpoints"
+import config from "../../../data/config"
 
 const TopbarContainer = styled.div`
   position: fixed;
@@ -45,11 +46,23 @@ const TopbarContainer = styled.div`
   }
 `
 
+const BurgerLink = styled(Link)`
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom: 2px solid black;
+  }
+`
+
 const Topbar = ({ title, email }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false)
 
-  const isMenuOpen = status => {
+  const getBurgerOpen = status => {
     setIsBurgerOpen(status.isOpen)
+  }
+
+  const handleClick = () => {
+    setIsBurgerOpen(false)
   }
 
   const menuStyles = {
@@ -66,7 +79,31 @@ const Topbar = ({ title, email }) => {
     },
     bmMenuWrap: {
       display: isBurgerOpen ? "block" : "none",
+      width: "300px",
+      top: "0",
+      left: "0",
     },
+    bmMorphShape: {
+      fill: "#fff",
+    },
+    bmItemList: {
+      display: "flex",
+      width: "300px",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    bmItem: {
+      display: "inline-block",
+      margin: "1rem 0",
+    },
+    bmCross: {
+      background: config.colors.textDark,
+    },
+    // bmCrossButton: {
+    //   top: "20px",
+    //   right: "30px",
+    // },
   }
 
   return (
@@ -74,12 +111,60 @@ const Topbar = ({ title, email }) => {
       <div>
         <div>
           Menu
-          <Menu styles={menuStyles} onStateChange={isMenuOpen}>
-            <a id="home" className="menu-item" href="/">
+          <Menu
+            styles={menuStyles}
+            onStateChange={getBurgerOpen}
+            isOpen={isBurgerOpen}
+          >
+            <BurgerLink
+              id="home"
+              className="menu-item"
+              to="/"
+              onClick={handleClick}
+            >
               Home
-            </a>
-            <a id="skills" className="menu-item" href="/skills">
+            </BurgerLink>
+            <BurgerLink
+              id="skills"
+              className="menu-item"
+              to="/skills"
+              onClick={handleClick}
+            >
               Skills
+            </BurgerLink>
+            <BurgerLink
+              id="portfolio"
+              className="menu-item"
+              to="/portfolio"
+              onClick={handleClick}
+            >
+              Portfolio
+            </BurgerLink>
+            <BurgerLink
+              id="accomplishments"
+              className="menu-item"
+              to="/accomplishments"
+              onClick={handleClick}
+            >
+              Accomplishments
+            </BurgerLink>
+            <a
+              id="blog"
+              className="menu-item"
+              href="https://ohyoufrancybruh.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleClick}
+            >
+              Blog
+            </a>
+            <a
+              id="resume"
+              className="menu-item"
+              href="/resume"
+              onClick={handleClick}
+            >
+              Resume
             </a>
           </Menu>
         </div>
