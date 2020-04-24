@@ -16,11 +16,13 @@ const TopbarContainer = styled.div`
   font-size: 1.2rem;
   color: var(--text-dark);
   background: ${props => (props.isNavColored ? "#fff" : "transparent")};
+  transition: background 500ms ease-in-out;
 
   > div {
     display: flex;
     justify-content: space-between;
     padding: ${props => (props.isNavColored ? "0.5rem 2rem" : "1rem 2rem")};
+    transition: padding 500ms ease-in-out;
 
     > div:nth-child(2) {
       font-weight: 600;
@@ -55,6 +57,8 @@ const BurgerLink = styled(Link)`
   }
 `
 
+const BurgerLinkA = styled(BurgerLink)``
+
 const Topbar = ({ title, email }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false)
   const [isNavColored, setisNavColored] = useState(false)
@@ -84,9 +88,9 @@ const Topbar = ({ title, email }) => {
   const menuStyles = {
     bmBurgerButton: {
       position: "fixed",
-      height: "35px",
+      height: "20px",
       width: "50px",
-      top: "10px",
+      top: isNavColored ? "10px" : "18px",
       left: "25px",
     },
     bmOverlay: {
@@ -154,14 +158,14 @@ const Topbar = ({ title, email }) => {
               Portfolio
             </BurgerLink>
             <BurgerLink
-              id="accomplishments"
+              id="accolades"
               className="menu-item"
-              to="/accomplishments"
+              to="/accolades"
               onClick={handleClick}
             >
-              Accomplishments
+              Accolades
             </BurgerLink>
-            <a
+            <BurgerLinkA
               id="blog"
               className="menu-item"
               href="https://ohyoufrancybruh.com"
@@ -170,15 +174,15 @@ const Topbar = ({ title, email }) => {
               onClick={handleClick}
             >
               Blog
-            </a>
-            <a
+            </BurgerLinkA>
+            <BurgerLinkA
               id="resume"
               className="menu-item"
               href="/resume"
               onClick={handleClick}
             >
               Resume
-            </a>
+            </BurgerLinkA>
           </Menu>
         </div>
         <div>
