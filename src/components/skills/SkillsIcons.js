@@ -1,12 +1,18 @@
 import React from "react"
 import styled from "styled-components"
 
+import { device } from "../../utils/breakpoints"
 import { icons } from "./icons"
 
 const SkillsIconsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 2rem;
+  justify-content: space-between;
+
+  @media ${device.maxMd} {
+    justify-content: center;
+  }
 `
 const Skill = styled.div`
   & div:nth-child(2) {
@@ -37,8 +43,8 @@ const Skill = styled.div`
 const SkillsIcons = () => {
   return (
     <SkillsIconsContainer>
-      {icons.map(e => (
-        <Skill>
+      {icons.map((e, idx) => (
+        <Skill key={idx}>
           <div>
             <img src={e.icon} alt={e.name} />
           </div>

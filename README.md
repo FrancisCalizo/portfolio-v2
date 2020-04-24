@@ -105,3 +105,5 @@ Set global body styles using styled components - https://stackoverflow.com/quest
 Emojis in React (Best practices) - https://medium.com/@seanmcp/%EF%B8%8F-how-to-use-emojis-in-react-d23bbf608bf7
 
 Paths for Logos - https://stackoverflow.com/questions/37644265/correct-path-for-img-on-react-js
+
+Fluid Typography - https://css-tricks.com/snippets/css/fluid-typography/

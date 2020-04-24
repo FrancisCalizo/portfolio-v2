@@ -13,7 +13,7 @@ module.exports = {
   skills: {
     header: "Specialized in writing modern, performant, and maintainable code.",
     description:
-      "Equipped with the skills to create intuitive, dynamic user experiences. I have a serious passion for frontend architecture. My skill set includes:",
+      "Equipped with the skills to create intuitive, dynamic user experiences. I have a serious passion for frontend architecture. My skill set includes, but is not limited to:",
   },
   colors: {
     salmon: "#e37263",

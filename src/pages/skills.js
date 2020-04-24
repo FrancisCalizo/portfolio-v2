@@ -26,6 +26,7 @@ const SkillsContainer = styled.div`
         font-family: "Rubik", sans-serif;
         font-weight: 400;
         letter-spacing: 1.1px;
+        font-size: 26px;
 
         & > span {
           border-bottom: 4px solid var(--salmon);
@@ -37,29 +38,14 @@ const SkillsContainer = styled.div`
         color: var(--text-dark);
         line-height: 1.4;
         margin: 1.5rem 0;
+        font-size: 36px;
       }
     }
 
     & p {
       color: var(--text-gray);
       margin: 0;
-    }
-  }
-
-  @media ${device.minLg} {
-    & div {
-      & h1 {
-        & span:nth-child(1) {
-          font-size: 26px;
-        }
-        & span:nth-child(2) {
-          font-size: 36px;
-        }
-      }
-
-      & p {
-        font-size: 20px;
-      }
+      font-size: 20px;
     }
   }
 
@@ -67,15 +53,37 @@ const SkillsContainer = styled.div`
     & div {
       & h1 {
         & span:nth-child(1) {
-          font-size: 12px;
+          font-size: calc(18px + (6) * ((100vw - 768px) / (1024 - 768)));
         }
         & span:nth-child(2) {
-          font-size: 12px;
+          font-size: calc(28px + (6) * ((100vw - 768px) / (1024 - 768)));
         }
       }
 
       & p {
-        font-size: 12px;
+        font-size: calc(12px + (6) * ((100vw - 768px) / (1024 - 768)));
+      }
+    }
+  }
+
+  @media ${device.maxMd}{
+    min-height: 0;
+    text-align: center;
+    margin: 5rem auto;
+    padding: 0 2rem;
+
+    & div {
+      & h1 {
+        & span:nth-child(1) {
+          font-size: calc(18px + (6) * ((100vw - 330px) / (768 - 330)));
+        }
+        & span:nth-child(2) {
+          font-size: calc(28px + (6) * ((100vw - 330px) / (768 - 330)));
+        }
+      }
+
+      & p {
+        font-size: calc(12px + (6) * ((100vw - 330px) / (768 - 330)));
       }
     }
   }

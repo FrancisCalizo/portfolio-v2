@@ -63,7 +63,7 @@ const SidebarLinks = styled.div`
   list-style-type: none;
 
   li {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-transform: uppercase;
     margin: 0.7rem 0;
     font-weight: 500;
