@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 
@@ -23,6 +24,13 @@ const TopbarContainer = styled.div`
     }
   }
 
+  a {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    text-decoration: none;
+  }
+
   @media ${device.minMd} {
     display: none;
   }
@@ -41,8 +49,12 @@ const Topbar = ({ title, email }) => {
     <TopbarContainer>
       <div>
         <div>Menu</div>
-        <div>{title}</div>
-        <div>Email</div>
+        <div>
+          <Link to="/">{title}</Link>
+        </div>
+        <div>
+          <a href={`mailto:${email}`}>Email</a>
+        </div>
       </div>
     </TopbarContainer>
   )
