@@ -117,9 +117,6 @@ const Sidebar = ({ title, email }) => {
           </a>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li>
           <a href="resume.pdf" target="_blank">
             Resume
           </a>

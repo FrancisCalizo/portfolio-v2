@@ -99,7 +99,7 @@ const HomeContainer = styled.div`
   }
 `
 
-const HomeLink = styled(Link)`
+const PortfolioButton = styled(Link)`
   color: var(--text-dark);
   text-transform: uppercase;
   text-decoration: none;
@@ -139,6 +139,8 @@ const HomeLink = styled(Link)`
   }
 `
 
+const EmailButton = styled(PortfolioButton)``
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -159,8 +161,15 @@ const IndexPage = () => (
         </p>
       </div>
       <div>
-        <HomeLink to="/portfolio">View my work</HomeLink>
-        <HomeLink to="/contact">Get in touch</HomeLink>
+        <PortfolioButton to="/portfolio">View my work</PortfolioButton>
+        <EmailButton
+          as="a"
+          href={`mailto:${config.email}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get in touch
+        </EmailButton>
       </div>
     </HomeContainer>
   </Layout>

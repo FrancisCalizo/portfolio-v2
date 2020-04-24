@@ -107,3 +107,5 @@ Emojis in React (Best practices) - https://medium.com/@seanmcp/%EF%B8%8F-how-to-
 Paths for Logos - https://stackoverflow.com/questions/37644265/correct-path-for-img-on-react-js
 
 Fluid Typography - https://css-tricks.com/snippets/css/fluid-typography/
+
+Extending Styles in Styled Components for Two Button on Home page - https://styled-components.com/docs/basics#adapting-based-on-props
