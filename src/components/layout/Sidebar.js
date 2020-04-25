@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
 import { device } from "../../utils/breakpoints"
 import SocialBar from "../social/SocialBar"
@@ -79,6 +81,10 @@ const SidebarLinks = styled.div`
   }
 `
 
+const Fa = styled(FontAwesomeIcon)`
+  color: var(--text-gray);
+`
+
 const Sidebar = ({ title, email }) => {
   return (
     <SidebarContainer>
@@ -113,7 +119,7 @@ const Sidebar = ({ title, email }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Blog
+            Blog <Fa icon={faExternalLinkAlt} />
           </a>
         </li>
         <li>

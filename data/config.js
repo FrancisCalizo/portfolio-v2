@@ -15,6 +15,16 @@ module.exports = {
     description:
       "Equipped with the skills to create intuitive, dynamic user experiences. I have a serious passion for frontend architecture. My skill set includes, but is not limited to:",
   },
+  portfolio: {
+    header: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, iusto, quo id mollitia, explicabo modi error aspernatur at nobis eius sequi officia maiores fugit dolorem quam beatae ut maxime illum?",
+  },
+  accolades: {
+    header: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, iusto, quo id mollitia, explicabo modi error aspernatur at nobis eius sequi officia maiores fugit dolorem quam beatae ut maxime illum?",
+  },
   colors: {
     salmon: "#e37263",
     textDark: "#343434",

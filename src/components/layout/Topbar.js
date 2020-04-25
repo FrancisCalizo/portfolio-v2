@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { slide as Menu } from "react-burger-menu"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
 import { device } from "../../utils/breakpoints"
 import config from "../../../data/config"
@@ -55,6 +57,10 @@ const BurgerLink = styled(Link)`
   &:hover {
     border-bottom: 2px solid black;
   }
+`
+
+const Fa = styled(FontAwesomeIcon)`
+  color: var(--text-dark);
 `
 
 const BurgerLinkA = styled(BurgerLink)``
@@ -174,7 +180,7 @@ const Topbar = ({ title, email }) => {
               rel="noopener noreferrer"
               onClick={handleClick}
             >
-              Blog
+              Blog <Fa icon={faExternalLinkAlt} size="sm" />
             </BurgerLinkA>
             <BurgerLinkA
               as="a"
