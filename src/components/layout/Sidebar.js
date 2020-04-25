@@ -111,7 +111,7 @@ const Sidebar = ({ title, email }) => {
           <Link to="/portfolio">Portfolio</Link>
         </li>
         <li>
-          <Link to="/accolades ">Accolades</Link>
+          <Link to="/featured ">Featured</Link>
         </li>
         <li>
           <a

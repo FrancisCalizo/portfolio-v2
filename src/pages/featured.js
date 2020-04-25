@@ -6,7 +6,7 @@ import config from "../../data/config"
 import SEO from "../components/Seo"
 import Layout from "../components/layout/Layout"
 
-const AccoladesContainer = styled.div`
+const FeaturedContainer = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -52,18 +52,18 @@ const AccoladesContainer = styled.div`
 const Accomplishments = () => {
   return (
     <Layout>
-      <SEO title="Accolades" />
-      <AccoladesContainer>
+      <SEO title="Featured" />
+      <FeaturedContainer>
         <div>
           <h1>
             <span>
-              // <span>Accolades</span>
+              // <span>Featured</span>
             </span>
-            <span>{config.accolades.header}</span>
+            <span>{config.featured.header}</span>
           </h1>
-          <p>{config.accolades.description}</p>
+          <p>{config.featured.description}</p>
         </div>
-      </AccoladesContainer>
+      </FeaturedContainer>
     </Layout>
   )
 }

@@ -164,12 +164,12 @@ const Topbar = ({ title, email }) => {
               Portfolio
             </BurgerLink>
             <BurgerLink
-              id="accolades"
+              id="featured"
               className="menu-item"
-              to="/accolades"
+              to="/featured"
               onClick={handleClick}
             >
-              Accolades
+              Featured
             </BurgerLink>
             <BurgerLinkA
               as="a"
