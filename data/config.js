@@ -28,7 +28,7 @@ module.exports = {
       {
         title: "May 2019 Issue - Spotlight",
         description:
-          'Interview article in the "Snapshot" section of the IBM Power Systems Magazine May 2019 issue, recognizing accomplished users of the IBM Power System server.',
+          'Interview article in the "Snapshot" section of the IBM Power Systems Magazine May 2019 issue, recognizing diligent and accomplished users of the IBM Power System server.',
         url:
           "http://www.ibmsystemsmagpowersystemsdigital.com/nxtbooks/ibmsystemsmag/ibmsystems_power_201905/index.php?startid=48#/p/48",
       },
