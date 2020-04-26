@@ -50,6 +50,45 @@ const FeaturedContainer = styled.div`
       font-size: 20px;
     }
   }
+
+  @media ${device.minMd} and ${device.maxLg} {
+    & div {
+      & h1 {
+        & span:nth-child(1) {
+          font-size: calc(18px + (6) * ((100vw - 768px) / (1024 - 768)));
+        }
+        & span:nth-child(2) {
+          font-size: calc(28px + (6) * ((100vw - 768px) / (1024 - 768)));
+        }
+      }
+
+      & p {
+        font-size: calc(16px + (4) * ((100vw - 768px) / (1024 - 768)));
+      }
+    }
+  }
+
+  @media ${device.maxMd}{
+    min-height: 0;
+    text-align: center;
+    margin: 5rem auto;
+    padding: 0 2rem;
+
+    & div {
+      & h1 {
+        & span:nth-child(1) {
+          font-size: calc(18px + (6) * ((100vw - 330px) / (768 - 330)));
+        }
+        & span:nth-child(2) {
+          font-size: calc(28px + (6) * ((100vw - 330px) / (768 - 330)));
+        }
+      }
+
+      & p {
+        font-size: calc(14px + (6) * ((100vw - 330px) / (768 - 330)));
+      }
+    }
+  }
 `
 
 const Accomplishments = () => {
@@ -61,9 +100,9 @@ const Accomplishments = () => {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 300, quality: 100) {
+              fixed(width: 180, quality: 100) {
                 originalName
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFixed
               }
             }
           }

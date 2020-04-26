@@ -61,7 +61,7 @@ const SkillsContainer = styled.div`
       }
 
       & p {
-        font-size: calc(12px + (6) * ((100vw - 768px) / (1024 - 768)));
+        font-size: calc(16px + (4) * ((100vw - 768px) / (1024 - 768)));
       }
     }
   }
