@@ -26,14 +26,14 @@ module.exports = {
       "I've had the honor of being interviewed and featured in multiple issues of IBM Power Systems Magazine as a software developer.",
     articles: [
       {
-        title: "May 2019 Issue - Spotlight",
+        title: "05/2019 Issue - Spotlight",
         description:
           'Interview article in the "Snapshot" section of the IBM Power Systems Magazine May 2019 issue, recognizing diligent and accomplished users of the IBM Power System server.',
         url:
           "http://www.ibmsystemsmagpowersystemsdigital.com/nxtbooks/ibmsystemsmag/ibmsystems_power_201905/index.php?startid=48#/p/48",
       },
       {
-        title: "November 2018 Issue - Fresh Faces",
+        title: "11/2018 Issue - Fresh Faces",
         description:
           'Featured in the "Fresh Faces" section of the IBM Power Systems Magazine issue November 2018 , which showcases "innovators who help their organizations succeed"',
         url:
