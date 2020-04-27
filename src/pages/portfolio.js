@@ -6,6 +6,8 @@ import config from "../../data/config"
 import SEO from "../components/Seo"
 import Layout from "../components/layout/Layout"
 
+import fsu from "../images/portfolio/fsu-portfolio.png"
+
 const PortfolioContainer = styled.div`
   min-height: 100vh;
   display: flex;
@@ -63,6 +65,7 @@ const Portfolio = () => {
           </h1>
           <p>{config.portfolio.description}</p>
         </div>
+        <img src={fsu} alt="yeet" style={{ width: "500px" }} />
       </PortfolioContainer>
     </Layout>
   )
