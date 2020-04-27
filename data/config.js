@@ -37,9 +37,9 @@ module.exports = {
     ],
   },
   portfolio: {
-    header: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    header: "Selected Projects",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, iusto, quo id mollitia, explicabo modi error aspernatur at nobis eius sequi officia maiores fugit dolorem quam beatae ut maxime illum?",
+      "A select group of projects I've created, from personal websites to data visualizations and single page web applications. ",
     projects: [
       {
         title: "Did FSU Win?",

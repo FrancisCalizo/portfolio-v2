@@ -1,5 +1,4 @@
 import React from "react"
-import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -7,8 +6,7 @@ import { device } from "../utils/breakpoints"
 import config from "../../data/config"
 import SEO from "../components/Seo"
 import Layout from "../components/layout/Layout"
-
-// import fsu from "../images/portfolio/fsu.png"
+import PortfolioCard from "../components/portfolio/PortfolioCard"
 
 const PortfolioContainer = styled.div`
   min-height: 100vh;
@@ -72,9 +70,6 @@ const Portfolio = () => {
       }
     }
   `)
-
-  console.log(data.portfolioImages)
-
   return (
     <Layout>
       <SEO title="Portfolio" />
@@ -88,11 +83,15 @@ const Portfolio = () => {
           </h1>
           <p>{config.portfolio.description}</p>
         </div>
-        <Img
-          fluid={data.portfolioImages.edges[0].node.childImageSharp.fluid}
-          alt={data.portfolioImages.edges[0].node.childImageSharp.originalName}
-        />
-        {/* <img src={fsu} alt="yeet" style={{ width: "500px" }} /> */}
+        <div>
+          {config.portfolio.projects.map((project, idx) => (
+            <PortfolioCard
+              key={idx}
+              project={project}
+              portfolioImages={data.portfolioImages.edges}
+            />
+          ))}
+        </div>
       </PortfolioContainer>
     </Layout>
   )

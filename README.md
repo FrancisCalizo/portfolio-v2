@@ -111,3 +111,5 @@ Fluid Typography - https://css-tricks.com/snippets/css/fluid-typography/
 Extending Styles in Styled Components for Two Button on Home page - https://styled-components.com/docs/basics#adapting-based-on-props
 
 Stop Border on Hover from Pushing other Elements Around it - https://stackoverflow.com/questions/18887058/css-hover-creating-border-but-pushing-content
+
+React Proptypes Array (Shape) - https://til.hashrocket.com/posts/ytrzhrpfxk-proptypes-array-of-shape
