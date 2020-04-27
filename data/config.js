@@ -15,11 +15,6 @@ module.exports = {
     description:
       "Equipped with the skills to create intuitive, dynamic user experiences. I have a serious passion for frontend architecture. My skill set includes, but is not limited to:",
   },
-  portfolio: {
-    header: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, iusto, quo id mollitia, explicabo modi error aspernatur at nobis eius sequi officia maiores fugit dolorem quam beatae ut maxime illum?",
-  },
   featured: {
     header: "In IBM Power Systems Magazine.",
     description:
@@ -38,6 +33,31 @@ module.exports = {
           'Featured in the "Fresh Faces" section of the IBM Power Systems Magazine issue November 2018 , which showcases "innovators who help their organizations succeed"',
         url:
           "http://www.ibmsystemsmagpowersystemsdigital.com/nxtbooks/ibmsystemsmag/ibmsystems_fresh_faces/index.php#/p/42",
+      },
+    ],
+  },
+  portfolio: {
+    header: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, iusto, quo id mollitia, explicabo modi error aspernatur at nobis eius sequi officia maiores fugit dolorem quam beatae ut maxime illum?",
+    projects: [
+      {
+        title: "Did FSU Win?",
+        description:
+          "A web app visualizing data and statistics regarding the FSU Football Team. Has the ability to view a countdown to the Noles' next football game, recent game updates, as well as schedule and roster information by year. View box scores, game stats, and play-by-play information for each game played.",
+        img: "fsu.png",
+        url: "https://www.didfsu.win/",
+        github: "https://github.com/FrancisCalizo/did-florida-state-win",
+        tech: ["React.js", "Tailwind CSS", "College Football API"],
+      },
+      {
+        title: "The Covid-19 Report",
+        description:
+          "A graphical report on coronavirus (COVID-19) cases, with ability to filter by country or by US state. Uses graphs and charts to display confirmed cases, deaths, and recoveries based on chosen country/state.",
+        img: "covid.png",
+        url: "https://thecovidreport.netlify.app/",
+        github: "https://github.com/FrancisCalizo/covid-19",
+        tech: ["Gatsby.js", "Chart.js", "Tailwind CSS", "COVID-19 API"],
       },
     ],
   },

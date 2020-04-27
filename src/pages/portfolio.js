@@ -1,4 +1,6 @@
 import React from "react"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import { device } from "../utils/breakpoints"
@@ -6,7 +8,7 @@ import config from "../../data/config"
 import SEO from "../components/Seo"
 import Layout from "../components/layout/Layout"
 
-import fsu from "../images/portfolio/fsu-portfolio.png"
+// import fsu from "../images/portfolio/fsu.png"
 
 const PortfolioContainer = styled.div`
   min-height: 100vh;
@@ -52,6 +54,27 @@ const PortfolioContainer = styled.div`
 `
 
 const Portfolio = () => {
+  const data = useStaticQuery(graphql`
+    query portfolioImageQuery {
+      portfolioImages: allFile(
+        filter: { relativeDirectory: { eq: "portfolio" } }
+      ) {
+        edges {
+          node {
+            childImageSharp {
+              fluid(maxWidth: 700, quality: 100) {
+                originalName
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  console.log(data.portfolioImages)
+
   return (
     <Layout>
       <SEO title="Portfolio" />
@@ -65,7 +88,11 @@ const Portfolio = () => {
           </h1>
           <p>{config.portfolio.description}</p>
         </div>
-        <img src={fsu} alt="yeet" style={{ width: "500px" }} />
+        <Img
+          fluid={data.portfolioImages.edges[0].node.childImageSharp.fluid}
+          alt={data.portfolioImages.edges[0].node.childImageSharp.originalName}
+        />
+        {/* <img src={fsu} alt="yeet" style={{ width: "500px" }} /> */}
       </PortfolioContainer>
     </Layout>
   )
