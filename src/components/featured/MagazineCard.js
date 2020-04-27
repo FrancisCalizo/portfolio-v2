@@ -69,10 +69,33 @@ const MagazineCardContainer = styled.div`
       }
     }
   }
+
+  @media ${device.maxSm}{
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin: 5rem 0.5rem 2rem;
+
+    & > div:nth-child(2) {
+      margin: -4rem 0.5rem 1.5rem;
+
+      & h2 {
+        font-size: calc(16px + (4) * ((100vw - 320px) / (425 - 320)));
+      }
+
+      & p {
+        font-size: calc(12px + (4) * ((100vw - 320px) / (425 - 320)));
+      }
+    }
+  }
 `
 const Image = styled(Img)`
   transform: translate(-50px, -50px);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4), 0 4px 8px 0 rgba(0, 0, 0, 0.22);
+
+  @media ${device.maxSm} {
+    transform: translateY(-50px);
+  }
 `
 
 const MagazineCard = ({ articles, index, magazine }) => {
