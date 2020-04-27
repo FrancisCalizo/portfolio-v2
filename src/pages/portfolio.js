@@ -70,6 +70,7 @@ const Portfolio = () => {
       }
     }
   `)
+
   return (
     <Layout>
       <SEO title="Portfolio" />
@@ -84,13 +85,19 @@ const Portfolio = () => {
           <p>{config.portfolio.description}</p>
         </div>
         <div>
-          {config.portfolio.projects.map((project, idx) => (
-            <PortfolioCard
-              key={idx}
-              project={project}
-              portfolioImages={data.portfolioImages.edges}
-            />
-          ))}
+          {config.portfolio.projects.map((project, idx) => {
+            const image = data.portfolioImages.edges.filter(img => {
+              return img.node.childImageSharp.fluid.originalName === project.img
+            })
+            const portfolioImage = image[0].node.childImageSharp.fluid
+            return (
+              <PortfolioCard
+                key={idx}
+                project={project}
+                portfolioImage={portfolioImage}
+              />
+            )
+          })}
         </div>
       </PortfolioContainer>
     </Layout>

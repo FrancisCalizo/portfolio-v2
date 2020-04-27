@@ -8,8 +8,8 @@ import config from "../../../data/config"
 
 const PortfolioCardContainer = styled.div``
 
-const PortfolioCard = ({ project, portfolioImages }) => {
-  console.log(portfolioImages[0].node.childImageSharp.fluid.originalname)
+const PortfolioCard = ({ project, portfolioImage }) => {
+  console.log(portfolioImage)
   return (
     <PortfolioCardContainer>
       <div>
@@ -17,10 +17,7 @@ const PortfolioCard = ({ project, portfolioImages }) => {
         <p>{project.description}</p>
       </div>
       <div>
-        {/* <Img
-          fluid={data.portfolioImages.edges[0].node.childImageSharp.fluid}
-          alt={data.portfolioImages.edges[0].node.childImageSharp.originalName}
-        /> */}
+        <Img fluid={portfolioImage} alt={portfolioImage.originalName} />
       </div>
     </PortfolioCardContainer>
   )
@@ -28,7 +25,7 @@ const PortfolioCard = ({ project, portfolioImages }) => {
 
 PortfolioCard.propTypes = {
   project: PropTypes.object.isRequired,
-  portfolioImages: PropTypes.arrayOf(
+  portfolioImage: PropTypes.arrayOf(
     PropTypes.shape({
       node: PropTypes.object,
     })
