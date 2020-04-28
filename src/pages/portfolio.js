@@ -75,6 +75,8 @@ const PortfolioContainer = styled.div`
     padding: 0 2rem;
 
     & > div:nth-child(1) {
+      max-width: none;
+
       & h1 {
         & span:nth-child(1) {
           font-size: calc(18px + (6) * ((100vw - 330px) / (768 - 330)));
@@ -93,10 +95,13 @@ const PortfolioContainer = styled.div`
 
 const Line = styled.hr`
   width: 40px;
-  text-align: left;
   border: 1px solid white;
   margin: 5rem 0 0;
   margin-left: 0;
+
+  @media ${device.maxMd} {
+    margin: 5rem auto 0;
+  }
 `
 
 const Portfolio = () => {

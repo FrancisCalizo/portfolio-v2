@@ -74,6 +74,8 @@ const SkillsContainer = styled.div`
     padding: 0 2rem;
 
     & div {
+      max-width: none;
+
       & h1 {
         & span:nth-child(1) {
           font-size: calc(18px + (6) * ((100vw - 330px) / (768 - 330)));

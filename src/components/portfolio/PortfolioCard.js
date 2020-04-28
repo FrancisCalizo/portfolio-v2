@@ -9,7 +9,12 @@ import config from "../../../data/config"
 
 const PortfolioCardContainer = styled.div`
   display: flex;
-  margin: 7rem 0;
+  margin: 4rem 0;
+
+  @media ${device.minMd} and ${device.maxLg} {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
 `
 
 const CaptionContainer = styled.div`
@@ -30,6 +35,14 @@ const CaptionContainer = styled.div`
       font-size: calc(22px + (4) * ((100vw - 1024px) / (1498 - 1024)));
     }
   }
+
+  @media ${device.minMd} and ${device.maxLg} {
+    flex-basis: 100%;
+
+    h2 {
+      font-size: calc(22px + (4) * ((100vw - 768px) / (1024 - 768)));
+    }
+  }
 `
 const Description = styled.p`
   color: var(--text-gray);
@@ -39,6 +52,10 @@ const Description = styled.p`
 
   @media ${device.minLg} and ${device.maxXl}{
       font-size: calc(16px + (2) * ((100vw - 1024px) / (1498 - 1024)));
+  }
+
+  @media ${device.minMd} and ${device.maxLg} {
+    font-size: calc(16px + (4) * ((100vw - 768px) / (1024 - 768)));
   }
 `
 
@@ -58,7 +75,7 @@ const Tech = styled.p`
 
     @media ${device.minLg} and ${device.maxXl}{
       font-size: calc(11px + (1) * ((100vw - 1024px) / (1498 - 1024)));
-  }
+    }
   }
 
 `
@@ -102,7 +119,10 @@ const SourceButton = styled(SiteButton)`
 
   &:hover {
     background: ${lighten(0.1, config.colors.salmon)};
-    color: white;
+
+    a {
+      color: white;
+    }
   }
 `
 
@@ -112,6 +132,12 @@ const ImgContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 1.5rem;
+
+  @media ${device.minMd} and ${device.maxLg} {
+    flex-basis: 100%;
+    width: 100%;
+    padding-left: 0;
+  }
 `
 
 const PortfolioCard = ({ project, portfolioImage }) => {
