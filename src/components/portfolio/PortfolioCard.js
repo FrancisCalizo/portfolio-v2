@@ -15,6 +15,11 @@ const PortfolioCardContainer = styled.div`
     flex-wrap: wrap;
     flex-direction: column-reverse;
   }
+
+  @media ${device.maxMd} {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
 `
 
 const CaptionContainer = styled.div`
@@ -43,6 +48,12 @@ const CaptionContainer = styled.div`
       font-size: calc(22px + (4) * ((100vw - 768px) / (1024 - 768)));
     }
   }
+
+  @media ${device.maxMd} {
+    h2 {
+      font-size: calc(20px + (2) * ((100vw - 330px) / (768 - 330)));
+    }
+  }
 `
 const Description = styled.p`
   color: var(--text-gray);
@@ -56,6 +67,11 @@ const Description = styled.p`
 
   @media ${device.minMd} and ${device.maxLg} {
     font-size: calc(16px + (4) * ((100vw - 768px) / (1024 - 768)));
+  }
+
+  @media ${device.maxMd}{
+    font-size: calc(14px + (4) * ((100vw - 330px) / (768 - 330)));
+    padding: 0;
   }
 `
 
@@ -75,6 +91,10 @@ const Tech = styled.p`
 
     @media ${device.minLg} and ${device.maxXl}{
       font-size: calc(11px + (1) * ((100vw - 1024px) / (1498 - 1024)));
+    }
+
+    @media ${device.maxMd}{
+      font-size: calc(10px + (2) * ((100vw - 330px) / (768 - 330)));
     }
   }
 
@@ -107,7 +127,13 @@ const SiteButton = styled.button`
     font-size: calc(10px + (3) * ((100vw - 1024px) / (1498 - 1024)));
     padding: calc(7px + (3) * ((100vw - 1024px) / (1498 - 1024))) calc(8px + (8) * ((100vw - 1024px) / (1498 - 1024)));
     margin-right: calc(12px + (9) * ((100vw - 1024px) / (1498 - 1024)))
-}
+  }
+
+  @media ${device.maxMd}{
+    display: block;
+    margin: 1rem auto;
+    font-size: calc(11px + (2) * ((100vw - 330px) / (768 - 330)));
+  }
 `
 
 const SourceButton = styled(SiteButton)`
@@ -137,6 +163,12 @@ const ImgContainer = styled.div`
     flex-basis: 100%;
     width: 100%;
     padding-left: 0;
+  }
+
+  @media ${device.maxMd}{
+    flex-basis: 100%;
+    width: 100%;
+    padding: 0;
   }
 `
 
