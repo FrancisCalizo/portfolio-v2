@@ -21,8 +21,14 @@ const CaptionContainer = styled.div`
     color: var(--text-dark);
     line-height: 1.4;
     margin: 1.5rem 0 0;
-    font-size: 24px;
+    font-size: 26px;
     border-bottom: 2px solid var(--salmon);
+  }
+
+  @media ${device.minLg} and ${device.maxXl}{
+    h2 {
+      font-size: calc(22px + (4) * ((100vw - 1024px) / (1498 - 1024)));
+    }
   }
 `
 const Description = styled.p`
@@ -30,19 +36,31 @@ const Description = styled.p`
   margin: 0;
   font-size: 18px;
   padding-right: 1rem;
+
+  @media ${device.minLg} and ${device.maxXl}{
+      font-size: calc(16px + (2) * ((100vw - 1024px) / (1498 - 1024)));
+  }
 `
 
 const Tech = styled.p`
-  margin: 0.8rem 0 1rem;
+  margin: 0.4rem 0 1rem;
 
   span {
+    display: inline-block;
     background: var(--text-dark);
     color: #fff;
     font-size: 12px;
     padding: 0.35rem 0.75rem;
-    margin-right: 0.3rem;
+    margin: 0.4rem 0.3rem 0.2rem 0;
     border-radius: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid var(--text-gray);
+
+    @media ${device.minLg} and ${device.maxXl}{
+      font-size: calc(11px + (1) * ((100vw - 1024px) / (1498 - 1024)));
   }
+  }
+
 `
 
 const SiteButton = styled.button`
@@ -67,6 +85,12 @@ const SiteButton = styled.button`
     background: ${lighten(0.1, config.colors.salmon)};
     cursor: pointer;
   }
+
+  @media ${device.minLg} and ${device.maxXl}{
+    font-size: calc(10px + (3) * ((100vw - 1024px) / (1498 - 1024)));
+    padding: calc(7px + (3) * ((100vw - 1024px) / (1498 - 1024))) calc(8px + (8) * ((100vw - 1024px) / (1498 - 1024)));
+    margin-right: calc(12px + (9) * ((100vw - 1024px) / (1498 - 1024)))
+}
 `
 
 const SourceButton = styled(SiteButton)`

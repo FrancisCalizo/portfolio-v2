@@ -44,7 +44,7 @@ module.exports = {
       {
         title: "Did FSU Win?",
         description:
-          "A web app visualizing stats and data of the FSU football team. View a countdown to the Noles' next game, recent game updates, as well as schedule and roster information by year. Observe box scores, game stats, and play-by-play information for each game played.",
+          "A web app visualizing stats and data of the FSU football team. View a countdown to the Noles' next game, recent game updates, as well as schedule and roster information by year. Observe box scores, game stats, and play-by-play information for each game.",
         img: "fsu.png",
         url: "https://www.didfsu.win/",
         github: "https://github.com/FrancisCalizo/did-florida-state-win",
@@ -53,7 +53,7 @@ module.exports = {
       {
         title: "The Covid-19 Report",
         description:
-          "A graphical report on coronavirus (COVID-19) cases, with ability to filter by country or by US state. Uses graphs and charts to display confirmed cases, deaths, and recoveries based on chosen country/state.",
+          "A graphical report on coronavirus (COVID-19) cases, with ability to filter by country or by US state. Graphs and charts are used to visualize confirmed cases, deaths, and recoveries based on the chosen country/state.",
         img: "covid.png",
         url: "https://thecovidreport.netlify.app/",
         github: "https://github.com/FrancisCalizo/covid-19",
@@ -62,7 +62,7 @@ module.exports = {
       {
         title: "Save The Date!",
         description:
-          "Official wedding website created for myself and my future wife-to-be. A single page application designed with my own creative taste, using Gatsby.js and styled components.",
+          "Official wedding website created for my future wife-to-be and myself. A single page application designed to my own creative taste, using Gatsby.js and styled components.",
         img: "wedding.png",
         url: "https://francisandcherrie.netlify.app/",
         github: "https://github.com/FrancisCalizo/cherrie-tickles-her-francy",
@@ -71,7 +71,7 @@ module.exports = {
       {
         title: "Portfolio-v2",
         description:
-          "The very site you are currently looking at. A single page application showcasing my projects, qualifications, and expertise as a software developer.",
+          "The very site you are currently looking at. A component-based SPA showcasing my projects, qualifications, and expertise as a software developer.",
         img: "portfolio.png",
         url: "https://franciscalizo.com/",
         github: "https://github.com/FrancisCalizo/portfolio-v2",
@@ -87,9 +87,9 @@ module.exports = {
         tech: ["Gatsby.js", "GraphQL"],
       },
       {
-        title: "NPMJS Clone",
+        title: "NPM Clone",
         description:
-          "Back to basics. A comprehensive understanding of the fundamentals has always been pertinent to my success as a developer. An exact clone of the NPM.js website made purely in HTML/CSS. ",
+          "Back to the basics. An exact clone of the NPM.js landing page made purely in HTML/CSS. A comprehensive understanding of the fundamentals has always been pertinent to my success as a developer.",
         img: "npm.png",
         url: "http://npm-clone.netlify.com",
         github: "https://github.com/FrancisCalizo/npm-clone",

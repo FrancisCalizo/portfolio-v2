@@ -5,8 +5,8 @@ export const size = {
   maxMd: "768px",
   minLg: "1025px",
   maxLg: "1024px",
-  minXl: "1441px",
-  maxXl: "1440px",
+  minXl: "1499px",
+  maxXl: "1498px",
 }
 
 export const device = {
