@@ -59,6 +59,42 @@ module.exports = {
         github: "https://github.com/FrancisCalizo/covid-19",
         tech: ["Gatsby.js", "Chart.js", "Tailwind CSS", "COVID-19 API"],
       },
+      {
+        title: "Save The Date!",
+        description:
+          "Official wedding website created for myself and my future wife-to-be. A single page application designed with my own creative taste, using Gatsby.js and styled components.",
+        img: "wedding.png",
+        url: "https://francisandcherrie.netlify.app/",
+        github: "https://github.com/FrancisCalizo/cherrie-tickles-her-francy",
+        tech: ["Gatsby.js", "Styled Components", "GraphQL"],
+      },
+      {
+        title: "Portfolio-v2",
+        description:
+          "The very site you are currently looking at. A single page application showcasing my projects, qualifications, and expertise as a software developer.",
+        img: "portfolio.png",
+        url: "https://franciscalizo.com/",
+        github: "https://github.com/FrancisCalizo/portfolio-v2",
+        tech: ["Gatsby.js", "Styled Components", "GraphQL"],
+      },
+      {
+        title: "Ohyoufrancybruh",
+        description:
+          "My personal blog. A simplistic look at what goes on in my mind; my personal slice of the internet. Made with a basic Gatsbyjs starter theme and tweaked to my liking.",
+        img: "blog.png",
+        url: "https://ohyoufrancybruh.com/",
+        github: "https://github.com/FrancisCalizo/ohyoufrancybruh",
+        tech: ["Gatsby.js", "GraphQL"],
+      },
+      {
+        title: "NPMJS Clone",
+        description:
+          "Back to basics. A comprehensive understanding of the fundamentals always been important to my success as a developer. An exact clone of the NPM.js website made purely in HTML/CSS. ",
+        img: "npm.png",
+        url: "http://npm-clone.netlify.com",
+        github: "https://github.com/FrancisCalizo/npm-clone",
+        tech: ["HTML", "CSS"],
+      },
     ],
   },
   colors: {
