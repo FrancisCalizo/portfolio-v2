@@ -14,8 +14,9 @@ const PortfolioContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 5rem;
+  margin: 12rem 0 8rem;
 
-  & div {
+  & > div:nth-child(1) {
     max-width: 600px;
 
     & > h1 {
@@ -49,6 +50,53 @@ const PortfolioContainer = styled.div`
       font-size: 20px;
     }
   }
+
+  @media ${device.minMd} and ${device.maxLg} {
+    & > div:nth-child(1) {
+      & h1 {
+        & span:nth-child(1) {
+          font-size: calc(18px + (6) * ((100vw - 768px) / (1024 - 768)));
+        }
+        & span:nth-child(2) {
+          font-size: calc(28px + (6) * ((100vw - 768px) / (1024 - 768)));
+        }
+      }
+
+      & p {
+        font-size: calc(16px + (4) * ((100vw - 768px) / (1024 - 768)));
+      }
+    }
+  }
+
+  @media ${device.maxMd}{
+    min-height: 0;
+    text-align: center;
+    margin: 5rem auto;
+    padding: 0 2rem;
+
+    & > div:nth-child(1) {
+      & h1 {
+        & span:nth-child(1) {
+          font-size: calc(18px + (6) * ((100vw - 330px) / (768 - 330)));
+        }
+        & span:nth-child(2) {
+          font-size: calc(28px + (6) * ((100vw - 330px) / (768 - 330)));
+        }
+      }
+
+      & p {
+        font-size: calc(14px + (6) * ((100vw - 330px) / (768 - 330)));
+      }
+    }
+  }
+`
+
+const Line = styled.hr`
+  width: 40px;
+  text-align: left;
+  border: 1px solid white;
+  margin: 5rem 0 0;
+  margin-left: 0;
 `
 
 const Portfolio = () => {
@@ -83,6 +131,7 @@ const Portfolio = () => {
             <span>{config.portfolio.header}</span>
           </h1>
           <p>{config.portfolio.description}</p>
+          <Line />
         </div>
         <div>
           {config.portfolio.projects.map((project, idx) => {

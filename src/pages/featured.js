@@ -90,6 +90,13 @@ const FeaturedContainer = styled.div`
     }
   }
 `
+const Line = styled.hr`
+  width: 40px;
+  text-align: left;
+  border: 1px solid white;
+  margin: 2.5rem 0;
+  margin-left: 0;
+`
 
 const Accomplishments = () => {
   const data = useStaticQuery(graphql`
@@ -123,6 +130,7 @@ const Accomplishments = () => {
             <span>{config.featured.header}</span>
           </h1>
           <p>{config.featured.description}</p>
+          <Line />
         </div>
         <div>
           {config.featured.articles.map((article, idx) => (

@@ -8,11 +8,12 @@ import Layout from "../components/layout/Layout"
 import SkillsIcons from "../components/skills/SkillsIcons"
 
 const SkillsContainer = styled.div`
-  min-height: 100vh;
+  // min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 5rem;
+  margin: 12rem 0 8rem;
 
   & div {
     max-width: 600px;

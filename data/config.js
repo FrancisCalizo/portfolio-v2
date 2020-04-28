@@ -44,7 +44,7 @@ module.exports = {
       {
         title: "Did FSU Win?",
         description:
-          "A web app visualizing data and statistics regarding the FSU Football Team. Has the ability to view a countdown to the Noles' next football game, recent game updates, as well as schedule and roster information by year. View box scores, game stats, and play-by-play information for each game played.",
+          "A web app visualizing stats and data of the FSU football team. View a countdown to the Noles' next game, recent game updates, as well as schedule and roster information by year. Observe box scores, game stats, and play-by-play information for each game played.",
         img: "fsu.png",
         url: "https://www.didfsu.win/",
         github: "https://github.com/FrancisCalizo/did-florida-state-win",
@@ -89,7 +89,7 @@ module.exports = {
       {
         title: "NPMJS Clone",
         description:
-          "Back to basics. A comprehensive understanding of the fundamentals always been important to my success as a developer. An exact clone of the NPM.js website made purely in HTML/CSS. ",
+          "Back to basics. A comprehensive understanding of the fundamentals has always been pertinent to my success as a developer. An exact clone of the NPM.js website made purely in HTML/CSS. ",
         img: "npm.png",
         url: "http://npm-clone.netlify.com",
         github: "https://github.com/FrancisCalizo/npm-clone",
