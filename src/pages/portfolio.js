@@ -86,10 +86,10 @@ const Portfolio = () => {
         </div>
         <div>
           {config.portfolio.projects.map((project, idx) => {
-            const image = data.portfolioImages.edges.filter(img => {
+            const [image] = data.portfolioImages.edges.filter(img => {
               return img.node.childImageSharp.fluid.originalName === project.img
             })
-            const portfolioImage = image[0].node.childImageSharp.fluid
+            const portfolioImage = image.node.childImageSharp.fluid
             return (
               <PortfolioCard
                 key={idx}

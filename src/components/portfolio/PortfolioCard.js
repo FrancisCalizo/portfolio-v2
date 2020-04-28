@@ -9,7 +9,6 @@ import config from "../../../data/config"
 const PortfolioCardContainer = styled.div``
 
 const PortfolioCard = ({ project, portfolioImage }) => {
-  console.log(portfolioImage)
   return (
     <PortfolioCardContainer>
       <div>
@@ -24,12 +23,22 @@ const PortfolioCard = ({ project, portfolioImage }) => {
 }
 
 PortfolioCard.propTypes = {
-  project: PropTypes.object.isRequired,
-  portfolioImage: PropTypes.arrayOf(
-    PropTypes.shape({
-      node: PropTypes.object,
-    })
-  ).isRequired,
+  project: PropTypes.shape({
+    description: PropTypes.string,
+    github: PropTypes.string,
+    img: PropTypes.string,
+    tech: PropTypes.arrayOf(PropTypes.string),
+    title: PropTypes.string,
+    url: PropTypes.string,
+  }).isRequired,
+  portfolioImage: PropTypes.shape({
+    aspectRatio: PropTypes.number,
+    base64: PropTypes.string,
+    originalName: PropTypes.string,
+    sizes: PropTypes.string,
+    src: PropTypes.string,
+    srcSet: PropTypes.string,
+  }).isRequired,
 }
 
 export default PortfolioCard
