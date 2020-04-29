@@ -86,9 +86,10 @@ const Fa = styled(FontAwesomeIcon)`
 `
 
 const Created = styled.p`
-  position: absolute;
-  bottom: 0;
+  // position: absolute;
+  // bottom: 0;
   margin: 0;
+  transform: translateY(25px);
   font-size: 12px;
   color: var(--text-gray);
 
@@ -149,17 +150,17 @@ const Sidebar = ({ title, email }) => {
         Questions? Comments? Concerns? Please don't hesitate to drop me a line
         at <a href={`mailto:${email}`}>{email}</a>
         <SocialBar />
+        <Created>
+          Built by <span>Francis Calizo</span> with{" "}
+          <a
+            href="https://gatsbyjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Gatsby.js
+          </a>
+        </Created>
       </div>
-      <Created>
-        Built by <span>Francis Calizo</span> with{" "}
-        <a
-          href="https://gatsbyjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Gatsby.js
-        </a>
-      </Created>
     </SidebarContainer>
   )
 }
