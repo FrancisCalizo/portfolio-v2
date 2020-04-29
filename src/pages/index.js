@@ -20,27 +20,27 @@ const HomeContainer = styled.div`
 
     & p:nth-child(1) {
       color: #fff;
-      font-size: 1.9rem;
+      font-size: 26px;
       font-weight: 300;
       letter-spacing: 1.1px;
 
       & span:nth-child(1) {
         border-bottom: 4px solid var(--salmon);
-        font-size: 2.2rem;
+        font-size: 30px;
         font-weight: 500;
       }
     }
 
     & h1 {
       color: var(--text-dark);
-      font-size: 2.75rem;
+      font-size: 38px;
       margin: 2rem 0;
       line-height: 1.4;
     }
 
     & p {
       color: var(--text-gray);
-      font-size: 1.5rem;
+      font-size: 21px;
       margin: 0;
     }
   }
@@ -52,19 +52,19 @@ const HomeContainer = styled.div`
   @media ${device.minMd} and ${device.maxLg}{
     & div {
       & p:nth-child(1){
-        font-size: 2.8vw;
+        font-size: calc(22px + (4) * ((100vw - 768px) / (1024 - 768)));
 
         & span:nth-child(1){
-          font-size: 3.2vw;
+          font-size: calc(26px + (4) * ((100vw - 768px) / (1024 - 768)));
         }
       }
 
       & h1 {
-        font-size: 3.5vw;
+        font-size: calc(32px + (6) * ((100vw - 768px) / (1024 - 768)));
       }
 
       & p {
-        font-size: 2vw;
+        font-size: calc(18px + (3) * ((100vw - 768px) / (1024 - 768)));
       }
     }
   }
@@ -76,19 +76,19 @@ const HomeContainer = styled.div`
       max-width: none;
 
       & p:nth-child(1){
-        font-size: min(max(16px, 4vw), 22px);
+        font-size: calc(18px + (4) * ((100vw - 320px) / (768 - 320)));
 
         & span:nth-child(1){
-          font-size: min(max(20px, 4vw), 26px);
+          font-size: calc(22px + (4) * ((100vw - 320px) / (768 - 320)));
         }
       }
 
       & h1 {
-        font-size: min(max(26px, 4vw), 34px);
+        font-size: calc(26px + (4) * ((100vw - 320px) / (768 - 320)));
       }
 
       & p {
-        font-size: min(max(14px, 3vw), 17px);
+        font-size: calc(14px + (3) * ((100vw - 320px) / (768 - 320)));
       }
     }
   }
@@ -129,12 +129,12 @@ const PortfolioButton = styled(Link)`
   }
 
   @media ${device.minMd} and ${device.maxLg}{
-    font-size: 1.4vw;
+    font-size: calc(12px + (2) * ((100vw - 768px) / (1024 - 768)));
     padding: 1.5vw 2vw;
   }
 
   @media ${device.maxMd}{
-    font-size: min(max(10px, 2vw), 12px);
+    font-size: calc(10px + (4) * ((100vw - 320px) / (768 - 320)));
     padding: 2.25vw 3.25vw;
   }
 `

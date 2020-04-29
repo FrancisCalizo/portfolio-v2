@@ -55,15 +55,15 @@ const PortfolioContainer = styled.div`
     & > div:nth-child(1) {
       & h1 {
         & span:nth-child(1) {
-          font-size: calc(18px + (6) * ((100vw - 768px) / (1024 - 768)));
+          font-size: calc(22px + (4) * ((100vw - 768px) / (1024 - 768)));
         }
         & span:nth-child(2) {
-          font-size: calc(28px + (6) * ((100vw - 768px) / (1024 - 768)));
+          font-size: calc(32px + (4) * ((100vw - 768px) / (1024 - 768)));
         }
       }
 
       & p {
-        font-size: calc(16px + (4) * ((100vw - 768px) / (1024 - 768)));
+        font-size: calc(18px + (3) * ((100vw - 768px) / (1024 - 768)));
       }
     }
   }
@@ -79,7 +79,7 @@ const PortfolioContainer = styled.div`
 
       & h1 {
         & span:nth-child(1) {
-          font-size: calc(18px + (6) * ((100vw - 330px) / (768 - 330)));
+          font-size: calc(24px + (2) * ((100vw - 330px) / (768 - 330)));
         }
         & span:nth-child(2) {
           font-size: calc(28px + (6) * ((100vw - 330px) / (768 - 330)));
