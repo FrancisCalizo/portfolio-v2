@@ -85,6 +85,23 @@ const Fa = styled(FontAwesomeIcon)`
   color: var(--text-gray);
 `
 
+const Created = styled.p`
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-gray);
+
+  span {
+    color: var(--text-dark);
+    font-weight: 500;
+  }
+
+  a:hover {
+    color: var(--salmon);
+  }
+`
+
 const Sidebar = ({ title, email }) => {
   return (
     <SidebarContainer>
@@ -133,6 +150,16 @@ const Sidebar = ({ title, email }) => {
         at <a href={`mailto:${email}`}>{email}</a>
         <SocialBar />
       </div>
+      <Created>
+        Built by <span>Francis Calizo</span> with{" "}
+        <a
+          href="https://gatsbyjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Gatsby.js
+        </a>
+      </Created>
     </SidebarContainer>
   )
 }

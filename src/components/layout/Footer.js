@@ -44,6 +44,25 @@ const SocialContainer = styled.div`
   }
 `
 
+const Created = styled.p`
+  font-size: 14px;
+  color: var(--text-gray);
+  margin: 2rem 0 0;
+
+  span {
+    color: var(--text-dark);
+    font-weight: 500;
+  }
+
+  & a:nth-child(2) {
+    border: none;
+  }
+
+  a:hover {
+    color: var(--salmon);
+  }
+`
+
 const Footer = ({ email }) => {
   return (
     <FooterContainer>
@@ -58,6 +77,16 @@ const Footer = ({ email }) => {
       <SocialContainer>
         <SocialBar email={email} />
       </SocialContainer>
+      <Created>
+        Built by <span>Francis Calizo</span> with
+        <a
+          href="https://gatsbyjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Gatsby.js
+        </a>
+      </Created>
     </FooterContainer>
   )
 }
