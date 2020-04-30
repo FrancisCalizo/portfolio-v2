@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { lighten, darken } from "polished"
+import { Transition } from "react-transition-group"
 
 import config from "../../data/config"
 import Layout from "../components/layout/Layout"
@@ -14,6 +15,8 @@ const HomeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 5rem;
+  opacity: ${props => (props.state === "entered" ? 1.0 : 0.0)};
+  transition: opacity 1s ease-in-out;
 
   & div {
     max-width: 600px;
@@ -141,38 +144,51 @@ const PortfolioButton = styled(Link)`
 
 const EmailButton = styled(PortfolioButton)``
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <HomeContainer>
-      <div>
-        <p>
-          // Hi, I'm <span>Francis</span>{" "}
-          <span role="img" aria-label="wave">
-            👋
-          </span>
-        </p>
-        <h1>{config.description}</h1>
-        <p>
-          {config.bio}
-          <span role="img" aria-label="flex">
-            💪
-          </span>
-        </p>
-      </div>
-      <div>
-        <PortfolioButton to="/portfolio">View my work</PortfolioButton>
-        <EmailButton
-          as="a"
-          href={`mailto:${config.email}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Get in touch
-        </EmailButton>
-      </div>
-    </HomeContainer>
-  </Layout>
-)
+const IndexPage = () => {
+  const [loadTrans, setLoadTrans] = useState(false)
+
+  useEffect(() => {
+    setLoadTrans(true)
+  }, [])
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Transition in={loadTrans} timeout={0}>
+        {state => (
+          <HomeContainer state={state}>
+            <div>
+              <p>
+                // Hi, I'm <span>Francis</span>{" "}
+                <span role="img" aria-label="wave">
+                  👋
+                </span>
+                {state}
+              </p>
+              <h1>{config.description}</h1>
+              <p>
+                {config.bio}
+                <span role="img" aria-label="flex">
+                  💪
+                </span>
+              </p>
+            </div>
+            <div>
+              <PortfolioButton to="/portfolio">View my work</PortfolioButton>
+              <EmailButton
+                as="a"
+                href={`mailto:${config.email}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get in touch
+              </EmailButton>
+            </div>
+          </HomeContainer>
+        )}
+      </Transition>
+    </Layout>
+  )
+}
 
 export default IndexPage
