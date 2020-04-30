@@ -161,6 +161,12 @@ const ImgContainer = styled.div`
   justify-content: center;
   padding: 0 1.5rem;
 
+  &:hover{
+    opacity: 0.8;
+    transform:scale(1.01);
+    transition: all 0.3s ease-in-out;
+  }
+
   @media ${device.minMd} and ${device.maxLg} {
     flex-basis: 100%;
     width: 100%;
@@ -197,11 +203,13 @@ const PortfolioCard = ({ project, portfolioImage }) => {
         </SourceButton>
       </CaptionContainer>
       <ImgContainer>
-        <Img
-          fluid={portfolioImage}
-          alt={portfolioImage.originalName}
-          style={{ width: "100%" }}
-        />
+        <a href={project.url} target="_blank" rel="noopener noreferrer">
+          <Img
+            fluid={portfolioImage}
+            alt={portfolioImage.originalName}
+            style={{ width: "100%" }}
+          />
+        </a>
       </ImgContainer>
     </PortfolioCardContainer>
   )

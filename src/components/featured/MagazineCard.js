@@ -21,8 +21,9 @@ const MagazineCardContainer = styled.div`
   margin: 5rem 0 5rem 50px;
 
   &:hover {
-    opacity: 0.7;
-    transition: opacity 0.2s ease-in-out;
+    opacity: 0.8;
+    transform:scale(1.015);
+    transition: all 0.2s ease-in-out;
   }
 
   & > div:nth-child(2) {

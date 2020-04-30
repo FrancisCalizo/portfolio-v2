@@ -19,7 +19,9 @@ const TopbarContainer = styled.div`
   font-size: 1.2rem;
   color: var(--text-dark);
   background: ${props => (props.isNavColored ? "#fff" : "transparent")};
-  transition: background 500ms ease-in-out;
+  border-bottom: ${props =>
+    props.isNavColored ? `3px solid ${config.colors.salmon}` : "none"};
+  transition: all 500ms ease-in-out;
 
   > div {
     display: flex;
@@ -159,7 +161,7 @@ const Topbar = ({ title, email }) => {
     <TopbarContainer isNavColored={isNavColored}>
       <div>
         <div>
-          Menu
+          <span>Menu</span>
           <Menu
             styles={menuStyles}
             onStateChange={getBurgerOpen}

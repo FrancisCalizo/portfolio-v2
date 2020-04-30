@@ -15,6 +15,11 @@ const SkillsIconsContainer = styled.div`
   }
 `
 const Skill = styled.div`
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+  }
+
   & div:nth-child(2) {
     display: flex;
     justify-content: center;
