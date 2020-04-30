@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
       <Topbar title={config.siteTitle} email={config.email} />
       <Sidebar title={config.siteTitle} email={config.email} />
       <UnderNav>
-        <MainContent>{children}</MainContent>
+        <MainContent>{children}</MainContent>}
         <Footer email={config.email} />
       </UnderNav>
     </div>

@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
+import { Transition } from "react-transition-group"
 
 import { device } from "../utils/breakpoints"
 import config from "../../data/config"
@@ -14,6 +15,8 @@ const SkillsContainer = styled.div`
   justify-content: center;
   padding: 0 5rem;
   margin: 12rem 0 8rem;
+  opacity: ${props => (props.state === "entered" ? 1.0 : 0.0)};
+  transition: opacity 0.3s ease-in;
 
   & div {
     max-width: 600px;
@@ -93,21 +96,31 @@ const SkillsContainer = styled.div`
 `
 
 const Skills = () => {
+  const [loadTrans, setLoadTrans] = useState(false)
+
+  useEffect(() => {
+    setLoadTrans(true)
+  }, [])
+
   return (
     <Layout>
       <SEO title="Skills" />
-      <SkillsContainer>
-        <div>
-          <h1>
-            <span>
-              // <span>Skills</span>
-            </span>
-            <span>{config.skills.header}</span>
-          </h1>
-          <p>{config.skills.description}</p>
-          <SkillsIcons />
-        </div>
-      </SkillsContainer>
+      <Transition in={loadTrans} timeout={0}>
+        {state => (
+          <SkillsContainer state={state}>
+            <div>
+              <h1>
+                <span>
+                  // <span>Skills</span>
+                </span>
+                <span>{config.skills.header}</span>
+              </h1>
+              <p>{config.skills.description}</p>
+              <SkillsIcons />
+            </div>
+          </SkillsContainer>
+        )}
+      </Transition>
     </Layout>
   )
 }

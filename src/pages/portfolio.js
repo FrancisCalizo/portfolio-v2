@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import { Transition } from "react-transition-group"
 
 import { device } from "../utils/breakpoints"
 import config from "../../data/config"
@@ -15,6 +16,8 @@ const PortfolioContainer = styled.div`
   justify-content: center;
   padding: 0 5rem;
   margin: 12rem 0 8rem;
+  opacity: ${props => (props.state === "entered" ? 1.0 : 0.0)};
+  transition: opacity 0.3s ease-in;
 
   & > div:nth-child(1) {
     max-width: 600px;
@@ -124,36 +127,48 @@ const Portfolio = () => {
     }
   `)
 
+  const [loadTrans, setLoadTrans] = useState(false)
+
+  useEffect(() => {
+    setLoadTrans(true)
+  }, [])
+
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <PortfolioContainer>
-        <div>
-          <h1>
-            <span>
-              // <span>Portfolio</span>
-            </span>
-            <span>{config.portfolio.header}</span>
-          </h1>
-          <p>{config.portfolio.description}</p>
-          <Line />
-        </div>
-        <div>
-          {config.portfolio.projects.map((project, idx) => {
-            const [image] = data.portfolioImages.edges.filter(img => {
-              return img.node.childImageSharp.fluid.originalName === project.img
-            })
-            const portfolioImage = image.node.childImageSharp.fluid
-            return (
-              <PortfolioCard
-                key={idx}
-                project={project}
-                portfolioImage={portfolioImage}
-              />
-            )
-          })}
-        </div>
-      </PortfolioContainer>
+      <Transition in={loadTrans} timeout={0}>
+        {state => (
+          <PortfolioContainer state={state}>
+            <div>
+              <h1>
+                <span>
+                  // <span>Portfolio</span>
+                </span>
+                <span>{config.portfolio.header}</span>
+              </h1>
+              <p>{config.portfolio.description}</p>
+              <Line />
+            </div>
+            <div>
+              {config.portfolio.projects.map((project, idx) => {
+                const [image] = data.portfolioImages.edges.filter(img => {
+                  return (
+                    img.node.childImageSharp.fluid.originalName === project.img
+                  )
+                })
+                const portfolioImage = image.node.childImageSharp.fluid
+                return (
+                  <PortfolioCard
+                    key={idx}
+                    project={project}
+                    portfolioImage={portfolioImage}
+                  />
+                )
+              })}
+            </div>
+          </PortfolioContainer>
+        )}
+      </Transition>
     </Layout>
   )
 }

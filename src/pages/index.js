@@ -16,7 +16,7 @@ const HomeContainer = styled.div`
   justify-content: center;
   padding: 0 5rem;
   opacity: ${props => (props.state === "entered" ? 1.0 : 0.0)};
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.3s ease-in;
 
   & div {
     max-width: 600px;
@@ -163,7 +163,6 @@ const IndexPage = () => {
                 <span role="img" aria-label="wave">
                   👋
                 </span>
-                {state}
               </p>
               <h1>{config.description}</h1>
               <p>

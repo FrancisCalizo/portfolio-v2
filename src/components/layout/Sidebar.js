@@ -108,7 +108,7 @@ const Sidebar = ({ title, email }) => {
     <SidebarContainer>
       <div>
         <Link to="/">
-          <span>{title}:</span>
+          <span>{title}</span>
         </Link>
         <p>
           Software Developer.

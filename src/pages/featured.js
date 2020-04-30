@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import { Transition } from "react-transition-group"
 
 import { device } from "../utils/breakpoints"
 import config from "../../data/config"
@@ -15,6 +16,8 @@ const FeaturedContainer = styled.div`
   justify-content: center;
   padding: 0 5rem;
   margin: 12rem 0 8rem;
+  opacity: ${props => (props.state === "entered" ? 1.0 : 0.0)};
+  transition: opacity 0.3s ease-in;
 
   & > div {
     max-width: 600px;
@@ -123,31 +126,41 @@ const Accomplishments = () => {
     }
   `)
 
+  const [loadTrans, setLoadTrans] = useState(false)
+
+  useEffect(() => {
+    setLoadTrans(true)
+  }, [])
+
   return (
     <Layout>
       <SEO title="Featured" />
-      <FeaturedContainer>
-        <div>
-          <h1>
-            <span>
-              // <span>Featured</span>
-            </span>
-            <span>{config.featured.header}</span>
-          </h1>
-          <p>{config.featured.description}</p>
-          <Line />
-        </div>
-        <div>
-          {config.featured.articles.map((article, idx) => (
-            <MagazineCard
-              key={idx}
-              index={idx}
-              articles={article}
-              magazine={data.magazineImages.edges}
-            />
-          ))}
-        </div>
-      </FeaturedContainer>
+      <Transition in={loadTrans} timeout={0}>
+        {state => (
+          <FeaturedContainer state={state}>
+            <div>
+              <h1>
+                <span>
+                  // <span>Featured</span>
+                </span>
+                <span>{config.featured.header}</span>
+              </h1>
+              <p>{config.featured.description}</p>
+              <Line />
+            </div>
+            <div>
+              {config.featured.articles.map((article, idx) => (
+                <MagazineCard
+                  key={idx}
+                  index={idx}
+                  articles={article}
+                  magazine={data.magazineImages.edges}
+                />
+              ))}
+            </div>
+          </FeaturedContainer>
+        )}
+      </Transition>
     </Layout>
   )
 }
