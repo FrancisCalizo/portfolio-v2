@@ -53,23 +53,35 @@ const TopbarContainer = styled.div`
 
 const BurgerLink = styled(Link)`
   border-bottom: 2px solid transparent;
-
-  &:hover {
-    border-bottom: 2px solid black;
-  }
+  color: ${props =>
+    props.current === props.to
+      ? config.colors.textDark
+      : config.colors.textGray};
+  font-weight: ${props => (props.current === props.to ? 600 : 500)};
+  border-bottom: ${props =>
+    props.current === props.to
+      ? `2px solid ${config.colors.textDark}`
+      : `none`};
 `
 
 const Fa = styled(FontAwesomeIcon)`
   color: var(--text-dark);
 `
 
-const BurgerLinkA = styled(BurgerLink)``
+const BurgerLinkA = styled(BurgerLink)`
+  color: var(--text-gray);
+  font-weight: 500;
+  border: none;
+`
 
 const Topbar = ({ title, email }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false)
   const [isNavColored, setisNavColored] = useState(false)
+  const [current, setCurrent] = useState("")
 
   useEffect(() => {
+    const url = typeof window !== "undefined" ? window.location.pathname : ""
+    setCurrent(url)
     window.addEventListener("scroll", handleScroll)
 
     return () => window.removeEventListener("scroll", handleScroll)
@@ -140,6 +152,7 @@ const Topbar = ({ title, email }) => {
             isOpen={isBurgerOpen}
           >
             <BurgerLink
+              current={current}
               id="home"
               className="menu-item"
               to="/"
@@ -148,6 +161,7 @@ const Topbar = ({ title, email }) => {
               Home
             </BurgerLink>
             <BurgerLink
+              current={current}
               id="skills"
               className="menu-item"
               to="/skills"
@@ -156,6 +170,7 @@ const Topbar = ({ title, email }) => {
               Skills
             </BurgerLink>
             <BurgerLink
+              current={current}
               id="portfolio"
               className="menu-item"
               to="/portfolio"
@@ -164,6 +179,7 @@ const Topbar = ({ title, email }) => {
               Portfolio
             </BurgerLink>
             <BurgerLink
+              current={current}
               id="featured"
               className="menu-item"
               to="/featured"
