@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import { slide as Menu } from "react-burger-menu"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
+import { lighten } from "polished"
 
 import { device } from "../../utils/breakpoints"
 import config from "../../../data/config"
@@ -62,6 +63,19 @@ const BurgerLink = styled(Link)`
     props.current === props.to
       ? `2px solid ${config.colors.textDark}`
       : `none`};
+  // padding: 0 0.5rem;
+  // border-radius: 2px;
+  // background: linear-gradient(to right, var(--salmon) 48%, transparent 50%);
+  // background-size: 200% 100%;
+  // background-position: right bottom;
+  // transition: all 0.3s ease-out;
+
+  &:hover {
+    // background-position: left bottom;
+    // color: white;
+    color: ${lighten(0.4, config.colors.textDark)};
+    transition: color 0.2s ease-in-out;
+  }
 `
 
 const Fa = styled(FontAwesomeIcon)`
