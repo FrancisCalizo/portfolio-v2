@@ -72,10 +72,17 @@ const SidebarLinks = styled.div`
     letter-spacing: 1.4px;
 
     & a {
-      padding: 0.3rem 0;
+      padding: 0.3rem;
+      border-radius: 2px;
+      background: linear-gradient(to right, var(--salmon) 50%, transparent 50%);
+      background-size: 200% 100%;
+      background-position: right bottom;
+      transition: all 0.3s ease-out;
     }
 
     & a:hover {
+      background-position: left bottom;
+      color: white;
     }
   }
 `
