@@ -120,6 +120,7 @@ const PortfolioButton = styled(Link)`
 
   &:nth-child(1):hover {
     background: ${lighten(0.1, config.colors.salmon)};
+    transition: background 0.3s ease-in-out;
   }
 
   &:nth-child(2) {
@@ -129,6 +130,7 @@ const PortfolioButton = styled(Link)`
   &:nth-child(2):hover {
     background: ${lighten(0.1, config.colors.salmon)};
     color: white;
+    transition: all 0.3s ease-in-out;
   }
 
   @media ${device.minMd} and ${device.maxLg}{

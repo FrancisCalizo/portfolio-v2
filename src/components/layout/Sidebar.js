@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
+import { lighten } from "polished"
 
 import config from "../../../data/config"
 import { device } from "../../utils/breakpoints"
@@ -48,6 +49,11 @@ const SidebarContainer = styled.div`
       color: var(--salmon);
       font-weight: 500;
       text-decoration: underline;
+    }
+
+    & a:hover {
+      color: ${lighten(0.1, config.colors.salmon)};
+      transition: color 0.2s ease-in-out;
     }
 
     & > div {

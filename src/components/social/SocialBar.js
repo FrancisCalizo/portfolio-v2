@@ -19,6 +19,7 @@ const SocialLink = styled(FontAwesomeIcon)`
 
   &:hover {
     color: var(--salmon);
+    transition: color 0.2s ease-in-out;
   }
 `
 

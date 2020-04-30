@@ -115,3 +115,5 @@ Stop Border on Hover from Pushing other Elements Around it - https://stackoverfl
 React Proptypes Array (Shape) - https://til.hashrocket.com/posts/ytrzhrpfxk-proptypes-array-of-shape
 
 Get Pathname of URL = https://css-tricks.com/how-to-the-get-current-page-url-in-gatsby/
+
+Horizontal Highlight Animation - https://codepen.io/kay8/pen/azKbjN

@@ -22,6 +22,7 @@ const MagazineCardContainer = styled.div`
 
   &:hover {
     opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
   }
 
   & > div:nth-child(2) {

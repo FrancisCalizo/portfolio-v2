@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import { lighten } from "polished"
 
+import config from "../../../data/config"
 import { device } from "../../utils/breakpoints"
 import SocialBar from "../social/SocialBar"
 
@@ -26,6 +28,11 @@ const FooterContainer = styled.div`
       text-decoration: none;
       padding: 5px;
       border-bottom: 2px solid var(--text-dark);
+
+      &:hover {
+        color: ${lighten(0.1, config.colors.textDark)};
+        border-bottom: 2px solid ${lighten(0.1, config.colors.textDark)};
+      }
     }
   }
 

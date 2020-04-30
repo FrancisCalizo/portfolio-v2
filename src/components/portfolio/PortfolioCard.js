@@ -121,6 +121,7 @@ const SiteButton = styled.button`
   &:hover {
     background: ${lighten(0.1, config.colors.salmon)};
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
   }
 
   @media ${device.minLg} and ${device.maxXl}{
@@ -145,9 +146,10 @@ const SourceButton = styled(SiteButton)`
 
   &:hover {
     background: ${lighten(0.1, config.colors.salmon)};
-
+    transition: all 0.3s ease-in-out;
     a {
       color: white;
+      transition: color 0.3s ease-in-out;
     }
   }
 `
