@@ -99,6 +99,7 @@ module.exports = {
   },
   colors: {
     salmon: "#e37263",
+    textGray: "#696969",
     textDark: "#343434",
   },
 }

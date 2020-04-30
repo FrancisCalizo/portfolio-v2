@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 
+import config from "../../../data/config"
 import { device } from "../../utils/breakpoints"
 import SocialBar from "../social/SocialBar"
 
@@ -24,7 +25,6 @@ const SidebarContainer = styled.div`
 
   a {
     text-decoration: none;
-    color: var(--text-gray);
   }
 
   & div:nth-child(1) {
@@ -76,9 +76,25 @@ const SidebarLinks = styled.div`
     }
 
     & a:hover {
-      border-bottom: 2px solid var(--text-gray);
     }
   }
+`
+
+const GLink = styled(Link)`
+  color: ${props =>
+    props.current === props.to
+      ? config.colors.textDark
+      : config.colors.textGray};
+  font-weight: ${props => (props.current === props.to ? 600 : 500)};
+  border-bottom: ${props =>
+    props.current === props.to
+      ? `2px solid ${config.colors.textDark}`
+      : `none`};
+`
+const ALink = styled(GLink)`
+  color: var(--text-gray);
+  font-weight: 500;
+  border: none;
 `
 
 const Fa = styled(FontAwesomeIcon)`
@@ -86,8 +102,6 @@ const Fa = styled(FontAwesomeIcon)`
 `
 
 const Created = styled.p`
-  // position: absolute;
-  // bottom: 0;
   margin: 0;
   transform: translateY(25px);
   font-size: 12px;
@@ -104,6 +118,13 @@ const Created = styled.p`
 `
 
 const Sidebar = ({ title, email }) => {
+  const [current, setCurrent] = useState("")
+
+  useEffect(() => {
+    const url = typeof window !== "undefined" ? window.location.pathname : ""
+    setCurrent(url)
+  }, [])
+
   return (
     <SidebarContainer>
       <div>
@@ -120,30 +141,44 @@ const Sidebar = ({ title, email }) => {
       </div>
       <SidebarLinks>
         <li>
-          <Link to="/">Home</Link>
+          <GLink current={current} to="/">
+            Home
+          </GLink>
         </li>
         <li>
-          <Link to="/skills">Skills</Link>
+          <GLink current={current} to="/skills">
+            Skills
+          </GLink>
         </li>
         <li>
-          <Link to="/portfolio">Portfolio</Link>
+          <GLink current={current} to="/portfolio">
+            Portfolio
+          </GLink>
         </li>
         <li>
-          <Link to="/featured ">Featured</Link>
+          <GLink current={current} to="/featured">
+            Featured
+          </GLink>
         </li>
         <li>
-          <a
+          <ALink
+            as="a"
             href="https://ohyoufrancybruh.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             Blog <Fa icon={faExternalLinkAlt} />
-          </a>
+          </ALink>
         </li>
         <li>
-          <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
+          <ALink
+            as="a"
+            href="resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Resume
-          </a>
+          </ALink>
         </li>
       </SidebarLinks>
       <div>
