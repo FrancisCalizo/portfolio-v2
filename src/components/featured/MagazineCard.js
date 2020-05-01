@@ -1,10 +1,11 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import PropTypes from "prop-types"
 
 import { device } from "../../utils/breakpoints"
-import config from "../../../data/config"
 
 const Link = styled.a`
   text-decoration: none;
@@ -99,6 +100,9 @@ const Image = styled(Img)`
     transform: translateY(-50px);
   }
 `
+const Fa = styled(FontAwesomeIcon)`
+  color: var(--text-dark);
+`
 
 const MagazineCard = ({ articles, index, magazine }) => {
   return (
@@ -111,7 +115,9 @@ const MagazineCard = ({ articles, index, magazine }) => {
           />
         </div>
         <div>
-          <h2>{articles.title}</h2>
+          <h2>
+            {articles.title} <Fa icon={faExternalLinkAlt} size="sm" />
+          </h2>
           <p>{articles.description}</p>
         </div>
       </MagazineCardContainer>

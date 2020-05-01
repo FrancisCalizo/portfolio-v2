@@ -23,6 +23,7 @@ const SidebarContainer = styled.div`
   width: 280px;
   padding: 2rem 2rem;
   box-sizing: border-box;
+  overflow-y: auto;
 
   a {
     text-decoration: none;
