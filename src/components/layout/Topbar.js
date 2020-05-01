@@ -17,10 +17,10 @@ const TopbarContainer = styled.div`
   z-index: 100;
   text-transform: uppercase;
   font-size: 1.2rem;
-  color: var(--text-dark);
+  color: ${config.colorsLight.textDark};
   background: ${props => (props.isNavColored ? "#fff" : "transparent")};
   border-bottom: ${props =>
-    props.isNavColored ? `3px solid ${config.colors.salmon}` : "none"};
+    props.isNavColored ? `3px solid ${config.colorsLight.bright}` : "none"};
   transition: all 500ms ease-in-out;
 
   > div {
@@ -37,7 +37,7 @@ const TopbarContainer = styled.div`
   a {
     text-transform: uppercase;
     font-size: 1.2rem;
-    color: var(--text-dark);
+    color: ${config.colorsLight.textDark};
     text-decoration: none;
   }
 
@@ -58,34 +58,27 @@ const BurgerLink = styled(Link)`
   border-bottom: 2px solid transparent;
   color: ${props =>
     props.current === props.to
-      ? config.colors.textDark
-      : config.colors.textGray};
+      ? config.colorsLight.textDark
+      : config.colorsLight.textLight};
   font-weight: ${props => (props.current === props.to ? 600 : 500)};
   border-bottom: ${props =>
     props.current === props.to
-      ? `2px solid ${config.colors.textDark}`
+      ? `2px solid ${config.colorsLight.textDark}`
       : `none`};
-  // padding: 0 0.5rem;
-  // border-radius: 2px;
-  // background: linear-gradient(to right, var(--salmon) 48%, transparent 50%);
-  // background-size: 200% 100%;
-  // background-position: right bottom;
-  // transition: all 0.3s ease-out;
 
   &:hover {
-    // background-position: left bottom;
     // color: white;
-    color: ${lighten(0.4, config.colors.textDark)};
+    color: ${lighten(0.4, config.colorsLight.textDark)};
     transition: color 0.2s ease-in-out;
   }
 `
 
 const Fa = styled(FontAwesomeIcon)`
-  color: var(--text-dark);
+  color: ${config.colorsLight.textDark};
 `
 
 const BurgerLinkA = styled(BurgerLink)`
-  color: var(--text-gray);
+  color: ${config.colorsLight.textLight};
   font-weight: 500;
   border: none;
 `
@@ -153,7 +146,7 @@ const Topbar = ({ title, email }) => {
       margin: "1rem 0",
     },
     bmCross: {
-      background: config.colors.textDark,
+      background: config.colorsLight.textDark,
     },
   }
 

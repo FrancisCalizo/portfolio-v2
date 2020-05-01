@@ -8,6 +8,8 @@ import {
   faBlog,
 } from "@fortawesome/free-solid-svg-icons"
 
+import config from "../../../data/config"
+
 const SocialLinks = styled.div`
   display: flex;
   justify-content: space-between;
@@ -15,10 +17,10 @@ const SocialLinks = styled.div`
 `
 
 const SocialLink = styled(FontAwesomeIcon)`
-  color: var(--text-dark);
+  color: ${config.colorsLight.textDark};
 
   &:hover {
-    color: var(--salmon);
+    color: ${config.colorsLight.bright};
     transition: color 0.2s ease-in-out;
   }
 `

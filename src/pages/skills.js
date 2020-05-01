@@ -33,13 +33,13 @@ const SkillsContainer = styled.div`
         font-size: 26px;
 
         & > span {
-          border-bottom: 4px solid var(--salmon);
+          border-bottom: 4px solid ${config.colorsLight.bright};
         }
       }
 
       & span:nth-child(2) {
         display: block;
-        color: var(--text-dark);
+        color: ${config.colorsLight.textDark};
         line-height: 1.4;
         margin: 1.5rem 0;
         font-size: 36px;
@@ -47,7 +47,7 @@ const SkillsContainer = styled.div`
     }
 
     & p {
-      color: var(--text-gray);
+      color: ${config.colorsLight.textLight};
       margin: 0;
       font-size: 20px;
     }

@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import config from "../../../data/config"
 import { device } from "../../utils/breakpoints"
 import { icons } from "./icons"
 
@@ -27,9 +28,9 @@ const Skill = styled.div`
     & > span {
       color: #fff;
       text-align: center;
-      background: var(--text-dark);
+      background: ${config.colorsLight.textDark};
       padding: 1px 5px;
-      border: 1px solid var(--text-dark);
+      border: 1px solid ${config.colorsLight.textDark};
       border-radius: 5px;
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
       transform: translateY(-20px);
@@ -41,7 +42,7 @@ const Skill = styled.div`
     margin: 0.5rem;
     padding: 1.15rem 1.2rem 0.75rem;
     border-radius: 100px;
-    border: 1px solid var(--text-gray);
+    border: 1px solid ${config.colorsLight.textLight};
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
   }
 `

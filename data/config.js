@@ -97,9 +97,30 @@ module.exports = {
       },
     ],
   },
-  colors: {
-    salmon: "#e37263",
-    textGray: "#696969",
+  colorsLight: {
+    bg: "#d3d3d3",
+    bright: "#e37263",
+    textLight: "#696969",
     textDark: "#343434",
+    primary: "#FFF",
+    secondary: "#000",
+    hoverTextDark: "#4e4e4e",
+    hoverBright: "#fd8c7d",
+    hoverTextDarkX4: "fd8c7d",
+  },
+  colorsDark: {
+    bg: "#0a192f",
+    bright: "#ccd6f6",
+    textLight: "#8892b0",
+    textDark: "#64ffda",
+    primary: "#000",
+    secondary: "#fff",
+    hoverTextDark: "#a2acca",
+    hoverBright: "#7efff4",
+    hoverTextDarkX4: "eef8ff",
+  },
+  fonts: {
+    body: "'Rubik', sans-serif;",
+    headers: "'Playfair Display', serif;",
   },
 }

@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import PropTypes from "prop-types"
 
+import config from "../../../data/config"
 import { device } from "../../utils/breakpoints"
 
 const Link = styled.a`
@@ -31,12 +32,12 @@ const MagazineCardContainer = styled.div`
     margin: 0 1rem 0.7rem -2rem;
 
     & h2 {
-      color: var(--text-dark);
+      color: ${config.colorsLight.textDark};
       font-size: 20px;
       margin-top 30px;
       margin-bottom: 10px;
       padding-bottom: 3px;
-      border-bottom: 2px solid var(--salmon);
+      border-bottom: 2px solid ${config.colorsLight.bright};
     }
 
     & p {
@@ -101,7 +102,7 @@ const Image = styled(Img)`
   }
 `
 const Fa = styled(FontAwesomeIcon)`
-  color: var(--text-dark);
+  color: ${config.colorsLight.textDark};
 `
 
 const MagazineCard = ({ articles, index, magazine }) => {

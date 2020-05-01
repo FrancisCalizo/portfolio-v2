@@ -1,13 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import { lighten } from "polished"
+import { lighten, cssVar } from "polished"
 
 import config from "../../../data/config"
 import { device } from "../../utils/breakpoints"
 import SocialBar from "../social/SocialBar"
 
 const FooterContainer = styled.div`
-  // position: absolute;
   bottom: 0;
   width: 100%;
   background: #fff;
@@ -16,22 +15,22 @@ const FooterContainer = styled.div`
   padding: 3rem 4rem;
 
   h2 {
-    color: var(--text-dark);
+    color: ${config.colorsLight.textDark};
     font-size: calc(22px + (6) * ((100vw - 330px) / (768 - 330)));
   }
 
   p {
-    color: var(--text-gray);
+    color: ${config.colorsLight.textLight};
 
     & a {
-      color: var(--text-dark);
+      color: ${config.colorsLight.textDark};
       text-decoration: none;
       padding: 5px;
-      border-bottom: 2px solid var(--text-dark);
+      border-bottom: 2px solid ${config.colorsLight.textDark};
 
       &:hover {
-        color: ${lighten(0.1, config.colors.textDark)};
-        border-bottom: 2px solid ${lighten(0.1, config.colors.textDark)};
+        color: ${config.colorsLight.hoverTextDark};
+        border-bottom: 2px solid ${config.colorsLight.hoverTextDark};
       }
     }
   }
@@ -53,11 +52,11 @@ const SocialContainer = styled.div`
 
 const Created = styled.p`
   font-size: 14px;
-  color: var(--text-gray);
+  color: ${config.colorsLight.textLight};
   margin: 2rem 0 0;
 
   span {
-    color: var(--text-dark);
+    color: ${config.colorsLight.textDark};
     font-weight: 500;
   }
 
@@ -66,7 +65,7 @@ const Created = styled.p`
   }
 
   a:hover {
-    color: var(--salmon);
+    color: ${config.colorsLight.Bright};
   }
 `
 

@@ -31,29 +31,29 @@ const SidebarContainer = styled.div`
 
   & div:nth-child(1) {
     & span {
-      color: var(--text-dark);
+      color: ${config.colorsLight.textDark};
       font-size: 1.6rem;
       font-weight: 600;
     }
 
     & p {
-      color: var(--text-gray);
+      color: ${config.colorsLight.textLight};
       margin: 2rem 0 0;
       line-height: 1.8;
     }
   }
 
   & div:nth-child(3) {
-    color: var(--text-gray);
+    color: ${config.colorsLight.textLight};
 
     & a {
-      color: var(--salmon);
+      color: ${config.colorsLight.bright};
       font-weight: 500;
       text-decoration: underline;
     }
 
     & a:hover {
-      color: ${lighten(0.1, config.colors.salmon)};
+      color: ${config.colorsLight.hoverBright};
       transition: color 0.2s ease-in-out;
     }
 
@@ -81,7 +81,11 @@ const SidebarLinks = styled.div`
     & a {
       padding: 0.3rem;
       border-radius: 2px;
-      background: linear-gradient(to right, var(--salmon) 50%, transparent 50%);
+      background: linear-gradient(
+        to right,
+        ${config.colorsLight.bright} 50%,
+        transparent 50%
+      );
       background-size: 200% 100%;
       background-position: right bottom;
       transition: all 0.3s ease-out;
@@ -97,37 +101,37 @@ const SidebarLinks = styled.div`
 const GLink = styled(Link)`
   color: ${props =>
     props.current === props.to
-      ? config.colors.textDark
-      : config.colors.textGray};
+      ? config.colorsLight.textDark
+      : config.colorsLight.textLight};
   font-weight: ${props => (props.current === props.to ? 600 : 500)};
   border-bottom: ${props =>
     props.current === props.to
-      ? `2px solid ${config.colors.textDark}`
+      ? `2px solid ${config.colorsLight.textDark}`
       : `none`};
 `
 const ALink = styled(GLink)`
-  color: var(--text-gray);
+  color: ${config.colorsLight.textLight};
   font-weight: 500;
   border: none;
 `
 
 const Fa = styled(FontAwesomeIcon)`
-  color: var(--text-gray);
+  color: ${config.colorsLight.textLight};
 `
 
 const Created = styled.p`
   margin: 0;
   transform: translateY(25px);
   font-size: 12px;
-  color: var(--text-gray);
+  color: ${config.colorsLight.textLight};
 
   span {
-    color: var(--text-dark);
+    color: ${config.colorsLight.textDark};
     font-weight: 500;
   }
 
   a:hover {
-    color: var(--salmon);
+    color: ${config.colorsLight.bright};
   }
 `
 

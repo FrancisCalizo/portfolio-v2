@@ -28,21 +28,21 @@ const HomeContainer = styled.div`
       letter-spacing: 1.1px;
 
       & span:nth-child(1) {
-        border-bottom: 4px solid var(--salmon);
+        border-bottom: 4px solid ${config.colorsLight.bright};
         font-size: 30px;
         font-weight: 500;
       }
     }
 
     & h1 {
-      color: var(--text-dark);
+      color: ${config.colorsLight.textDark};
       font-size: 38px;
       margin: 2rem 0;
       line-height: 1.4;
     }
 
     & p {
-      color: var(--text-gray);
+      color: ${config.colorsLight.textLight};
       font-size: 21px;
       margin: 0;
     }
@@ -103,7 +103,7 @@ const HomeContainer = styled.div`
 `
 
 const PortfolioButton = styled(Link)`
-  color: var(--text-dark);
+  color: ${config.colorsLight.textDark};
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 1.5rem;
@@ -113,22 +113,22 @@ const PortfolioButton = styled(Link)`
 
   &:nth-child(1) {
     margin-right: 1.5rem;
-    background: var(--salmon);
+    background: ${config.colorsLight.bright};
     color: white;
-    border: 1px solid ${darken(0.1, config.colors.salmon)};
+    border: 1px solid ${darken(0.1, config.colorsLight.bright)};
   }
 
   &:nth-child(1):hover {
-    background: ${lighten(0.1, config.colors.salmon)};
+    background: ${lighten(0.1, config.colorsLight.bright)};
     transition: background 0.3s ease-in-out;
   }
 
   &:nth-child(2) {
-    border: 2px solid var(--salmon);
+    border: 2px solid ${config.colorsLight.bright};
   }
 
   &:nth-child(2):hover {
-    background: ${lighten(0.1, config.colors.salmon)};
+    background: ${lighten(0.1, config.colorsLight.bright)};
     color: white;
     transition: all 0.3s ease-in-out;
   }
