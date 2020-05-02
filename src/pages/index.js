@@ -10,11 +10,12 @@ import { device } from "../utils/breakpoints"
 import SEO from "../components/Seo"
 
 const HomeContainer = styled.div`
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 5rem;
+  margin: 10rem 0 8rem;
   opacity: ${props => (props.state === "entered" ? 1.0 : 0.0)};
   transition: opacity 0.3s ease-in;
 
@@ -26,6 +27,7 @@ const HomeContainer = styled.div`
       font-size: 26px;
       font-weight: 300;
       letter-spacing: 1.1px;
+      padding-top: 8px;
 
       & span:nth-child(1) {
         border-bottom: 4px solid ${config.colorsLight.bright};
@@ -37,7 +39,7 @@ const HomeContainer = styled.div`
     & h1 {
       color: ${config.colorsLight.textDark};
       font-size: 38px;
-      margin: 2rem 0;
+      margin: 1.5rem 0;
       line-height: 1.4;
     }
 

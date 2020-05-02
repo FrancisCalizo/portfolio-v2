@@ -14,7 +14,7 @@ const SkillsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0 5rem;
-  margin: 12rem 0 8rem;
+  margin: 10rem 0 8rem;
   opacity: ${props => (props.state === "entered" ? 1.0 : 0.0)};
   transition: opacity 0.3s ease-in;
 

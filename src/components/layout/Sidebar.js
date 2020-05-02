@@ -38,13 +38,15 @@ const SidebarContainer = styled.div`
 
     & p {
       color: ${config.colorsLight.textLight};
-      margin: 2rem 0 0;
-      line-height: 1.8;
+      margin: 1rem 0 0;
+      line-height: 1.4;
+      font-size: 15px;
     }
   }
 
   & div:nth-child(3) {
     color: ${config.colorsLight.textLight};
+    font-size: 15px;
 
     & a {
       color: ${config.colorsLight.bright};
