@@ -32,12 +32,12 @@ const MagazineCardContainer = styled.div`
     margin: 0 1rem 0.7rem -2rem;
 
     & h2 {
-      color: ${config.colorsLight.textDark};
+      color: ${props => props.theme.textDark};
       font-size: 20px;
       margin-top 30px;
       margin-bottom: 10px;
       padding-bottom: 3px;
-      border-bottom: 2px solid ${config.colorsLight.bright};
+      border-bottom: 2px solid ${props => props.theme.bright};
     }
 
     & p {
@@ -102,7 +102,7 @@ const Image = styled(Img)`
   }
 `
 const Fa = styled(FontAwesomeIcon)`
-  color: ${config.colorsLight.textDark};
+  color: ${props => props.theme.textDark};
 `
 
 const MagazineCard = ({ articles, index, magazine }) => {

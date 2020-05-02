@@ -28,11 +28,11 @@ const CaptionContainer = styled.div`
 
   h2 {
     display: inline-block;
-    color: ${config.colorsLight.textDark};
+    color: ${props => props.theme.textDark};
     line-height: 1.4;
     margin: 1.5rem 0 0;
     font-size: 26px;
-    border-bottom: 2px solid ${config.colorsLight.bright};
+    border-bottom: 2px solid ${props => props.theme.bright};
   }
 
   @media ${device.minLg} and ${device.maxXl}{
@@ -56,7 +56,7 @@ const CaptionContainer = styled.div`
   }
 `
 const Description = styled.p`
-  color: ${config.colorsLight.textLight};
+  color: ${props => props.theme.textLight};
   margin: 0;
   font-size: 18px;
   padding-right: 1rem;
@@ -80,14 +80,14 @@ const Tech = styled.p`
 
   span {
     display: inline-block;
-    background: ${config.colorsLight.textDark};
+    background: ${props => props.theme.textDark};
     color: #fff;
     font-size: 12px;
     padding: 0.35rem 0.75rem;
     margin: 0.4rem 0.3rem 0.2rem 0;
     border-radius: 10px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
-    border: 1px solid ${config.colorsLight.textLight};
+    border: 1px solid ${props => props.theme.textLight};
 
     @media ${device.minLg} and ${device.maxXl}{
       font-size: calc(11px + (1) * ((100vw - 1024px) / (1498 - 1024)));
@@ -109,8 +109,8 @@ const SiteButton = styled.button`
   font-weight: 600;
   letter-spacing: 1.1px;
   margin-right: 1.5rem;
-  background: ${config.colorsLight.bright};
-  border: 1px solid ${darken(0.1, config.colorsLight.bright)};
+  background: ${props => props.theme.bright};
+  border: 1px solid ${props => props.theme.bright};
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
 
   a {
@@ -119,7 +119,7 @@ const SiteButton = styled.button`
   }
 
   &:hover {
-    background: ${lighten(0.1, config.colorsLight.bright)};
+    background: ${props => props.theme.hoverBright};
     cursor: pointer;
     transition: background 0.3s ease-in-out;
   }
@@ -141,11 +141,11 @@ const SourceButton = styled(SiteButton)`
   background: transparent;
 
   a {
-    color: ${config.colorsLight.textDark};
+    color: ${props => props.theme.textDark};
   }
 
   &:hover {
-    background: ${lighten(0.1, config.colorsLight.bright)};
+    background: ${props => props.theme.hoverBright};
     transition: all 0.3s ease-in-out;
     a {
       color: white;

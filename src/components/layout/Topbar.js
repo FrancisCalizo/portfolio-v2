@@ -5,7 +5,6 @@ import PropTypes from "prop-types"
 import { slide as Menu } from "react-burger-menu"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
-import { lighten } from "polished"
 
 import { device } from "../../utils/breakpoints"
 import config from "../../../data/config"
@@ -17,10 +16,10 @@ const TopbarContainer = styled.div`
   z-index: 100;
   text-transform: uppercase;
   font-size: 1.2rem;
-  color: ${config.colorsLight.textDark};
+  color: ${props => props.theme.textDark};
   background: ${props => (props.isNavColored ? "#fff" : "transparent")};
   border-bottom: ${props =>
-    props.isNavColored ? `3px solid ${config.colorsLight.bright}` : "none"};
+    props.isNavColored ? `3px solid ${props.theme.bright}` : "none"};
   transition: all 500ms ease-in-out;
 
   > div {
@@ -37,7 +36,7 @@ const TopbarContainer = styled.div`
   a {
     text-transform: uppercase;
     font-size: 1.2rem;
-    color: ${config.colorsLight.textDark};
+    color: ${props => props.theme.textDark};
     text-decoration: none;
   }
 
@@ -57,29 +56,24 @@ const TopbarContainer = styled.div`
 const BurgerLink = styled(Link)`
   border-bottom: 2px solid transparent;
   color: ${props =>
-    props.current === props.to
-      ? config.colorsLight.textDark
-      : config.colorsLight.textLight};
-  font-weight: ${props => (props.current === props.to ? 600 : 500)};
+    props.current === props.to ? props.theme.textDark : props.theme.textLight};
+  font-weight: ${props => (props.current === props.to ? 600 : 400)};
   border-bottom: ${props =>
-    props.current === props.to
-      ? `2px solid ${config.colorsLight.textDark}`
-      : `none`};
+    props.current === props.to ? `2px solid ${props.theme.textDark}` : `none`};
 
   &:hover {
-    // color: white;
-    color: ${lighten(0.4, config.colorsLight.textDark)};
+    color: ${props => props.theme.textLight};
     transition: color 0.2s ease-in-out;
   }
 `
 
 const Fa = styled(FontAwesomeIcon)`
-  color: ${config.colorsLight.textDark};
+  color: ${props => props.theme.textDark};
 `
 
 const BurgerLinkA = styled(BurgerLink)`
-  color: ${config.colorsLight.textLight};
-  font-weight: 500;
+  color: ${props => props.theme.textLight};
+  font-weight: 400;
   border: none;
 `
 
@@ -118,7 +112,7 @@ const Topbar = ({ title, email }) => {
       height: "20px",
       width: "50px",
       top: isNavColored ? "10px" : "18px",
-      left: "25px",
+      left: "35px",
     },
     bmOverlay: {
       top: "0",

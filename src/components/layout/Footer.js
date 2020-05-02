@@ -15,22 +15,22 @@ const FooterContainer = styled.div`
   padding: 3rem 4rem;
 
   h2 {
-    color: ${config.colorsLight.textDark};
+    color: ${props => props.theme.textDark};
     font-size: calc(22px + (6) * ((100vw - 330px) / (768 - 330)));
   }
 
   p {
-    color: ${config.colorsLight.textLight};
+    color: ${props => props.theme.textLight};
 
     & a {
-      color: ${config.colorsLight.textDark};
+      color: ${props => props.theme.textDark};
       text-decoration: none;
       padding: 5px;
-      border-bottom: 2px solid ${config.colorsLight.textDark};
+      border-bottom: 2px solid ${props => props.theme.textDark};
 
       &:hover {
-        color: ${config.colorsLight.hoverTextDark};
-        border-bottom: 2px solid ${config.colorsLight.hoverTextDark};
+        color: ${props => props.theme.hoverTextDark};
+        border-bottom: 2px solid ${props => props.theme.hoverTextDark};
       }
     }
   }
@@ -52,11 +52,11 @@ const SocialContainer = styled.div`
 
 const Created = styled.p`
   font-size: 14px;
-  color: ${config.colorsLight.textLight};
+  color: ${props => props.theme.textLight};
   margin: 2rem 0 0;
 
   span {
-    color: ${config.colorsLight.textDark};
+    color: ${props => props.theme.textDark};
     font-weight: 500;
   }
 
@@ -65,7 +65,7 @@ const Created = styled.p`
   }
 
   a:hover {
-    color: ${config.colorsLight.Bright};
+    color: ${props => props.theme.bright};
   }
 `
 

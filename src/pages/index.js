@@ -30,21 +30,21 @@ const HomeContainer = styled.div`
       padding-top: 8px;
 
       & span:nth-child(1) {
-        border-bottom: 4px solid ${config.colorsLight.bright};
+        border-bottom: 4px solid ${props => props.theme.bright};
         font-size: 30px;
         font-weight: 500;
       }
     }
 
     & h1 {
-      color: ${config.colorsLight.textDark};
+      color: ${props => props.theme.textDark};
       font-size: 38px;
       margin: 1.5rem 0;
       line-height: 1.4;
     }
 
     & p {
-      color: ${config.colorsLight.textLight};
+      color: ${props => props.theme.textLight};
       font-size: 21px;
       margin: 0;
     }
@@ -105,7 +105,7 @@ const HomeContainer = styled.div`
 `
 
 const PortfolioButton = styled(Link)`
-  color: ${config.colorsLight.textDark};
+  color: ${props => props.theme.textDark};
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 1.5rem;
@@ -115,22 +115,22 @@ const PortfolioButton = styled(Link)`
 
   &:nth-child(1) {
     margin-right: 1.5rem;
-    background: ${config.colorsLight.bright};
+    background: ${props => props.theme.bright};
     color: white;
     border: 1px solid ${darken(0.1, config.colorsLight.bright)};
   }
 
   &:nth-child(1):hover {
-    background: ${lighten(0.1, config.colorsLight.bright)};
+    background: ${props => props.theme.hoverBright};
     transition: background 0.3s ease-in-out;
   }
 
   &:nth-child(2) {
-    border: 2px solid ${config.colorsLight.bright};
+    border: 2px solid ${props => props.theme.bright};
   }
 
   &:nth-child(2):hover {
-    background: ${lighten(0.1, config.colorsLight.bright)};
+    background: ${props => props.theme.hoverBright};
     color: white;
     transition: all 0.3s ease-in-out;
   }

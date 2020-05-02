@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 
 import { device } from "../../utils/breakpoints"
 import config from "../../../data/config"
@@ -9,6 +9,8 @@ import Sidebar from "./Sidebar"
 import Topbar from "./Topbar"
 import UnderNav from "./UnderNav"
 import Footer from "./Footer"
+
+const { colorsLight, colorsDark } = config
 
 const MainContent = styled.div`
   @media ${device.minMd} {
@@ -19,7 +21,7 @@ const MainContent = styled.div`
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <ThemeProvider theme={colorsLight}>
       <GlobalStyle />
       <Topbar title={config.siteTitle} email={config.email} />
       <Sidebar title={config.siteTitle} email={config.email} />
@@ -27,7 +29,7 @@ const Layout = ({ children }) => {
         <MainContent>{children}</MainContent>}
         <Footer email={config.email} />
       </UnderNav>
-    </div>
+    </ThemeProvider>
   )
 }
 

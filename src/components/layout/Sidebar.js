@@ -4,9 +4,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
-import { lighten } from "polished"
 
-import config from "../../../data/config"
 import { device } from "../../utils/breakpoints"
 import SocialBar from "../social/SocialBar"
 
@@ -31,13 +29,13 @@ const SidebarContainer = styled.div`
 
   & div:nth-child(1) {
     & span {
-      color: ${config.colorsLight.textDark};
+      color: ${props => props.theme.textDark};
       font-size: 1.6rem;
       font-weight: 600;
     }
 
     & p {
-      color: ${config.colorsLight.textLight};
+      color: ${props => props.theme.textLight};
       margin: 1rem 0 0;
       line-height: 1.4;
       font-size: 15px;
@@ -45,17 +43,17 @@ const SidebarContainer = styled.div`
   }
 
   & div:nth-child(3) {
-    color: ${config.colorsLight.textLight};
+    color: ${props => props.theme.textLight};
     font-size: 15px;
 
     & a {
-      color: ${config.colorsLight.bright};
+      color: ${props => props.theme.bright};
       font-weight: 500;
       text-decoration: underline;
     }
 
     & a:hover {
-      color: ${config.colorsLight.hoverBright};
+      color: ${props => props.theme.hoverBright};
       transition: color 0.2s ease-in-out;
     }
 
@@ -85,7 +83,7 @@ const SidebarLinks = styled.div`
       border-radius: 2px;
       background: linear-gradient(
         to right,
-        ${config.colorsLight.bright} 50%,
+        ${props => props.theme.bright} 50%,
         transparent 50%
       );
       background-size: 200% 100%;
@@ -102,38 +100,34 @@ const SidebarLinks = styled.div`
 
 const GLink = styled(Link)`
   color: ${props =>
-    props.current === props.to
-      ? config.colorsLight.textDark
-      : config.colorsLight.textLight};
+    props.current === props.to ? props.theme.textDark : props.theme.textLight};
   font-weight: ${props => (props.current === props.to ? 600 : 500)};
   border-bottom: ${props =>
-    props.current === props.to
-      ? `2px solid ${config.colorsLight.textDark}`
-      : `none`};
+    props.current === props.to ? `2px solid ${props.theme.textDark}` : `none`};
 `
 const ALink = styled(GLink)`
-  color: ${config.colorsLight.textLight};
+  color: ${props => props.theme.textLight};
   font-weight: 500;
   border: none;
 `
 
 const Fa = styled(FontAwesomeIcon)`
-  color: ${config.colorsLight.textLight};
+  color: ${props => props.theme.textLight};
 `
 
 const Created = styled.p`
   margin: 0;
   transform: translateY(25px);
   font-size: 12px;
-  color: ${config.colorsLight.textLight};
+  color: ${props => props.theme.textLight};
 
   span {
-    color: ${config.colorsLight.textDark};
+    color: ${props => props.theme.textDark};
     font-weight: 500;
   }
 
   a:hover {
-    color: ${config.colorsLight.bright};
+    color: ${props => props.theme.bright};
   }
 `
 

@@ -34,13 +34,13 @@ const PortfolioContainer = styled.div`
         font-size: 26px;
 
         & > span {
-          border-bottom: 4px solid ${config.colorsLight.bright};
+          border-bottom: 4px solid ${props => props.theme.bright};
         }
       }
 
       & span:nth-child(2) {
         display: block;
-        color: ${config.colorsLight.textDark};
+        color: ${props => props.theme.textDark};
         line-height: 1.4;
         margin: 1.5rem 0;
         font-size: 36px;
@@ -48,7 +48,7 @@ const PortfolioContainer = styled.div`
     }
 
     & p {
-      color: ${config.colorsLight.textLight};
+      color: ${props => props.theme.textLight};
       margin: 0;
       font-size: 20px;
     }

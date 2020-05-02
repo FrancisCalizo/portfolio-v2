@@ -28,9 +28,9 @@ const Skill = styled.div`
     & > span {
       color: #fff;
       text-align: center;
-      background: ${config.colorsLight.textDark};
+      background: ${props => props.theme.textDark};
       padding: 1px 5px;
-      border: 1px solid ${config.colorsLight.textDark};
+      border: 1px solid ${props => props.theme.textDark};
       border-radius: 5px;
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
       transform: translateY(-20px);
@@ -42,7 +42,7 @@ const Skill = styled.div`
     margin: 0.5rem;
     padding: 1.15rem 1.2rem 0.75rem;
     border-radius: 100px;
-    border: 1px solid ${config.colorsLight.textLight};
+    border: 1px solid ${props => props.theme.textLight};
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
   }
 `

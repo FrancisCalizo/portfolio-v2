@@ -17,10 +17,10 @@ const SocialLinks = styled.div`
 `
 
 const SocialLink = styled(FontAwesomeIcon)`
-  color: ${config.colorsLight.textDark};
+  color: ${props => props.theme.textDark};
 
   &:hover {
-    color: ${config.colorsLight.bright};
+    color: ${props => props.theme.bright};
     transition: color 0.2s ease-in-out;
   }
 `
