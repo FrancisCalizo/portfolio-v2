@@ -3,7 +3,11 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExternalLinkAlt, faMoon } from "@fortawesome/free-solid-svg-icons"
+import {
+  faExternalLinkAlt,
+  faMoon,
+  faSun,
+} from "@fortawesome/free-solid-svg-icons"
 
 import { device } from "../../utils/breakpoints"
 import SocialBar from "../social/SocialBar"
@@ -142,7 +146,7 @@ const Created = styled.p`
   }
 `
 
-const Sidebar = ({ title, email }) => {
+const Sidebar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   const [current, setCurrent] = useState("")
 
   useEffect(() => {
@@ -150,13 +154,21 @@ const Sidebar = ({ title, email }) => {
     setCurrent(url)
   }, [])
 
+  const handleClick = () => {
+    setIsDarkMode(isDarkMode ? false : true)
+  }
+
   return (
     <SidebarContainer>
       <div>
         <Link to="/">
           <span>{title}</span>
         </Link>{" "}
-        <ToggleTheme icon={faMoon} size="lg" />
+        <ToggleTheme
+          icon={isDarkMode ? faSun : faMoon}
+          size="lg"
+          onClick={handleClick}
+        />
         <p>
           Software Developer.
           <br />
@@ -229,6 +241,8 @@ const Sidebar = ({ title, email }) => {
 Sidebar.propTypes = {
   title: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
+  isDarkMode: PropTypes.bool.isRequired,
+  setIsDarkMode: PropTypes.func.isRequired,
 }
 
 export default Sidebar

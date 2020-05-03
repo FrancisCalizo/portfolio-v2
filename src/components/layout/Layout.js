@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled, { ThemeProvider } from "styled-components"
 
@@ -20,11 +20,18 @@ const MainContent = styled.div`
 `
 
 const Layout = ({ children }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false)
+
   return (
-    <ThemeProvider theme={colorsLight}>
+    <ThemeProvider theme={isDarkMode ? colorsDark : colorsLight}>
       <GlobalStyle />
       <Topbar title={config.siteTitle} email={config.email} />
-      <Sidebar title={config.siteTitle} email={config.email} />
+      <Sidebar
+        title={config.siteTitle}
+        email={config.email}
+        isDarkMode={isDarkMode}
+        setIsDarkMode={setIsDarkMode}
+      />
       <UnderNav>
         <MainContent>{children}</MainContent>}
         <Footer email={config.email} />
