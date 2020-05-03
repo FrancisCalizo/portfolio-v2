@@ -26,7 +26,7 @@ const Skill = styled.div`
     justify-content: center;
 
     & > span {
-      color: #fff;
+      color: ${props => props.theme.bgAlt};
       text-align: center;
       background: ${props => props.theme.textDark};
       padding: 1px 5px;
@@ -38,7 +38,7 @@ const Skill = styled.div`
   }
 
   & > div:nth-child(1) {
-    background: #fff;
+    background: ${props => props.theme.bgAlt};
     margin: 0.5rem;
     padding: 1.15rem 1.2rem 0.75rem;
     border-radius: 100px;

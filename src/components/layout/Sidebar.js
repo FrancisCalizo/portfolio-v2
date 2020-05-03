@@ -9,7 +9,7 @@ import { device } from "../../utils/breakpoints"
 import SocialBar from "../social/SocialBar"
 
 const SidebarContainer = styled.div`
-  background: #fff;
+  background: ${props => props.theme.bgAlt};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -93,7 +93,7 @@ const SidebarLinks = styled.div`
 
     & a:hover {
       background-position: left bottom;
-      color: white;
+      color: ${props => props.theme.bgAlt};
     }
   }
 `
@@ -105,6 +105,7 @@ const GLink = styled(Link)`
   border-bottom: ${props =>
     props.current === props.to ? `2px solid ${props.theme.textDark}` : `none`};
 `
+
 const ALink = styled(GLink)`
   color: ${props => props.theme.textLight};
   font-weight: 500;

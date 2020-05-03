@@ -16,7 +16,7 @@ const Link = styled.a`
 const MagazineCardContainer = styled.div`
   display: flex;
   max-width: 540px;
-  background: #fff;
+  background: ${props => props.theme.bgAlt};
   border: 1px solid lightgray;
   border-radius: 5px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);

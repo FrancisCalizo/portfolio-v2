@@ -99,6 +99,7 @@ module.exports = {
   },
   colorsLight: {
     bg: "#d3d3d3",
+    bgAlt: "#fff",
     bright: "#e37263",
     textLight: "#696969",
     textDark: "#343434",
@@ -110,9 +111,10 @@ module.exports = {
   },
   colorsDark: {
     bg: "#0a192f",
-    bright: "#ccd6f6",
+    bgAlt: "#172A45",
+    bright: "#64ffda",
     textLight: "#8892b0",
-    textDark: "#64ffda",
+    textDark: "#ccd6f6",
     primary: "#000",
     secondary: "#fff",
     hoverTextDark: "#a2acca",

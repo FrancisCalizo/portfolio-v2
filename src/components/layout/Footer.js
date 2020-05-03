@@ -9,7 +9,7 @@ import SocialBar from "../social/SocialBar"
 const FooterContainer = styled.div`
   bottom: 0;
   width: 100%;
-  background: #fff;
+  background: ${props => props.theme.bgAlt};
   text-align: center;
   box-sizing: border-box;
   padding: 3rem 4rem;

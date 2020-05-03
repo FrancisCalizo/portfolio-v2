@@ -81,7 +81,7 @@ const Tech = styled.p`
   span {
     display: inline-block;
     background: ${props => props.theme.textDark};
-    color: #fff;
+    color: ${props => props.theme.bgAlt};
     font-size: 12px;
     padding: 0.35rem 0.75rem;
     margin: 0.4rem 0.3rem 0.2rem 0;
@@ -115,7 +115,7 @@ const SiteButton = styled.button`
 
   a {
     text-decoration: none;
-    color: white;
+    color: ${props => props.theme.bgAlt};
   }
 
   &:hover {
@@ -148,7 +148,7 @@ const SourceButton = styled(SiteButton)`
     background: ${props => props.theme.hoverBright};
     transition: all 0.3s ease-in-out;
     a {
-      color: white;
+      color: ${props => props.theme.bgAlt};
       transition: color 0.3s ease-in-out;
     }
   }

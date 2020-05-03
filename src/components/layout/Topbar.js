@@ -17,7 +17,8 @@ const TopbarContainer = styled.div`
   text-transform: uppercase;
   font-size: 1.2rem;
   color: ${props => props.theme.textDark};
-  background: ${props => (props.isNavColored ? "#fff" : "transparent")};
+  background: ${props =>
+    props.isNavColored ? props.theme.bgAlt : "transparent"};
   border-bottom: ${props =>
     props.isNavColored ? `3px solid ${props.theme.bright}` : "none"};
   transition: all 500ms ease-in-out;
