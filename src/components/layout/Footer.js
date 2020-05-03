@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { lighten, cssVar } from "polished"
 
-import config from "../../../data/config"
 import { device } from "../../utils/breakpoints"
 import SocialBar from "../social/SocialBar"
 

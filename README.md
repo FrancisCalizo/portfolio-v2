@@ -117,3 +117,5 @@ React Proptypes Array (Shape) - https://til.hashrocket.com/posts/ytrzhrpfxk-prop
 Get Pathname of URL = https://css-tricks.com/how-to-the-get-current-page-url-in-gatsby/
 
 Horizontal Highlight Animation - https://codepen.io/kay8/pen/azKbjN
+
+Dark Mode with Styled Components - https://www.youtube.com/watch?v=MMivyJS49jU and https://medium.com/swlh/create-a-dark-mode-of-your-app-using-styled-components-a44bc5a59330 and https://github.com/krofax/Dark-Mode-Using-Styled-Component-In-React-Apps
