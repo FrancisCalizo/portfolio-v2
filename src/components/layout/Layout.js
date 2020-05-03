@@ -21,7 +21,7 @@ const MainContent = styled.div`
 
 const Layout = ({ children }) => {
   return (
-    <ThemeProvider theme={colorsDark}>
+    <ThemeProvider theme={colorsLight}>
       <GlobalStyle />
       <Topbar title={config.siteTitle} email={config.email} />
       <Sidebar title={config.siteTitle} email={config.email} />

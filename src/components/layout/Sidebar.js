@@ -3,7 +3,7 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
+import { faExternalLinkAlt, faMoon } from "@fortawesome/free-solid-svg-icons"
 
 import { device } from "../../utils/breakpoints"
 import SocialBar from "../social/SocialBar"
@@ -86,7 +86,7 @@ const SidebarLinks = styled.div`
         ${props => props.theme.bright} 50%,
         transparent 50%
       );
-      background-size: 200% 100%;
+      background-size: 202% 100%;
       background-position: right bottom;
       transition: all 0.3s ease-out;
     }
@@ -114,6 +114,16 @@ const ALink = styled(GLink)`
 
 const Fa = styled(FontAwesomeIcon)`
   color: ${props => props.theme.textLight};
+`
+
+const ToggleTheme = styled(FontAwesomeIcon)`
+  color: #fcc21b;
+  border-radius: 4px;
+  padding: 5px 7.5px;
+  margin: 0 2px;
+  background: ${props => props.theme.bg};
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.11);
+  cursor: pointer;
 `
 
 const Created = styled.p`
@@ -145,7 +155,8 @@ const Sidebar = ({ title, email }) => {
       <div>
         <Link to="/">
           <span>{title}</span>
-        </Link>
+        </Link>{" "}
+        <ToggleTheme icon={faMoon} size="lg" />
         <p>
           Software Developer.
           <br />
