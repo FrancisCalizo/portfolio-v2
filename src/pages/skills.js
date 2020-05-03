@@ -34,6 +34,7 @@ const SkillsContainer = styled.div`
 
         & > span {
           border-bottom: 4px solid ${props => props.theme.bright};
+          transition: all 300ms ease-in-out;
         }
       }
 
@@ -43,6 +44,7 @@ const SkillsContainer = styled.div`
         line-height: 1.4;
         margin: 1.5rem 0;
         font-size: 36px;
+        transition: all 300ms ease-in-out;
       }
     }
 
@@ -50,6 +52,7 @@ const SkillsContainer = styled.div`
       color: ${props => props.theme.textLight};
       margin: 0;
       font-size: 20px;
+      transition: all 300ms ease-in-out;
     }
   }
 

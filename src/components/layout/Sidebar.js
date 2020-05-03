@@ -26,6 +26,7 @@ const SidebarContainer = styled.div`
   padding: 2rem 2rem;
   box-sizing: border-box;
   overflow-y: auto;
+  transition: all 300ms ease-in-out;
 
   a {
     text-decoration: none;
@@ -36,6 +37,7 @@ const SidebarContainer = styled.div`
       color: ${props => props.theme.textDark};
       font-size: 1.6rem;
       font-weight: 600;
+      transition: all 300ms ease-in-out;
     }
 
     & p {
@@ -43,17 +45,20 @@ const SidebarContainer = styled.div`
       margin: 1rem 0 0;
       line-height: 1.4;
       font-size: 15px;
+      transition: all 300ms ease-in-out;
     }
   }
 
   & div:nth-child(3) {
     color: ${props => props.theme.textLight};
     font-size: 15px;
+    transition: all 300ms ease-in-out;
 
     & a {
       color: ${props => props.theme.bright};
       font-weight: 500;
       text-decoration: underline;
+      transition: all 300ms ease-in-out;
     }
 
     & a:hover {
@@ -108,16 +113,19 @@ const GLink = styled(Link)`
   font-weight: ${props => (props.current === props.to ? 600 : 500)};
   border-bottom: ${props =>
     props.current === props.to ? `2px solid ${props.theme.textDark}` : `none`};
+  transition: all 300ms ease-in-out;
 `
 
 const ALink = styled(GLink)`
   color: ${props => props.theme.textLight};
   font-weight: 500;
   border: none;
+  transition: all 300ms ease-in-out;
 `
 
 const Fa = styled(FontAwesomeIcon)`
   color: ${props => props.theme.textLight};
+  transition: all 300ms ease-in-out;
 `
 
 const ToggleTheme = styled(FontAwesomeIcon)`
@@ -135,14 +143,17 @@ const Created = styled.p`
   transform: translateY(25px);
   font-size: 12px;
   color: ${props => props.theme.textLight};
+  transition: all 300ms ease-in-out;
 
   span {
     color: ${props => props.theme.textDark};
     font-weight: 500;
+    transition: all 300ms ease-in-out;
   }
 
   a:hover {
     color: ${props => props.theme.bright};
+    transition: all 300ms ease-in-out;
   }
 `
 

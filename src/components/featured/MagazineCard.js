@@ -21,6 +21,7 @@ const MagazineCardContainer = styled.div`
   border-radius: 5px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
   margin: 5rem 0 5rem 50px;
+  transition: all 300ms ease-in-out;
 
   &:hover {
     opacity: 0.8;
@@ -38,6 +39,7 @@ const MagazineCardContainer = styled.div`
       margin-bottom: 10px;
       padding-bottom: 3px;
       border-bottom: 2px solid ${props => props.theme.bright};
+      transition: all 300ms ease-in-out;
     }
 
     & p {
@@ -103,6 +105,7 @@ const Image = styled(Img)`
 `
 const Fa = styled(FontAwesomeIcon)`
   color: ${props => props.theme.textDark};
+  transition: all 300ms ease-in-out;
 `
 
 const MagazineCard = ({ articles, index, magazine }) => {

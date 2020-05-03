@@ -35,12 +35,14 @@ const FeaturedContainer = styled.div`
 
         & > span {
           border-bottom: 4px solid ${props => props.theme.bright};
+          transition: all 300ms ease-in-out;
         }
       }
 
       & span:nth-child(2) {
         display: block;
         color: ${props => props.theme.textDark};
+        transition: all 300ms ease-in-out;
         line-height: 1.4;
         margin: 1.5rem 0;
         font-size: 36px;
@@ -51,6 +53,7 @@ const FeaturedContainer = styled.div`
       color: ${props => props.theme.textLight};
       margin: 0;
       font-size: 20px;
+      transition: all 300ms ease-in-out;
     }
   }
 

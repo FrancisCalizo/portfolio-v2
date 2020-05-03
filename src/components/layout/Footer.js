@@ -12,24 +12,29 @@ const FooterContainer = styled.div`
   text-align: center;
   box-sizing: border-box;
   padding: 3rem 4rem;
+  transition: all 300ms ease-in-out;
 
   h2 {
     color: ${props => props.theme.textDark};
     font-size: calc(22px + (6) * ((100vw - 330px) / (768 - 330)));
+    transition: all 300ms ease-in-out;
   }
 
   p {
     color: ${props => props.theme.textLight};
+    transition: all 300ms ease-in-out;
 
     & a {
       color: ${props => props.theme.textDark};
       text-decoration: none;
       padding: 5px;
       border-bottom: 2px solid ${props => props.theme.textDark};
+      transition: all 300ms ease-in-out;
 
       &:hover {
         color: ${props => props.theme.hoverTextDark};
         border-bottom: 2px solid ${props => props.theme.hoverTextDark};
+        transition: all 300ms ease-in-out;
       }
     }
   }
@@ -53,10 +58,12 @@ const Created = styled.p`
   font-size: 14px;
   color: ${props => props.theme.textLight};
   margin: 2rem 0 0;
+  transition: all 300ms ease-in-out;
 
   span {
     color: ${props => props.theme.textDark};
     font-weight: 500;
+    transition: all 300ms ease-in-out;
   }
 
   & a:nth-child(2) {
@@ -65,6 +72,7 @@ const Created = styled.p`
 
   a:hover {
     color: ${props => props.theme.bright};
+    transition: all 300ms ease-in-out;
   }
 `
 

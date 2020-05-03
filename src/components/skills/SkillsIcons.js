@@ -34,6 +34,7 @@ const Skill = styled.div`
       border-radius: 5px;
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
       transform: translateY(-20px);
+      transition: all 300ms ease-in-out;
     }
   }
 
@@ -44,6 +45,7 @@ const Skill = styled.div`
     border-radius: 100px;
     border: 1px solid ${props => props.theme.textLight};
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+    transition: all 300ms ease-in-out;
   }
 `
 const SkillsIcons = () => {

@@ -32,7 +32,9 @@ const CaptionContainer = styled.div`
     line-height: 1.4;
     margin: 1.5rem 0 0;
     font-size: 26px;
-    border-bottom: 2px solid ${props => props.theme.bright};
+    border-bottom: 2px solid
+     ${props => props.theme.bright};
+     transition: all 300ms ease-in-out;
   }
 
   @media ${device.minLg} and ${device.maxXl}{
@@ -60,6 +62,7 @@ const Description = styled.p`
   margin: 0;
   font-size: 18px;
   padding-right: 1rem;
+  transition: all 300ms ease-in-out;
 
   @media ${device.minLg} and ${device.maxXl}{
       font-size: calc(16px + (2) * ((100vw - 1024px) / (1498 - 1024)));
@@ -88,6 +91,7 @@ const Tech = styled.p`
     border-radius: 10px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
     border: 1px solid ${props => props.theme.textLight};
+    transition: all 300ms ease-in-out;
 
     @media ${device.minLg} and ${device.maxXl}{
       font-size: calc(11px + (1) * ((100vw - 1024px) / (1498 - 1024)));
@@ -112,10 +116,12 @@ const SiteButton = styled.button`
   background: ${props => props.theme.bright};
   border: 1px solid ${props => props.theme.bright};
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+  transition: all 300ms ease-in-out;
 
   a {
     text-decoration: none;
     color: ${props => props.theme.bgAlt};
+    transition: all 300ms ease-in-out;
   }
 
   &:hover {
@@ -142,6 +148,7 @@ const SourceButton = styled(SiteButton)`
 
   a {
     color: ${props => props.theme.textDark};
+    transition: all 300ms ease-in-out;
   }
 
   &:hover {

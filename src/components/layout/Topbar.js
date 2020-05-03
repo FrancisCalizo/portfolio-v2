@@ -39,6 +39,7 @@ const TopbarContainer = styled.div`
     font-size: 1.2rem;
     color: ${props => props.theme.textDark};
     text-decoration: none;
+    transition: all 300ms ease-in-out;
   }
 
   @media ${device.minMd} {
@@ -61,6 +62,7 @@ const BurgerLink = styled(Link)`
   font-weight: ${props => (props.current === props.to ? 600 : 400)};
   border-bottom: ${props =>
     props.current === props.to ? `2px solid ${props.theme.textDark}` : `none`};
+  transition: all 300ms ease-in-out;
 
   &:hover {
     color: ${props => props.theme.textLight};
@@ -70,12 +72,14 @@ const BurgerLink = styled(Link)`
 
 const Fa = styled(FontAwesomeIcon)`
   color: ${props => props.theme.textDark};
+  transition: all 300ms ease-in-out;
 `
 
 const BurgerLinkA = styled(BurgerLink)`
   color: ${props => props.theme.textLight};
   font-weight: 400;
   border: none;
+  transition: all 300ms ease-in-out;
 `
 
 const Topbar = ({ title, email }) => {

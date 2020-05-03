@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     background: ${props => props.theme.bg};
+    transition: all 300ms ease-in-out;
     font-family: ${config.fonts.body};
     font-weight: 400;
     line-height: 1.6;

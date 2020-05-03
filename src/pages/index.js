@@ -31,6 +31,7 @@ const HomeContainer = styled.div`
 
       & span:nth-child(1) {
         border-bottom: 4px solid ${props => props.theme.bright};
+        transition: all 300ms ease-in-out;
         font-size: 30px;
         font-weight: 500;
       }
@@ -41,12 +42,14 @@ const HomeContainer = styled.div`
       font-size: 38px;
       margin: 1.5rem 0;
       line-height: 1.4;
+      transition: all 300ms ease-in-out;
     }
 
     & p {
       color: ${props => props.theme.textLight};
       font-size: 21px;
       margin: 0;
+      transition: all 300ms ease-in-out;
     }
   }
 
@@ -112,11 +115,13 @@ const PortfolioButton = styled(Link)`
   border-radius: 25px;
   font-weight: 500;
   letter-spacing: 1.1px;
+  transition: all 300ms ease-in-out;
 
   &:nth-child(1) {
     margin-right: 1.5rem;
     background: ${props => props.theme.bright};
     color: ${props => props.theme.bgAlt};
+    transition: all 300ms ease-in-out;
   }
 
   &:nth-child(1):hover {
@@ -126,6 +131,7 @@ const PortfolioButton = styled(Link)`
 
   &:nth-child(2) {
     border: 2px solid ${props => props.theme.bright};
+    transition: all 300ms ease-in-out;
   }
 
   &:nth-child(2):hover {

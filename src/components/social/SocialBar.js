@@ -18,6 +18,7 @@ const SocialLinks = styled.div`
 
 const SocialLink = styled(FontAwesomeIcon)`
   color: ${props => props.theme.textDark};
+  transition: all 300ms ease-in-out;
 
   &:hover {
     color: ${props => props.theme.bright};

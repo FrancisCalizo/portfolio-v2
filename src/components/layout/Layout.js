@@ -20,7 +20,8 @@ const MainContent = styled.div`
 `
 
 const Layout = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const stored = localStorage.getItem("isDarkMode")
+  const [isDarkMode, setIsDarkMode] = useState(stored === "true" ? true : false)
 
   return (
     <ThemeProvider theme={isDarkMode ? colorsDark : colorsLight}>
