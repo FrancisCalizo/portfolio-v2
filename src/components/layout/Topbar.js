@@ -82,7 +82,7 @@ const BurgerLinkA = styled(BurgerLink)`
   transition: all 300ms ease-in-out;
 `
 
-const Topbar = ({ title, email }) => {
+const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false)
   const [isNavColored, setisNavColored] = useState(false)
   const [current, setCurrent] = useState("")
@@ -130,7 +130,7 @@ const Topbar = ({ title, email }) => {
       left: "0",
     },
     bmMorphShape: {
-      fill: "#fff",
+      fill: isDarkMode ? "#172A45" : "#fff",
     },
     bmItemList: {
       display: "flex",
@@ -138,7 +138,7 @@ const Topbar = ({ title, email }) => {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      background: "#fff",
+      background: isDarkMode ? "#172A45" : "#fff",
     },
     bmItem: {
       display: "inline-block",
@@ -231,5 +231,7 @@ const Topbar = ({ title, email }) => {
 Topbar.propTypes = {
   title: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
+  isDarkMode: PropTypes.bool.isRequired,
+  setIsDarkMode: PropTypes.func.isRequired,
 }
 export default Topbar

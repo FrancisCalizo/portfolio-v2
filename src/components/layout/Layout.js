@@ -26,7 +26,12 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={isDarkMode ? colorsDark : colorsLight}>
       <GlobalStyle />
-      <Topbar title={config.siteTitle} email={config.email} />
+      <Topbar
+        title={config.siteTitle}
+        email={config.email}
+        isDarkMode={isDarkMode}
+        setIsDarkMode={setIsDarkMode}
+      />
       <Sidebar
         title={config.siteTitle}
         email={config.email}
