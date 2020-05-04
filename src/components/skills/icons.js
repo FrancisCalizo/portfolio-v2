@@ -8,9 +8,9 @@ import mongo from "../../images/skills/mongo.svg"
 import node from "../../images/skills/node.svg"
 import react from "../../images/skills/react.svg"
 import redux from "../../images/skills/redux.svg"
-import sass from "../../images/skills/sass.svg"
 import sql from "../../images/skills/sql.svg"
 import ts from "../../images/skills/ts.svg"
+// import sass from "../../images/skills/sass.svg"
 
 export const icons = [
   {

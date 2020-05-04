@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import config from "../../../data/config"
 import { device } from "../../utils/breakpoints"
 import { icons } from "./icons"
 

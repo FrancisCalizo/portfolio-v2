@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { lighten, darken } from "polished"
 import { Transition } from "react-transition-group"
 
 import config from "../../data/config"

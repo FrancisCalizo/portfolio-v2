@@ -4,10 +4,24 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import { slide as Menu } from "react-burger-menu"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
+import {
+  faExternalLinkAlt,
+  faMoon,
+  faSun,
+} from "@fortawesome/free-solid-svg-icons"
 
 import { device } from "../../utils/breakpoints"
 import config from "../../../data/config"
+
+const ToggleTheme = styled(FontAwesomeIcon)`
+  color: #fcc21b;
+  border-radius: 4px;
+  padding: 5px 7.5px;
+  margin: 0 2px;
+  background: ${props => props.theme.bg};
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.11);
+  cursor: pointer;
+`
 
 const TopbarContainer = styled.div`
   position: fixed;
@@ -111,6 +125,11 @@ const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
     }
   }
 
+  const handleDarkClick = () => {
+    localStorage.setItem("isDarkMode", !isDarkMode)
+    setIsDarkMode(isDarkMode ? false : true)
+  }
+
   const menuStyles = {
     bmBurgerButton: {
       position: "fixed",
@@ -130,7 +149,7 @@ const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
       left: "0",
     },
     bmMorphShape: {
-      fill: isDarkMode ? "#172A45" : "#fff",
+      fill: isDarkMode ? config.colorsDark.bgAlt : "#fff",
     },
     bmItemList: {
       display: "flex",
@@ -138,14 +157,14 @@ const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      background: isDarkMode ? "#172A45" : "#fff",
+      background: isDarkMode ? config.colorsDark.bgAlt : "#fff",
     },
     bmItem: {
       display: "inline-block",
       margin: "1rem 0",
     },
     bmCross: {
-      background: config.colorsLight.textDark,
+      background: isDarkMode ? "#fff" : config.colorsLight.textDark,
     },
   }
 
@@ -159,6 +178,11 @@ const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
             onStateChange={getBurgerOpen}
             isOpen={isBurgerOpen}
           >
+            <ToggleTheme
+              icon={isDarkMode ? faSun : faMoon}
+              size="lg"
+              onClick={handleDarkClick}
+            />
             <BurgerLink
               current={current}
               id="home"

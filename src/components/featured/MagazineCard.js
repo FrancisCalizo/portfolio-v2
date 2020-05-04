@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import PropTypes from "prop-types"
 
-import config from "../../../data/config"
 import { device } from "../../utils/breakpoints"
 
 const Link = styled.a`

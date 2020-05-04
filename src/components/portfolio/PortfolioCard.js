@@ -2,10 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import { lighten, darken } from "polished"
 
 import { device } from "../../utils/breakpoints"
-import config from "../../../data/config"
 
 const PortfolioCardContainer = styled.div`
   display: flex;

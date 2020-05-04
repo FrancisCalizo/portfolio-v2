@@ -8,8 +8,6 @@ import {
   faBlog,
 } from "@fortawesome/free-solid-svg-icons"
 
-import config from "../../../data/config"
-
 const SocialLinks = styled.div`
   display: flex;
   justify-content: space-between;
