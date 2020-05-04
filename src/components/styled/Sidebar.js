@@ -117,8 +117,8 @@ export const ALink = styled(GLink)`
 export const Fa = styled(FontAwesomeIcon)`
   color: ${props => props.theme.textLight};
   transition: all 300ms ease-in-out;
-  max-width: 35px;
-  max-height: 35px;
+  max-width: 16px;
+  max-height: 16px;
 `
 
 export const ToggleTheme = styled(FontAwesomeIcon)`
