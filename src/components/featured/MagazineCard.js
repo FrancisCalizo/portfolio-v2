@@ -6,6 +6,7 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import PropTypes from "prop-types"
 
 import { device } from "../../utils/breakpoints"
+import fluid from "../../utils/fluid"
 
 const Link = styled.a`
   text-decoration: none;
@@ -50,12 +51,12 @@ const MagazineCardContainer = styled.div`
     & > div:nth-child(2) {
 
       & h2 {
-        font-size: calc(16px + (4) * ((100vw - 768px) / (1024 - 768)));
-        margin-top calc(10px + (10) * ((100vw - 768px) / (1024 - 768)));
+        font-size: ${fluid(16, 4, 768, 1024)};
+        margin-top: ${fluid(10, 10, 768, 1024)};
       }
 
       & p {
-        font-size: calc(12px + (4) * ((100vw - 768px) / (1024 - 768)));
+        font-size: ${fluid(12, 4, 768, 1024)};
       }
     }
   }
@@ -65,12 +66,12 @@ const MagazineCardContainer = styled.div`
     & > div:nth-child(2) {
 
       & h2 {
-        font-size: calc(16px + (4) * ((100vw - 425px) / (768 - 425)));
-        margin-top calc(10px + (10) * ((100vw - 425px) / (768 - 425)));
+        font-size: ${fluid(16, 4, 425, 768)};
+        margin-top: ${fluid(10, 10, 425, 768)};
       }
 
       & p {
-        font-size: calc(12px + (4) * ((100vw - 425px) / (768 - 425)));
+        font-size: ${fluid(12, 4, 425, 768)};
       }
     }
   }
@@ -85,11 +86,11 @@ const MagazineCardContainer = styled.div`
       margin: -4rem 0.5rem 1.5rem;
 
       & h2 {
-        font-size: calc(16px + (4) * ((100vw - 320px) / (425 - 320)));
+        font-size: ${fluid(16, 4, 320, 425)};
       }
 
       & p {
-        font-size: calc(12px + (4) * ((100vw - 320px) / (425 - 320)));
+        font-size: ${fluid(12, 4, 320, 425)};
       }
     }
   }

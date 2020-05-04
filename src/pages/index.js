@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { Transition } from "react-transition-group"
 
 import config from "../../data/config"
+import fluid from "../utils/fluid"
 import Layout from "../components/layout/Layout"
 import { device } from "../utils/breakpoints"
 import SEO from "../components/Seo"
@@ -59,19 +60,19 @@ const HomeContainer = styled.div`
   @media ${device.minMd} and ${device.maxLg}{
     & div {
       & p:nth-child(1){
-        font-size: calc(22px + (4) * ((100vw - 768px) / (1024 - 768)));
+        font-size: ${fluid(22, 4, 768, 1024)};
 
         & span:nth-child(1){
-          font-size: calc(26px + (4) * ((100vw - 768px) / (1024 - 768)));
+          font-size: ${fluid(26, 4, 768, 1024)};
         }
       }
 
       & h1 {
-        font-size: calc(32px + (6) * ((100vw - 768px) / (1024 - 768)));
+        font-size: ${fluid(32, 6, 768, 1024)};
       }
 
       & p {
-        font-size: calc(18px + (3) * ((100vw - 768px) / (1024 - 768)));
+        font-size: ${fluid(18, 3, 768, 1024)};
       }
     }
   }
@@ -83,19 +84,19 @@ const HomeContainer = styled.div`
       max-width: none;
 
       & p:nth-child(1){
-        font-size: calc(18px + (4) * ((100vw - 320px) / (768 - 320)));
+        font-size: ${fluid(18, 4, 320, 768)};
 
         & span:nth-child(1){
-          font-size: calc(22px + (4) * ((100vw - 320px) / (768 - 320)));
+        font-size: ${fluid(22, 4, 320, 768)};
         }
       }
 
       & h1 {
-        font-size: calc(26px + (4) * ((100vw - 320px) / (768 - 320)));
+        font-size: ${fluid(26, 4, 320, 768)};
       }
 
       & p {
-        font-size: calc(14px + (3) * ((100vw - 320px) / (768 - 320)));
+        font-size: ${fluid(14, 3, 320, 768)};
       }
     }
   }
@@ -140,12 +141,12 @@ const PortfolioButton = styled(Link)`
   }
 
   @media ${device.minMd} and ${device.maxLg}{
-    font-size: calc(12px + (2) * ((100vw - 768px) / (1024 - 768)));
+    font-size: ${fluid(12, 2, 768, 1024)};
     padding: 1.5vw 2vw;
   }
 
   @media ${device.maxMd}{
-    font-size: calc(10px + (4) * ((100vw - 320px) / (768 - 320)));
+    font-size: ${fluid(10, 4, 320, 768)};
     padding: 2.25vw 3.25vw;
   }
 `

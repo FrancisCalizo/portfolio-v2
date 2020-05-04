@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { device } from "../../utils/breakpoints"
+import fluid from "../../utils/fluid"
 import SocialBar from "../social/SocialBar"
 
 const FooterContainer = styled.div`
@@ -15,13 +16,14 @@ const FooterContainer = styled.div`
 
   h2 {
     color: ${props => props.theme.textDark};
-    font-size: calc(22px + (6) * ((100vw - 330px) / (768 - 330)));
+    font-size: ${fluid(22, 6, 330, 768)};
     transition: all 300ms ease-in-out;
   }
 
   p {
     color: ${props => props.theme.textLight};
     transition: all 300ms ease-in-out;
+    font-size: ${fluid(14, 2, 330, 768)};
 
     & a {
       color: ${props => props.theme.textDark};

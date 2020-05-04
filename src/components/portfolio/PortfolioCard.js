@@ -4,6 +4,7 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 
 import { device } from "../../utils/breakpoints"
+import fluid from "../../utils/fluid"
 
 const PortfolioCardContainer = styled.div`
   display: flex;
@@ -37,7 +38,7 @@ const CaptionContainer = styled.div`
 
   @media ${device.minLg} and ${device.maxXl}{
     h2 {
-      font-size: calc(22px + (4) * ((100vw - 1024px) / (1498 - 1024)));
+      font-size: ${fluid(22, 4, 1024, 1498)};
     }
   }
 
@@ -45,13 +46,13 @@ const CaptionContainer = styled.div`
     flex-basis: 100%;
 
     h2 {
-      font-size: calc(22px + (4) * ((100vw - 768px) / (1024 - 768)));
+      font-size: ${fluid(22, 4, 768, 1024)};
     }
   }
 
   @media ${device.maxMd} {
     h2 {
-      font-size: calc(20px + (2) * ((100vw - 330px) / (768 - 330)));
+      font-size: ${fluid(22, 2, 330, 768)};
     }
   }
 `
@@ -63,15 +64,15 @@ const Description = styled.p`
   transition: all 300ms ease-in-out;
 
   @media ${device.minLg} and ${device.maxXl}{
-      font-size: calc(16px + (2) * ((100vw - 1024px) / (1498 - 1024)));
+      font-size: ${fluid(16, 2, 1024, 1498)};
   }
 
   @media ${device.minMd} and ${device.maxLg} {
-    font-size: calc(16px + (4) * ((100vw - 768px) / (1024 - 768)));
+    font-size: ${fluid(16, 4, 768, 1024)};
   }
 
   @media ${device.maxMd}{
-    font-size: calc(14px + (4) * ((100vw - 330px) / (768 - 330)));
+    font-size: ${fluid(14, 4, 330, 768)};
     padding: 0;
   }
 `
@@ -92,11 +93,11 @@ const Tech = styled.p`
     transition: all 300ms ease-in-out;
 
     @media ${device.minLg} and ${device.maxXl}{
-      font-size: calc(11px + (1) * ((100vw - 1024px) / (1498 - 1024)));
+      font-size: ${fluid(11, 1, 1024, 1498)};
     }
 
     @media ${device.maxMd}{
-      font-size: calc(10px + (2) * ((100vw - 330px) / (768 - 330)));
+      font-size: ${fluid(10, 2, 330, 768)};
     }
   }
 
@@ -129,15 +130,15 @@ const SiteButton = styled.button`
   }
 
   @media ${device.minLg} and ${device.maxXl}{
-    font-size: calc(10px + (3) * ((100vw - 1024px) / (1498 - 1024)));
-    padding: calc(7px + (3) * ((100vw - 1024px) / (1498 - 1024))) calc(8px + (8) * ((100vw - 1024px) / (1498 - 1024)));
-    margin-right: calc(12px + (9) * ((100vw - 1024px) / (1498 - 1024)))
+    font-size: ${fluid(10, 3, 1024, 1498)};
+    padding: ${fluid(7, 3, 1024, 1498)} ${fluid(18, 8, 1024, 1498)};
+    margin-right: ${fluid(12, 9, 1024, 1498)};
   }
 
   @media ${device.maxMd}{
     display: block;
     margin: 1rem auto;
-    font-size: calc(11px + (2) * ((100vw - 330px) / (768 - 330)));
+    font-size: ${fluid(11, 2, 330, 768)};
   }
 `
 

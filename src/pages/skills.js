@@ -3,13 +3,13 @@ import styled from "styled-components"
 import { Transition } from "react-transition-group"
 
 import { device } from "../utils/breakpoints"
+import fluid from "../utils/fluid"
 import config from "../../data/config"
 import SEO from "../components/Seo"
 import Layout from "../components/layout/Layout"
 import SkillsIcons from "../components/skills/SkillsIcons"
 
 const SkillsContainer = styled.div`
-  // min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,15 +60,15 @@ const SkillsContainer = styled.div`
     & div {
       & h1 {
         & span:nth-child(1) {
-          font-size: calc(22px + (4) * ((100vw - 768px) / (1024 - 768)));
+          font-size: ${fluid(22, 4, 768, 1024)};
         }
         & span:nth-child(2) {
-          font-size: calc(32px + (4) * ((100vw - 768px) / (1024 - 768)));
+          font-size: ${fluid(32, 4, 768, 1024)};
         }
       }
 
       & p {
-        font-size: calc(18px + (3) * ((100vw - 768px) / (1024 - 768)));
+        font-size: ${fluid(18, 3, 768, 1024)};
       }
     }
   }
@@ -84,15 +84,15 @@ const SkillsContainer = styled.div`
 
       & h1 {
         & span:nth-child(1) {
-          font-size: calc(24px + (2) * ((100vw - 330px) / (768 - 330)));
+          font-size: ${fluid(24, 2, 330, 768)};
         }
         & span:nth-child(2) {
-          font-size: calc(28px + (6) * ((100vw - 330px) / (768 - 330)));
+          font-size: ${fluid(28, 6, 330, 768)};
         }
       }
 
       & p {
-        font-size: calc(14px + (6) * ((100vw - 330px) / (768 - 330)));
+        font-size:  ${fluid(14, 6, 330, 768)};
       }
     }
   }
