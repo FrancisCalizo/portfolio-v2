@@ -117,6 +117,8 @@ export const ALink = styled(GLink)`
 export const Fa = styled(FontAwesomeIcon)`
   color: ${props => props.theme.textLight};
   transition: all 300ms ease-in-out;
+  max-width: 35px;
+  max-height: 35px;
 `
 
 export const ToggleTheme = styled(FontAwesomeIcon)`
@@ -127,6 +129,8 @@ export const ToggleTheme = styled(FontAwesomeIcon)`
   background: ${props => props.theme.bg};
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.11);
   cursor: pointer;
+  max-width: 35px;
+  max-height: 35px;
 `
 
 export const Created = styled.p`
