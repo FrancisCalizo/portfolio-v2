@@ -13,7 +13,7 @@ function SEO({ meta }) {
         language,
       }}
       title={siteTitle}
-      titleTemplate={`%s | ${siteTitle}}`}
+      titleTemplate={`${siteTitle} | Software Developer`}
       meta={[
         {
           name: `description`,
