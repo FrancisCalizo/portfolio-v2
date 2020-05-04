@@ -48,7 +48,9 @@ const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   }
 
   const handleDarkClick = () => {
-    localStorage.setItem("isDarkMode", !isDarkMode)
+    typeof window !== "undefined" &&
+      localStorage.setItem("isDarkMode", !isDarkMode)
+
     setIsDarkMode(isDarkMode ? false : true)
   }
 

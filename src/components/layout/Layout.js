@@ -20,7 +20,8 @@ const MainContent = styled.div`
 `
 
 const Layout = ({ children }) => {
-  const stored = localStorage.getItem("isDarkMode")
+  const stored =
+    typeof window !== "undefined" ? localStorage.getItem("isDarkMode") : null
   const [isDarkMode, setIsDarkMode] = useState(stored === "true" ? true : false)
 
   return (
@@ -39,7 +40,7 @@ const Layout = ({ children }) => {
         setIsDarkMode={setIsDarkMode}
       />
       <UnderNav>
-        <MainContent>{children}</MainContent>}
+        <MainContent>{children}</MainContent>
         <Footer email={config.email} />
       </UnderNav>
     </ThemeProvider>

@@ -28,7 +28,8 @@ const Sidebar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   }, [])
 
   const handleClick = () => {
-    localStorage.setItem("isDarkMode", !isDarkMode)
+    typeof window !== "undefined" &&
+      localStorage.setItem("isDarkMode", !isDarkMode)
     setIsDarkMode(isDarkMode ? false : true)
   }
 
