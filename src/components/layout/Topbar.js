@@ -16,6 +16,7 @@ import {
   BurgerLinkA,
   Fa,
 } from "../styled/Topbar"
+import resume from "../../../static/resume.pdf"
 
 const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false)
@@ -155,7 +156,8 @@ const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
               as="a"
               id="resume"
               className="menu-item"
-              href="/resume"
+              href={resume}
+              target="_blank"
               onClick={handleClick}
             >
               Resume

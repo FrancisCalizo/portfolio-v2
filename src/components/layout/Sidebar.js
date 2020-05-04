@@ -17,6 +17,7 @@ import {
   ToggleTheme,
   Created,
 } from "../styled/Sidebar"
+import resume from "../../../static/resume.pdf"
 
 const Sidebar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   const [current, setCurrent] = useState("")
@@ -82,12 +83,7 @@ const Sidebar = ({ title, email, isDarkMode, setIsDarkMode }) => {
           </ALink>
         </li>
         <li>
-          <ALink
-            as="a"
-            href="resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ALink as="a" href={resume} target="_blank" rel="noopener noreferrer">
             Resume
           </ALink>
         </li>
