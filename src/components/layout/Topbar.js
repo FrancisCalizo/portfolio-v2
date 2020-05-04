@@ -1,100 +1,21 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
 import PropTypes from "prop-types"
 import { slide as Menu } from "react-burger-menu"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faExternalLinkAlt,
   faMoon,
   faSun,
 } from "@fortawesome/free-solid-svg-icons"
 
-import { device } from "../../utils/breakpoints"
 import config from "../../../data/config"
-
-const ToggleTheme = styled(FontAwesomeIcon)`
-  color: #fcc21b;
-  border-radius: 4px;
-  padding: 5px 7.5px;
-  margin: 0 2px;
-  background: ${props => props.theme.bg};
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.11);
-  cursor: pointer;
-`
-
-const TopbarContainer = styled.div`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  color: ${props => props.theme.textDark};
-  background: ${props =>
-    props.isNavColored ? props.theme.bgAlt : "transparent"};
-  border-bottom: ${props =>
-    props.isNavColored ? `3px solid ${props.theme.bright}` : "none"};
-  transition: all 500ms ease-in-out;
-
-  > div {
-    display: flex;
-    justify-content: space-between;
-    padding: ${props => (props.isNavColored ? "0.5rem 2rem" : "1rem 2rem")};
-    transition: padding 500ms ease-in-out;
-
-    > div:nth-child(2) {
-      font-weight: 600;
-    }
-  }
-
-  a {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: ${props => props.theme.textDark};
-    text-decoration: none;
-    transition: all 300ms ease-in-out;
-  }
-
-  @media ${device.minMd} {
-    display: none;
-  }
-
-  @media ${device.maxSm} {
-    > div {
-      > div:nth-child(2) {
-        display: none;
-      }
-    }
-  }
-`
-
-const BurgerLink = styled(Link)`
-  border-bottom: 2px solid transparent;
-  color: ${props =>
-    props.current === props.to ? props.theme.textDark : props.theme.textLight};
-  font-weight: ${props => (props.current === props.to ? 600 : 400)};
-  border-bottom: ${props =>
-    props.current === props.to ? `2px solid ${props.theme.textDark}` : `none`};
-  transition: all 300ms ease-in-out;
-
-  &:hover {
-    color: ${props => props.theme.textLight};
-    transition: color 0.2s ease-in-out;
-  }
-`
-
-const Fa = styled(FontAwesomeIcon)`
-  color: ${props => props.theme.textDark};
-  transition: all 300ms ease-in-out;
-`
-
-const BurgerLinkA = styled(BurgerLink)`
-  color: ${props => props.theme.textLight};
-  font-weight: 400;
-  border: none;
-  transition: all 300ms ease-in-out;
-`
+import {
+  ToggleTheme,
+  TopbarContainer,
+  BurgerLink,
+  BurgerLinkA,
+  Fa,
+} from "../styled/Topbar"
 
 const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false)

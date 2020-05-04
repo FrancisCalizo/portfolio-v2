@@ -1,6 +1,4 @@
 import React from "react"
-import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 import {
   faEnvelopeSquare,
@@ -8,21 +6,7 @@ import {
   faBlog,
 } from "@fortawesome/free-solid-svg-icons"
 
-const SocialLinks = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 180px;
-`
-
-const SocialLink = styled(FontAwesomeIcon)`
-  color: ${props => props.theme.textDark};
-  transition: all 300ms ease-in-out;
-
-  &:hover {
-    color: ${props => props.theme.bright};
-    transition: color 0.2s ease-in-out;
-  }
-`
+import { SocialLinks, SocialLink } from "../styled/SocialBar"
 
 const SocialBar = ({ email }) => {
   return (

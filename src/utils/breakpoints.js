@@ -1,4 +1,5 @@
 export const size = {
+  maxXs: "330px",
   minSm: "426px",
   maxSm: "425px",
   minMd: "769px",
@@ -14,6 +15,7 @@ export const device = {
   minMd: `(min-width: ${size.minMd})`,
   minLg: `(min-width: ${size.minLg})`,
   minXl: `(min-width: ${size.minXl})`,
+  maxXs: `(max-width: ${size.maxXs})`,
   maxSm: `(max-width: ${size.maxSm})`,
   maxMd: `(max-width: ${size.maxMd})`,
   maxLg: `(max-width: ${size.maxLg})`,
