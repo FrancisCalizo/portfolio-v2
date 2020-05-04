@@ -6,7 +6,6 @@ import {
   faMoon,
   faSun,
 } from "@fortawesome/free-solid-svg-icons"
-import { config } from "@fortawesome/fontawesome-svg-core"
 
 import SocialBar from "../social/SocialBar"
 import {
@@ -24,7 +23,6 @@ const Sidebar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   const [current, setCurrent] = useState("")
 
   useEffect(() => {
-    config.autoAddCss = false
     const url = typeof window !== "undefined" ? window.location.pathname : ""
     setCurrent(url)
   }, [])
