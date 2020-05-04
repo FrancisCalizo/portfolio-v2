@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import SEO from "../components/seo"
-import { Button } from "../components/styled/404"
+import SEO from "../components/SEO"
+import { Button } from "../components/styled/404Styles"
 
 const NotFoundPage = () => {
   return (
