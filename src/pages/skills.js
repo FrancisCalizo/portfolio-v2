@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Transition } from "react-transition-group"
 
 import config from "../../data/config"
-import Seo from "../components/Seo"
+import Seo from "../seo"
 import Layout from "../components/layout/Layout"
 import SkillsIcons from "../components/skills/SkillsIcons"
 import { SkillsContainer } from "../components/styled/Skills"

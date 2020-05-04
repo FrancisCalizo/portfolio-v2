@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Transition } from "react-transition-group"
 
 import config from "../../data/config"
-import Seo from "../components/Seo"
+import Seo from "../seo"
 import Layout from "../components/layout/Layout"
 import PortfolioCard from "../components/portfolio/PortfolioCard"
 import { PortfolioContainer, Line } from "../components/styled/Portfolio"

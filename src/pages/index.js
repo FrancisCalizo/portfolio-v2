@@ -3,7 +3,7 @@ import { Transition } from "react-transition-group"
 
 import config from "../../data/config"
 import Layout from "../components/layout/Layout"
-import Seo from "../components/Seo"
+import Seo from "../seo"
 import {
   HomeContainer,
   PortfolioButton,
