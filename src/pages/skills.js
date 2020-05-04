@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Transition } from "react-transition-group"
 
 import config from "../../data/config"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 import Layout from "../components/layout/Layout"
 import SkillsIcons from "../components/skills/SkillsIcons"
 import { SkillsContainer } from "../components/styled/Skills"
@@ -16,7 +16,7 @@ const Skills = () => {
 
   return (
     <Layout>
-      <SEO title="Skills" />
+      <Seo title="Skills" />
       <Transition in={loadTrans} timeout={0}>
         {state => (
           <SkillsContainer state={state}>

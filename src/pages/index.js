@@ -3,7 +3,7 @@ import { Transition } from "react-transition-group"
 
 import config from "../../data/config"
 import Layout from "../components/layout/Layout"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 import {
   HomeContainer,
   PortfolioButton,
@@ -19,7 +19,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <Transition in={loadTrans} timeout={0}>
         {state => (
           <HomeContainer state={state}>

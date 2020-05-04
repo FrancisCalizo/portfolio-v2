@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Transition } from "react-transition-group"
 
 import config from "../../data/config"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 import Layout from "../components/layout/Layout"
 import PortfolioCard from "../components/portfolio/PortfolioCard"
 import { PortfolioContainer, Line } from "../components/styled/Portfolio"
@@ -36,7 +36,7 @@ const Portfolio = () => {
 
   return (
     <Layout>
-      <SEO title="Portfolio" />
+      <Seo title="Portfolio" />
       <Transition in={loadTrans} timeout={0}>
         {state => (
           <PortfolioContainer state={state}>

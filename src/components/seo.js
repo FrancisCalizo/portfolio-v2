@@ -6,7 +6,7 @@ import config from "../../data/config"
 
 const { language, siteTitle, author, description } = config
 
-function SEO({ meta }) {
+function Seo({ meta }) {
   return (
     <Helmet
       htmlAttributes={{
@@ -52,12 +52,12 @@ function SEO({ meta }) {
   )
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   meta: [],
 }
 
-SEO.propTypes = {
+Seo.propTypes = {
   meta: PropTypes.arrayOf(PropTypes.object),
 }
 
-export default SEO
+export default Seo

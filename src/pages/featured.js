@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Transition } from "react-transition-group"
 
 import config from "../../data/config"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 import Layout from "../components/layout/Layout"
 import MagazineCard from "../components/featured/MagazineCard"
 import { FeaturedContainer, Line } from "../components/styled/Featured"
@@ -36,7 +36,7 @@ const Accomplishments = () => {
 
   return (
     <Layout>
-      <SEO title="Featured" />
+      <Seo title="Featured" />
       <Transition in={loadTrans} timeout={0}>
         {state => (
           <FeaturedContainer state={state}>
