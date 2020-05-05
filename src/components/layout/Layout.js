@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import styled, { ThemeProvider } from "styled-components"
 
@@ -20,9 +20,19 @@ const MainContent = styled.div`
 `
 
 const Layout = ({ children }) => {
+  // const stored =
+  //   typeof window !== "undefined" ? localStorage.getItem("isDarkMode") : null
+  // const [isDarkMode, setIsDarkMode] = useState(stored === "true" ? true : false)
+
   const stored =
     typeof window !== "undefined" ? localStorage.getItem("isDarkMode") : null
-  const [isDarkMode, setIsDarkMode] = useState(stored === "true" ? true : false)
+  const [isDarkMode, setIsDarkMode] = useState(false)
+
+  useEffect(() => {
+    setIsDarkMode(
+      typeof window !== "undefined" && stored === "true" ? true : false
+    )
+  }, [setIsDarkMode])
 
   return (
     <ThemeProvider theme={isDarkMode ? colorsDark : colorsLight}>
