@@ -100,7 +100,6 @@ export const HomeContainer = styled.div`
     margin: 5rem auto;
   }
 `
-
 export const PortfolioButton = styled(Link)`
   color: ${props => props.theme.textDark};
   text-transform: uppercase;
