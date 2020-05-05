@@ -18,6 +18,7 @@ import {
   Created,
 } from "../styled/Sidebar"
 import resume from "../../../static/resume.pdf"
+import storage from "local-storage-fallback"
 
 const Sidebar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   const [current, setCurrent] = useState("")
@@ -28,8 +29,7 @@ const Sidebar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   }, [])
 
   const handleClick = () => {
-    typeof window !== "undefined" &&
-      localStorage.setItem("isDarkMode", !isDarkMode)
+    storage.setItem("isDarkMode", !isDarkMode)
     setIsDarkMode(isDarkMode ? false : true)
   }
 

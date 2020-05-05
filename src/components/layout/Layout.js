@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled, { ThemeProvider } from "styled-components"
+import storage from "local-storage-fallback"
 
 import { device } from "../../utils/breakpoints"
 import config from "../../../data/config"
@@ -20,8 +21,7 @@ const MainContent = styled.div`
 `
 
 const Layout = ({ children }) => {
-  const stored =
-    typeof window !== "undefined" ? localStorage.getItem("isDarkMode") : null
+  const stored = storage.getItem("isDarkMode")
   const [isDarkMode, setIsDarkMode] = useState(stored === "true" ? true : false)
 
   return (
