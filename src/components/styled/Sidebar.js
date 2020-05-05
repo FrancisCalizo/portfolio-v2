@@ -129,8 +129,8 @@ export const ToggleTheme = styled(FontAwesomeIcon)`
   background: ${props => props.theme.bg};
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.11);
   cursor: pointer;
-  max-width: 36px;
-  max-height: 31px;
+  max-width: 19px;
+  max-height: 21px;
 `
 
 export const Created = styled.p`
