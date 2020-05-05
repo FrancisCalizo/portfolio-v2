@@ -7,7 +7,6 @@ import {
   faMoon,
   faSun,
 } from "@fortawesome/free-solid-svg-icons"
-import storage from "local-storage-fallback"
 
 import config from "../../../data/config"
 import {
@@ -49,8 +48,8 @@ const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   }
 
   const handleDarkClick = () => {
-    storage.setItem("isDarkMode", !isDarkMode)
-
+    typeof window !== "undefined" &&
+      localStorage.setItem("isDarkMode", !isDarkMode)
     setIsDarkMode(isDarkMode ? false : true)
   }
 
