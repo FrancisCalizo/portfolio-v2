@@ -21,3 +21,5 @@ Horizontal Highlight Animation - https://codepen.io/kay8/pen/azKbjN
 Dark Mode with Styled Components - https://www.youtube.com/watch?v=MMivyJS49jU and https://medium.com/swlh/create-a-dark-mode-of-your-app-using-styled-components-a44bc5a59330 and https://github.com/krofax/Dark-Mode-Using-Styled-Component-In-React-Apps
 
 PDF Link in Static Folder (resume)- https://github.com/gatsbyjs/gatsby/issues/3086
+
+Dark Mode not persisting | Temporary Solution - https://github.com/styled-components/styled-components/issues/2629
