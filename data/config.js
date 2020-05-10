@@ -42,15 +42,6 @@ module.exports = {
       "A select group of projects I've created, from personal websites to data visualizations and single page web applications. ",
     projects: [
       {
-        title: "Did FSU Win?",
-        description:
-          "A web app visualizing stats and data of the FSU football team. View a countdown to the Noles' next game, recent game updates, as well as schedule and roster information by year. Observe box scores, game stats, and play-by-play information for each game.",
-        img: "fsu.png",
-        url: "https://www.didfsu.win/",
-        github: "https://github.com/FrancisCalizo/did-florida-state-win",
-        tech: ["React.js", "Tailwind CSS", "College Football API"],
-      },
-      {
         title: "The Covid-19 Report",
         description:
           "A graphical report on coronavirus (COVID-19) cases, with ability to filter by country or by US state. Graphs and charts are used to visualize confirmed cases, deaths, and recoveries based on the chosen country/state.",
@@ -58,6 +49,15 @@ module.exports = {
         url: "https://thecovidreport.netlify.app/",
         github: "https://github.com/FrancisCalizo/covid-19",
         tech: ["Gatsby.js", "Chart.js", "Tailwind CSS", "COVID-19 API"],
+      },
+      {
+        title: "Did FSU Win?",
+        description:
+          "A web app visualizing stats and data of the FSU football team. View a countdown to the Noles' next game, recent game updates, as well as schedule and roster information by year. Observe box scores, game stats, and play-by-play information for each game.",
+        img: "fsu.png",
+        url: "https://www.didfsu.win/",
+        github: "https://github.com/FrancisCalizo/did-florida-state-win",
+        tech: ["React.js", "Tailwind CSS", "College Football API"],
       },
       {
         title: "Save The Date!",
