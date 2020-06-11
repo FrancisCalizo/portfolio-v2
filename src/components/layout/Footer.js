@@ -3,7 +3,7 @@ import React from "react"
 import SocialBar from "../social/SocialBar"
 import { FooterContainer, SocialContainer, Created } from "../styled/Footer"
 
-const Footer = ({ email }) => {
+const Footer = ({ email, resume }) => {
   return (
     <FooterContainer>
       <h2>Let's Connect!</h2>
@@ -15,7 +15,7 @@ const Footer = ({ email }) => {
         <a href={`mailto:${email}`}>{email}</a>
       </p>
       <SocialContainer>
-        <SocialBar email={email} />
+        <SocialBar email={email} resume={resume} />
       </SocialContainer>
       <Created>
         Built by <span>Francis Calizo</span> with

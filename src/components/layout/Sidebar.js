@@ -92,7 +92,7 @@ const Sidebar = ({ title, email, isDarkMode, setIsDarkMode }) => {
       <div>
         Questions? Comments? Concerns? Please don't hesitate to drop me a line
         at <a href={`mailto:${email}`}>{email}</a>
-        <SocialBar />
+        <SocialBar email={email} resume={resume} />
         <Created>
           Built by <span>Francis Calizo</span> with{" "}
           <a

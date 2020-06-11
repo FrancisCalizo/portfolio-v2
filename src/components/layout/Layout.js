@@ -9,6 +9,7 @@ import Sidebar from "./Sidebar"
 import Topbar from "./Topbar"
 import UnderNav from "./UnderNav"
 import Footer from "./Footer"
+import resume from "../../../static/resume.pdf"
 
 const { colorsLight, colorsDark } = config
 
@@ -51,7 +52,7 @@ const Layout = ({ children }) => {
       />
       <UnderNav>
         <MainContent>{children}</MainContent>
-        <Footer email={config.email} />
+        <Footer email={config.email} resume={resume} />
       </UnderNav>
     </ThemeProvider>
   )

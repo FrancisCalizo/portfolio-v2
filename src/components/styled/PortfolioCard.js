@@ -22,6 +22,10 @@ export const CaptionContainer = styled.div`
   flex-basis: 40%;
   max-width: 1020px;
 
+  a {
+    text-decoration: none;
+  }
+
   h2 {
     display: inline-block;
     color: ${props => props.theme.textDark};

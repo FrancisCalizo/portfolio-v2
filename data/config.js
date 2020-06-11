@@ -9,7 +9,7 @@ module.exports = {
   description:
     "I'm a web | software developer proficient at creating modern and captivating web applications.",
   bio:
-    "You can find me primarily using the latest JavaScript technologies to build front-end web projects, but I also aspire to develop myself into a full-stack engineer (as well as learn new languages and tools). I welcome challenging opportunities for growth and development ",
+    "You can find me primarily using the latest JavaScript technologies to build front-end web projects, but I also have skilled experienced in full-stack development. I am always eager to learn new languages and tools while welcoming challenging opportunities for growth and development ",
   skills: {
     header: "Specialized in writing modern, performant, and maintainable code.",
     description:

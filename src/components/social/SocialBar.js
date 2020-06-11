@@ -8,7 +8,7 @@ import {
 
 import { SocialLinks, SocialLink } from "../styled/SocialBar"
 
-const SocialBar = ({ email }) => {
+const SocialBar = ({ email, resume }) => {
   return (
     <SocialLinks>
       <a
@@ -28,7 +28,7 @@ const SocialBar = ({ email }) => {
       <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
         <SocialLink icon={faEnvelopeSquare} size="2x" />
       </a>
-      <a href="#!" target="_blank" rel="noopener noreferrer">
+      <a href={resume} target="_blank" rel="noopener noreferrer">
         <SocialLink icon={faFile} size="2x" />
       </a>
       <a
