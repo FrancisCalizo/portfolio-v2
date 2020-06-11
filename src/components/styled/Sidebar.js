@@ -14,7 +14,7 @@ export const SidebarContainer = styled.div`
   bottom: 0px;
   z-index: 100;
   width: 280px;
-  padding: 2rem 2rem;
+  padding: 2rem 1.85rem;
   box-sizing: border-box;
   overflow-y: auto;
   transition: all 300ms ease-in-out;

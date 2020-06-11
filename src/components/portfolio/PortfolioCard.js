@@ -23,16 +23,12 @@ const PortfolioCard = ({ project, portfolioImage }) => {
           ))}
         </Tech>
         <Description>{project.description}</Description>
-        <SiteButton>
-          <a href={project.url} target="_blank" rel="noopener noreferrer">
-            View Site
-          </a>
-        </SiteButton>
-        <SourceButton>
-          <a href={project.github} target="_blank" rel="noopener noreferrer">
-            View Source
-          </a>
-        </SourceButton>
+        <a href={project.url} target="_blank" rel="noopener noreferrer">
+          <SiteButton>View Site</SiteButton>
+        </a>
+        <a href={project.github} target="_blank" rel="noopener noreferrer">
+          <SourceButton>View Source</SourceButton>
+        </a>
       </CaptionContainer>
       <ImgContainer>
         <a href={project.url} target="_blank" rel="noopener noreferrer">
