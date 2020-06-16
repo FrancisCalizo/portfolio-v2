@@ -9,7 +9,7 @@ module.exports = {
   description:
     "I'm a web | software developer proficient at creating modern and captivating web applications.",
   bio:
-    "You can find me primarily using the latest JavaScript technologies to build front-end web projects, but I also have skilled experienced in full-stack development. I am always eager to learn new languages and tools while welcoming challenging opportunities for growth and development ",
+    "You can find me primarily using the latest JavaScript technologies to build front-end web projects, but I also have considerable experience in full-stack development. I am always eager to learn new languages and tools while welcoming challenging opportunities for growth and development ",
   skills: {
     header: "Specialized in writing modern, performant, and maintainable code.",
     description:
@@ -51,15 +51,6 @@ module.exports = {
         tech: ["Gatsby.js", "Chart.js", "Tailwind CSS", "COVID-19 API"],
       },
       {
-        title: "Did FSU Win?",
-        description:
-          "A web app visualizing stats and data of the FSU football team. View a countdown to the Noles' next game, recent game updates, as well as schedule and roster information by year. Observe box scores, game stats, and play-by-play information for each game.",
-        img: "fsu.png",
-        url: "https://www.didfsu.win/",
-        github: "https://github.com/FrancisCalizo/did-florida-state-win",
-        tech: ["React.js", "Tailwind CSS", "College Football API"],
-      },
-      {
         title: "Save The Date!",
         description:
           "Official wedding website created for my future wife-to-be and myself. A single page application designed to my own creative taste, using Gatsby.js and styled components.",
@@ -67,6 +58,15 @@ module.exports = {
         url: "https://francisandcherrie.netlify.app/",
         github: "https://github.com/FrancisCalizo/cherrie-tickles-her-francy",
         tech: ["Gatsby.js", "Styled Components", "GraphQL"],
+      },
+      {
+        title: "Did FSU Win?",
+        description:
+          "A web app visualizing stats and data of the FSU football team. View a countdown to the Noles' next game, recent game updates, as well as schedule and roster information by year. Observe box scores, game stats, and play-by-play information for each game.",
+        img: "fsu.png",
+        url: "https://www.didfsu.win/",
+        github: "https://github.com/FrancisCalizo/did-florida-state-win",
+        tech: ["React.js", "Tailwind CSS", "College Football API"],
       },
       {
         title: "Portfolio-v2",
