@@ -95,6 +95,15 @@ module.exports = {
         github: "https://github.com/FrancisCalizo/npm-clone",
         tech: ["HTML", "CSS"],
       },
+      // {
+      //   title: "Weathercast",
+      //   description:
+      //     "A mobile-first weather forecast application built with TypeScript, React, and Weatherbit API. Has the ability to view current weather, hourly/weekly forecast, and retrieve users current location.",
+      //   img: "weather.png",
+      //   url: "http://weathercasts.netlify.com",
+      //   github: "https://github.com/FrancisCalizo/weathercast",
+      //   tech: ["React.js", "Tailwind CSS", Weatherbit API],
+      // },
     ],
   },
   colorsLight: {
