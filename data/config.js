@@ -87,6 +87,15 @@ module.exports = {
         tech: ["Gatsby.js", "GraphQL"],
       },
       {
+        title: "Weathercast",
+        description:
+          "A mobile-first weather forecast application built with TypeScript, React.js, & Weatherbit API. Has the ability to view current weather, hourly and weekly forecast, & retrieve users current location.",
+        img: "weather.png",
+        url: "http://weathercasts.netlify.com",
+        github: "https://github.com/FrancisCalizo/weathercast",
+        tech: ["React.js", "Tailwind CSS", "Weatherbit API"],
+      },
+      {
         title: "NPM Clone",
         description:
           "Back to the basics. An exact clone of the NPM.js landing page made purely in HTML/CSS. A comprehensive understanding of the fundamentals has always been pertinent to my success as a developer.",
@@ -95,15 +104,6 @@ module.exports = {
         github: "https://github.com/FrancisCalizo/npm-clone",
         tech: ["HTML", "CSS"],
       },
-      // {
-      //   title: "Weathercast",
-      //   description:
-      //     "A mobile-first weather forecast application built with TypeScript, React, and Weatherbit API. Has the ability to view current weather, hourly/weekly forecast, and retrieve users current location.",
-      //   img: "weather.png",
-      //   url: "http://weathercasts.netlify.com",
-      //   github: "https://github.com/FrancisCalizo/weathercast",
-      //   tech: ["React.js", "Tailwind CSS", Weatherbit API],
-      // },
     ],
   },
   colorsLight: {
