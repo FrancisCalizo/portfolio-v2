@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { device } from "../../utils/breakpoints"
 
 const UnderNavContainer = styled.div`
-  @media ${device.maxMd} {
+  @media (${device.maxMd}) {
     padding-top: 60px;
   }
 `

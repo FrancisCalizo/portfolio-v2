@@ -7,12 +7,12 @@ export const PortfolioCardContainer = styled.div`
   display: flex;
   margin: 4rem 0;
 
-  @media ${device.minMd} and (${device.maxLg}) {
+  @media (${device.minMd}) and (${device.maxLg}) {
     flex-wrap: wrap;
     flex-direction: column-reverse;
   }
 
-  @media ${device.maxMd} {
+  @media (${device.maxMd}) {
     flex-wrap: wrap;
     flex-direction: column-reverse;
   }
@@ -36,13 +36,13 @@ export const CaptionContainer = styled.div`
     transition: all 300ms ease-in-out;
   }
 
-  @media ${device.minLg} and (${device.maxXl}) {
+  @media (${device.minLg}) and (${device.maxXl}) {
     h2 {
       font-size: ${fluid(22, 4, 1024, 1498)};
     }
   }
 
-  @media ${device.minMd} and (${device.maxLg}) {
+  @media (${device.minMd}) and (${device.maxLg}) {
     flex-basis: 100%;
 
     h2 {
@@ -50,7 +50,7 @@ export const CaptionContainer = styled.div`
     }
   }
 
-  @media ${device.maxMd} {
+  @media (${device.maxMd}) {
     h2 {
       font-size: ${fluid(22, 2, 330, 768)};
     }
@@ -63,15 +63,15 @@ export const Description = styled.p`
   padding-right: 1rem;
   transition: all 300ms ease-in-out;
 
-  @media ${device.minLg} and (${device.maxXl}) {
+  @media (${device.minLg}) and (${device.maxXl}) {
     font-size: ${fluid(16, 2, 1024, 1498)};
   }
 
-  @media ${device.minMd} and (${device.maxLg}) {
+  @media (${device.minMd}) and (${device.maxLg}) {
     font-size: ${fluid(16, 4, 768, 1024)};
   }
 
-  @media ${device.maxMd} {
+  @media (${device.maxMd}) {
     font-size: ${fluid(14, 4, 330, 768)};
     padding: 0;
   }
@@ -92,11 +92,11 @@ export const Tech = styled.p`
     border: 1px solid ${props => props.theme.textLight};
     transition: all 300ms ease-in-out;
 
-    @media ${device.minLg} and (${device.maxXl}) {
+    @media (${device.minLg}) and (${device.maxXl}) {
       font-size: ${fluid(11, 1, 1024, 1498)};
     }
 
-    @media ${device.maxMd} {
+    @media (${device.maxMd}) {
       font-size: ${fluid(10, 2, 330, 768)};
     }
   }
@@ -125,13 +125,13 @@ export const SiteButton = styled.button`
     transition: background 0.3s ease-in-out;
   }
 
-  @media ${device.minLg} and (${device.maxXl}) {
+  @media (${device.minLg}) and (${device.maxXl}) {
     font-size: ${fluid(10, 3, 1024, 1498)};
     padding: ${fluid(7, 3, 1024, 1498)} ${fluid(18, 8, 1024, 1498)};
     margin-right: ${fluid(12, 9, 1024, 1498)};
   }
 
-  @media ${device.maxMd} {
+  @media (${device.maxMd}) {
     display: block;
     margin: 1rem auto;
     font-size: ${fluid(11, 2, 330, 768)};
@@ -163,13 +163,13 @@ export const ImgContainer = styled.div`
     transition: all 0.3s ease-in-out;
   }
 
-  @media ${device.minMd} and (${device.maxLg}) {
+  @media (${device.minMd}) and (${device.maxLg}) {
     flex-basis: 100%;
     width: 100%;
     padding-left: 0;
   }
 
-  @media ${device.maxMd} {
+  @media (${device.maxMd}) {
     flex-basis: 100%;
     width: 100%;
     padding: 0;

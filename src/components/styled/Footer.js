@@ -42,7 +42,7 @@ export const FooterContainer = styled.div`
     margin: 1rem 0 2.5rem;
   }
 
-  @media ${device.minMd} {
+  @media (${device.minMd}) {
     display: none;
   }
 `

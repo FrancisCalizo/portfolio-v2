@@ -8,7 +8,7 @@ export const SkillsIconsContainer = styled.div`
   margin-top: 2rem;
   justify-content: space-between;
 
-  @media ${device.maxMd} {
+  @media (${device.maxMd}) {
     justify-content: center;
   }
 `

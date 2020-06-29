@@ -47,11 +47,11 @@ export const TopbarContainer = styled.div`
     transition: all 300ms ease-in-out;
   }
 
-  @media ${device.minMd} {
+  @media (${device.minMd}) {
     display: none;
   }
 
-  @media ${device.maxSm} {
+  @media (${device.maxSm}) {
     > div {
       > div:nth-child(2) {
         display: none;

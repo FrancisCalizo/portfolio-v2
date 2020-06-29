@@ -44,7 +44,7 @@ export const MagazineCardContainer = styled.div`
     }
   }
 
-  @media ${device.minMd} and ${device.maxLg} {
+  @media (${device.minMd}) and (${device.maxLg}) {
     & > div:nth-child(2) {
 
       & h2 {
@@ -59,7 +59,7 @@ export const MagazineCardContainer = styled.div`
   }
 
 
-  @media ${device.minSm} and ${device.maxMd}{
+  @media (${device.minSm}) and (${device.maxMd}){
     & > div:nth-child(2) {
 
       & h2 {
@@ -73,7 +73,7 @@ export const MagazineCardContainer = styled.div`
     }
   }
 
-  @media ${device.maxSm}{
+  @media (${device.maxSm}){
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
@@ -96,7 +96,7 @@ export const Image = styled(Img)`
   transform: translate(-50px, -50px);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4), 0 4px 8px 0 rgba(0, 0, 0, 0.22);
 
-  @media ${device.maxSm} {
+  @media (${device.maxSm}) {
     transform: translateY(-50px);
   }
 `

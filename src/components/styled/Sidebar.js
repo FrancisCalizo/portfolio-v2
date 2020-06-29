@@ -62,7 +62,7 @@ export const SidebarContainer = styled.div`
     }
   }
 
-  @media ${device.maxMd} {
+  @media (${device.maxMd}) {
     display: none;
   }
 `

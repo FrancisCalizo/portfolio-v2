@@ -51,7 +51,9 @@ export const PortfolioContainer = styled.div`
     }
   }
 
-  @media ${device.minMd} and ${device.maxLg} {
+  @media (${device.minMd}) and (${device.maxLg}) {
+    text-align: center;
+
     & > div:nth-child(1) {
       & h1 {
         & span:nth-child(1) {
@@ -68,7 +70,7 @@ export const PortfolioContainer = styled.div`
     }
   }
 
-  @media ${device.maxMd}{
+  @media (${device.maxMd}) {
     min-height: 0;
     text-align: center;
     margin: 5rem auto;
@@ -99,7 +101,7 @@ export const Line = styled.hr`
   margin: 5rem 0 0;
   margin-left: 0;
 
-  @media ${device.maxMd} {
+  @media (${device.maxMd}) {
     margin: 5rem auto 0;
   }
 `

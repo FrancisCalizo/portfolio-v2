@@ -50,7 +50,7 @@ export const SkillsContainer = styled.div`
     }
   }
 
-  @media ${device.minMd} and ${device.maxLg} {
+  @media (${device.minMd}) and (${device.maxLg}) {
     & div {
       & h1 {
         & span:nth-child(1) {
@@ -67,7 +67,7 @@ export const SkillsContainer = styled.div`
     }
   }
 
-  @media ${device.maxMd}{
+  @media (${device.maxMd}) {
     min-height: 0;
     text-align: center;
     margin: 5rem auto;
@@ -86,7 +86,7 @@ export const SkillsContainer = styled.div`
       }
 
       & p {
-        font-size:  ${fluid(14, 6, 330, 768)};
+        font-size: ${fluid(14, 6, 330, 768)};
       }
     }
   }

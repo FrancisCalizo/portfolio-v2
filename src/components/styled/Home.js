@@ -51,12 +51,12 @@ export const HomeContainer = styled.div`
     margin: 3rem 0;
   }
 
-  @media ${device.minMd} and ${device.maxLg}{
+  @media (${device.minMd}) and (${device.maxLg}) {
     & div {
-      & p:nth-child(1){
+      & p:nth-child(1) {
         font-size: ${fluid(22, 4, 768, 1024)};
 
-        & span:nth-child(1){
+        & span:nth-child(1) {
           font-size: ${fluid(26, 4, 768, 1024)};
         }
       }
@@ -71,17 +71,17 @@ export const HomeContainer = styled.div`
     }
   }
 
-  @media ${device.maxMd}{
+  @media (${device.maxMd}) {
     height: 100%;
     padding: 0 2rem;
     & div {
       max-width: none;
 
-      & p:nth-child(1){
+      & p:nth-child(1) {
         font-size: ${fluid(18, 4, 320, 768)};
 
-        & span:nth-child(1){
-        font-size: ${fluid(22, 4, 320, 768)};
+        & span:nth-child(1) {
+          font-size: ${fluid(22, 4, 320, 768)};
         }
       }
 
@@ -95,7 +95,7 @@ export const HomeContainer = styled.div`
     }
   }
 
-  @media ${device.maxMd}{
+  @media (${device.maxMd}) {
     text-align: center;
     margin: 5rem auto;
   }
@@ -116,7 +116,7 @@ export const PortfolioButton = styled(Link)`
     color: ${props => props.theme.bgAlt};
     transition: all 300ms ease-in-out;
 
-    @media ${device.maxXs}{
+    @media (${device.maxXs}) {
       margin-right: 0.5rem;
     }
   }
@@ -137,17 +137,17 @@ export const PortfolioButton = styled(Link)`
     transition: all 0.3s ease-in-out;
   }
 
-  @media ${device.minMd} and ${device.maxLg}{
+  @media (${device.minMd}) and (${device.maxLg}) {
     font-size: ${fluid(12, 2, 768, 1024)};
     padding: 1.5vw 2vw;
   }
 
-  @media ${device.maxMd}{
+  @media (${device.maxMd}) {
     font-size: ${fluid(10, 4, 320, 768)};
     padding: ${fluid(12, 4, 320, 768)} ${fluid(16, 4, 320, 768)};
   }
 
-  @media ${device.maxXs}{
+  @media (${device.maxXs}) {
     display: block;
     margin: 1rem 0.5rem;
   }

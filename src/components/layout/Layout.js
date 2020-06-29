@@ -14,7 +14,7 @@ import resume from "../../../static/resume.pdf"
 const { colorsLight, colorsDark } = config
 
 const MainContent = styled.div`
-  @media ${device.minMd} {
+  @media (${device.minMd}) {
     position: absolute;
     left: 280px;
   }
