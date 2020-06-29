@@ -8,6 +8,7 @@ import {
   HomeContainer,
   PortfolioButton,
   EmailButton,
+  Wave,
 } from "../components/styled/Home"
 
 const IndexPage = () => {
@@ -26,9 +27,9 @@ const IndexPage = () => {
             <div>
               <p>
                 // Hi, I'm <span>Francis</span>{" "}
-                <span role="img" aria-label="wave">
+                <Wave role="img" aria-label="wave">
                   👋
-                </span>
+                </Wave>
               </p>
               <h1>{config.description}</h1>
               <p>

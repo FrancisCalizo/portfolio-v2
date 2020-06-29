@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 import fluid from "../../utils/fluid"
 import { device } from "../../utils/breakpoints"
@@ -100,6 +100,25 @@ export const HomeContainer = styled.div`
     margin: 5rem auto;
   }
 `
+
+const waveAnimation = keyframes`
+  0% { transform: rotate(  0.0deg) }
+ 10% { transform: rotate(-10.0deg) }
+ 20% { transform: rotate( 12.0deg) }
+ 30% { transform: rotate(-10.0deg) }
+ 40% { transform: rotate(  9.0deg) }
+ 50% { transform: rotate(  0.0deg) }
+100% { transform: rotate(  0.0deg) }
+`
+
+export const Wave = styled.span`
+  animation-name: ${waveAnimation};
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+`
+
 export const PortfolioButton = styled(Link)`
   color: ${props => props.theme.textDark};
   text-transform: uppercase;
