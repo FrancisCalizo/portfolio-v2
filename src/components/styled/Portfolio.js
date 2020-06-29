@@ -101,7 +101,7 @@ export const Line = styled.hr`
   margin: 5rem 0 0;
   margin-left: 0;
 
-  @media (${device.maxMd}) {
+  @media (${device.maxLg}) {
     margin: 5rem auto 0;
   }
 `
