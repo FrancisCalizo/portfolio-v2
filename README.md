@@ -1,6 +1,6 @@
 # franciscalizo.com - v2
 
-The second iteration of [franciscalizo.com](https://www.franciscalizo.com), my personal portfolio showcasing my skillset and lastest projects.
+The second iteration of [franciscalizo.com](https://www.franciscalizo.com), my personal portfolio showcasing my skillset and latest projects.
 
 Built with [Gatsbyjs](https://www.gatsbyjs.org/) and [Styled Components](https://styled-components.com/).
 
