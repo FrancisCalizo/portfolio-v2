@@ -26,10 +26,6 @@ export const icons = [
     icon: react,
   },
   {
-    name: "GraphQL",
-    icon: gql,
-  },
-  {
     name: "Redux",
     icon: redux,
   },
@@ -50,12 +46,16 @@ export const icons = [
     icon: express,
   },
   {
+    name: "SQL",
+    icon: sql,
+  },
+  {
     name: "MongoDB",
     icon: mongo,
   },
   {
-    name: "SQL",
-    icon: sql,
+    name: "GraphQL",
+    icon: gql,
   },
   {
     name: "Git | Github",
