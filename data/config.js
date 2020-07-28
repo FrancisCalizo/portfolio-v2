@@ -86,15 +86,15 @@ module.exports = {
         github: "https://github.com/FrancisCalizo/ohyoufrancybruh",
         tech: ["Gatsby.js", "GraphQL"],
       },
-      {
-        title: "Weathercast",
-        description:
-          "A mobile-first weather forecast application built with TypeScript, React.js, & Weatherbit API. Has the ability to view current weather, hourly and weekly forecast, & retrieve users current location.",
-        img: "weather.png",
-        url: "http://weathercasts.netlify.com",
-        github: "https://github.com/FrancisCalizo/weathercast",
-        tech: ["React.js", "Tailwind CSS", "Weatherbit API"],
-      },
+      // {
+      //   title: "Weathercast",
+      //   description:
+      //     "A mobile-first weather forecast application built with TypeScript, React.js, & Weatherbit API. Has the ability to view current weather, hourly and weekly forecast, & retrieve users current location.",
+      //   img: "weather.png",
+      //   url: "http://weathercasts.netlify.com",
+      //   github: "https://github.com/FrancisCalizo/weathercast",
+      //   tech: ["React.js", "Tailwind CSS", "Weatherbit API"],
+      // },
       {
         title: "NPM Clone",
         description:
