@@ -9,7 +9,7 @@ import Sidebar from "./Sidebar"
 import Topbar from "./Topbar"
 import UnderNav from "./UnderNav"
 import Footer from "./Footer"
-import resume from "../../../static/resume.pdf"
+import resume from "../../../static/resume_f.pdf"
 
 const { colorsLight, colorsDark } = config
 

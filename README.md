@@ -18,7 +18,7 @@ Built with [Gatsbyjs](https://www.gatsbyjs.org/) and [Styled Components](https:/
 
 - Stop Border on Hover from Pushing other Elements Around it - https://stackoverflow.com/questions/18887058/css-hover-creating-border-but-pushing-content
 
-- React PropTypes Array (Shape) - https://til.hashrocket.com/posts/ytrzhrpfxk-proptypes-array-of-shape
+- React Proptypes Array (Shape) - https://til.hashrocket.com/posts/ytrzhrpfxk-proptypes-array-of-shape
 
 - Get Pathname of URL = https://css-tricks.com/how-to-the-get-current-page-url-in-gatsby/
 
