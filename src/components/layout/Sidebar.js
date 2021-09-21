@@ -17,7 +17,7 @@ import {
   ToggleTheme,
   Created,
 } from "../styled/Sidebar"
-import resume from "../../../static/resume_f.pdf"
+import resume from "../../../static/resumef.pdf"
 
 const Sidebar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   const [current, setCurrent] = useState("")
