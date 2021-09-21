@@ -16,7 +16,7 @@ import {
   BurgerLinkA,
   Fa,
 } from "../styled/Topbar"
-import resume from "../../../static/resumef.pdf"
+import resume from "../../../static/resume.pdf"
 
 const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false)
