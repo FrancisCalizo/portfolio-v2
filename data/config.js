@@ -64,7 +64,7 @@ module.exports = {
         description:
           "A web app visualizing stats and data of the FSU football team. View a countdown to the Noles' next game, recent game updates, as well as schedule and roster information by year. Observe box scores, game stats, and play-by-play information for each game.",
         img: "fsu.png",
-        url: "https://www.didfsu.win/schedule",
+        url: "https://didfloridastatewin.netlify.app/about",
         github: "https://github.com/FrancisCalizo/did-florida-state-win",
         tech: ["React.js", "Tailwind CSS", "College Football API"],
       },
