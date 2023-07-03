@@ -146,7 +146,7 @@ const Topbar = ({ title, email, isDarkMode, setIsDarkMode }) => {
               as="a"
               id="blog"
               className="menu-item"
-              href="https://ohyoufrancybruh.com"
+              href="https://ohyoufrancyblog.com"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleClick}

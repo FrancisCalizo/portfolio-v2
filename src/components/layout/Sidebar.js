@@ -76,7 +76,7 @@ const Sidebar = ({ title, email, isDarkMode, setIsDarkMode }) => {
         <li>
           <ALink
             as="a"
-            href="https://ohyoufrancybruh.com"
+            href="https://ohyoufrancyblog.com"
             target="_blank"
             rel="noopener noreferrer"
           >

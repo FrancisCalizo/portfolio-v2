@@ -32,7 +32,7 @@ const SocialBar = ({ email, resume }) => {
         <SocialLink icon={faFile} size="2x" />
       </a>
       <a
-        href="https://ohyoufrancybruh.com"
+        href="https://ohyoufrancyblog.com"
         target="_blank"
         rel="noopener noreferrer"
       >
