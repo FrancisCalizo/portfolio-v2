@@ -1,7 +1,7 @@
 import css from "../../images/skills/css.svg"
 import express from "../../images/skills/express.svg"
 import github from "../../images/skills/github.svg"
-import gql from "../../images/skills/gql.svg"
+// import gql from "../../images/skills/gql.svg"
 import html from "../../images/skills/html.svg"
 import js from "../../images/skills/js.svg"
 import mongo from "../../images/skills/mongo.svg"
@@ -10,7 +10,7 @@ import react from "../../images/skills/react.svg"
 import redux from "../../images/skills/redux.svg"
 import sql from "../../images/skills/sql.svg"
 import ts from "../../images/skills/ts.svg"
-// import sass from "../../images/skills/sass.svg"
+import sass from "../../images/skills/sass.svg"
 
 export const icons = [
   {
@@ -54,8 +54,8 @@ export const icons = [
     icon: mongo,
   },
   {
-    name: "GraphQL",
-    icon: gql,
+    name: "SCSS",
+    icon: sass,
   },
   {
     name: "Git | Github",
