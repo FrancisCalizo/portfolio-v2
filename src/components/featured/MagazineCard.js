@@ -5,8 +5,13 @@ import PropTypes from "prop-types"
 import { Link, MagazineCardContainer, Image, Fa } from "../styled/Magazinecard"
 
 const MagazineCard = ({ articles, index, magazine }) => {
+  const handleClick = () => 
+    alert("Unfortunately, the URL to the e-article is no longer available :(")
+
   return (
-    <Link href={articles.url} target="_blank" rel="noopener noreferrer">
+    // URL to the e-magazines no longer work :(
+    // <Link href={articles.url} target="_blank" rel="noopener noreferrer">
+    <Link href="#" onClick={handleClick}>
       <MagazineCardContainer>
         <div>
           <Image
