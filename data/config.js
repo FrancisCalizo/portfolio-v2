@@ -78,11 +78,11 @@ module.exports = {
         tech: ["Gatsby.js", "Styled Components", "GraphQL"],
       },
       {
-        title: "Ohyoufrancybruh",
+        title: "Ohyoufrancyblog",
         description:
           "My personal blog. A simplistic look at what goes on in my mind; my personal slice of the internet. Made with a basic Gatsbyjs starter theme and tweaked to my liking.",
         img: "blog.png",
-        url: "https://ohyoufrancybruh.com/",
+        url: "https://ohyoufrancyblog.com/",
         github: "https://github.com/FrancisCalizo/ohyoufrancybruh",
         tech: ["Gatsby.js", "GraphQL"],
       },
