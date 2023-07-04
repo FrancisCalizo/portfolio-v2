@@ -60,15 +60,6 @@ module.exports = {
         tech: ["Gatsby.js", "Styled Components", "GraphQL"],
       },
       {
-        title: "Did FSU Win?",
-        description:
-          "A web app visualizing stats and data of the FSU football team. View a countdown to the Noles' next game, recent game updates, as well as schedule and roster information by year. Observe box scores, game stats, and play-by-play information for each game.",
-        img: "fsu.png",
-        url: "https://didfloridastatewin.netlify.app/about",
-        github: "https://github.com/FrancisCalizo/did-florida-state-win",
-        tech: ["React.js", "Tailwind CSS", "College Football API"],
-      },
-      {
         title: "Portfolio-v2",
         description:
           "The very site you are currently looking at. A component-based SPA showcasing my projects, qualifications, and expertise as a software developer.",
@@ -85,6 +76,15 @@ module.exports = {
         url: "https://ohyoufrancyblog.com/",
         github: "https://github.com/FrancisCalizo/ohyoufrancybruh",
         tech: ["Gatsby.js", "GraphQL"],
+      },
+      {
+        title: "Did FSU Win?",
+        description:
+          "A web app visualizing stats and data of the FSU football team. View a countdown to the Noles' next game, recent game updates, as well as schedule and roster information by year. Observe box scores, game stats, and play-by-play information for each game.",
+        img: "fsu.png",
+        url: "https://didfloridastatewin.netlify.app/about",
+        github: "https://github.com/FrancisCalizo/did-florida-state-win",
+        tech: ["React.js", "Tailwind CSS", "College Football API"],
       },
       // {
       //   title: "Weathercast",
